@@ -1,0 +1,293 @@
+### Project / Blueprint
+
+**Angel / Engram-AI — consolidated research architecture**
+
+### One-sentence purpose
+
+Build a persistent conversational system whose current behavior is genuinely downstream of prior interactions through layered memory, continuous internal state, stable identity structure, selective reflection, and controlled imperfection.
+
+### Concepts worth keeping
+
+**Orchestrated Cognitive Stack**
+What it does: Separates dialogue, memory, state, retrieval, reflection, and maintenance into cooperating subsystems rather than asking one prompt/model to do everything simultaneously. 
+Ability: **Specialized cognition with shared persistent state.**
+Implementation note: Claude argues for a simple mostly-sequential controller; Gemini argues for an explicit conditional graph. The architectural capability is agreed upon; orchestration complexity is not.  
+Status: **Keep; implementation unresolved.**
+
+**Single Surface Voice**
+What it does: One model owns all outward dialogue even if other models/services assist internally, preventing conversational identity from changing with routing.  
+Ability: **Maintain one coherent speaking identity across heterogeneous internal cognition.**
+Status: **Strong recommendation.**
+
+**Structured Perception Pass**
+What it does: Before responding, extracts structured signals such as entities, affect cues, memory-write candidates, self-relevant triggers, intent, and unresolved questions. 
+Ability: **Turn raw interaction into explicit cognitive inputs before deciding how to respond.**
+Status: **Proposed.**
+
+**Layered Identity Architecture**
+What it does: Separates relatively invariant identity, curated behavioral/style tendencies, and mutable/evolving state instead of treating persona as one monolithic prompt. 
+Ability: **Change over time without rewriting core identity every turn.**
+Status: **Existing blueprint mechanism; strongly endorsed.**
+
+**Decision-Pattern Identity**
+What it does: Defines identity partly through recurring choices and priorities—what gets valued, resisted, pursued, or avoided—rather than primarily vocabulary and stylistic tics. 
+Ability: **Preserve recognizable behavioral character across changing language and contexts.**
+Status: **Keep.**
+
+**Explicit Self-Model**
+What it does: Maintains a structured representation of current self-understanding that can be reasoned over rather than leaving “self” implicit in prompt text and retrieved memories. 
+Ability: **Reason explicitly about current identity, tendencies, relationships, and change.**
+Status: **Proposed gap-filler.**
+
+**Persistent Cognitive-Affective State**
+What it does: Maintains a small state vector—e.g. valence, arousal, rapport, trust, curiosity, uncertainty—that persists independently of whether relevant memories happen to retrieve. 
+Ability: **Carry mood, stance, and relationship state continuously across turns.**
+Status: **Strong convergence / major missing layer.**
+
+**Affective Inertia**
+What it does: New events modify rather than replace prior emotional state, so reactions inherit momentum from previous turns and decay gradually. 
+Ability: **Produce emotional carryover instead of turn-by-turn resets.**
+Status: **Strong convergence.**
+
+**Temperament-Based Appraisal**
+What it does: Converts perceived events into state changes according to stable temperament rather than directly copying the user's detected emotion into the system's state. 
+Ability: **React characteristically to the same external event.**
+Status: **Proposed.**
+
+**Homeostatic Drives**
+What it does: Supplements simple affect coordinates with slowly changing “needs” or drives that participate in state updates and behavioral selection. 
+Ability: **Let persistent internal pressures influence behavior over longer timescales.**
+Status: **Speculative but useful.**
+
+**Emotional Negative Space**
+What it does: Allows low-intensity, distracted, content, or emotionally flat states rather than forcing every interaction to produce visible emotional performance. 
+Ability: **Remain emotionally continuous without constantly displaying emotion.**
+Status: **Keep.**
+
+**Three-Band Temporal Context**
+What it does: Separates immediate/live turns, a short-to-medium-term session bridge, and durable long-term memory. 
+Ability: **Maintain continuity across multiple timescales without stuffing everything into one context.**
+Status: **Existing mechanism; strongly endorsed.**
+
+**Session Bridge**
+What it does: Carries recent emotional trajectory, unresolved threads, relational stance, and other unfinished context across session boundaries without requiring long-term-memory retrieval to reconstruct yesterday's state. 
+Ability: **Resume a relationship/conversation state rather than merely remember facts from it.**
+Status: **Critical missing component across the comparisons.**
+
+**Structured Memory Extraction Contract**
+What it does: Turns interactions into typed memory candidates with fields such as memory class, affect, importance, durability, participants, and confidence while explicitly refusing low-value noise. 
+Ability: **Create high-resolution memories whose type and significance survive later retrieval.**
+Status: **Existing mechanism; upgrade strongly recommended.**
+
+**Knowledge–Autobiography Separation**
+What it does: Keeps general knowledge and personally meaningful/autobiographical memory from indiscriminately contaminating each other. 
+Ability: **Know something without automatically treating it as part of personal history or identity.**
+Status: **Keep boundary.**
+
+**Selective Meaning Crossover**
+What it does: Allows selected knowledge or experiences to cross the knowledge/autobiography boundary once they become personally significant, without merging the stores wholesale. 
+Ability: **Allow information to acquire autobiographical meaning over time.**
+Status: **Hard “the stores never feed each other” rule is abandoned/replaced by selective crossover in later critique.**
+
+**ACT-R Activation Retrieval**
+What it does: Uses frequency and recency-style activation rather than semantic similarity alone to determine which memories become available. 
+Ability: **Prefer memories according to learned accessibility and use history.**
+Status: **Existing mechanism; strongly endorsed.**
+
+**Hebbian Association Learning**
+What it does: Memories repeatedly activated together strengthen links, allowing one recalled memory to spread activation into related memories. 
+Ability: **Surface indirectly related memories through learned associations.**
+Status: **Existing mechanism; strongly endorsed.**
+
+**STDP-Style Causal Association**
+What it does: Uses temporal ordering between activations to infer directional/causal relationships rather than merely undirected similarity. 
+Ability: **Learn “this tends to lead to that” associations from experience.**
+Status: **Existing experimental mechanism.**
+
+**Controlled Forgetting / Right to Forget**
+What it does: Memory accessibility decays according to importance, recency, affect, and reactivation; weak material can fall into archival/cold states rather than remaining equally available forever.  
+Ability: **Lose access to low-value information while preserving important/reinforced memories.**
+Status: **Strong convergence.**
+
+**Consolidation, Replay, and Downscaling**
+What it does: Periodically merges/rebalances memory, decays associations, revisits selected older material, updates semantic information, and reduces unchecked activation growth. 
+Ability: **Restructure memory offline instead of treating storage as permanently fixed.**
+Status: **Existing mechanism; endorsed.**
+
+**Hybrid Multi-Signal Retrieval**
+What it does: Retrieves through several routes—semantic similarity, lexical matching, recency, entities, emotional resonance, salience, and associative links—then combines the candidates.  
+Ability: **Recall information for multiple kinds of relevance instead of keyword/vector similarity alone.**
+Status: **Strong convergence; flat vector-RAG rejected/replaced.**
+
+**Retrieval Reranking**
+What it does: Applies a more precise second-stage relevance model after broad retrieval but before context injection. 
+Ability: **Spend a small context budget on the memories most relevant to the present moment.**
+Status: **Proposed improvement.**
+
+**Retrieval Restraint**
+What it does: Uses a high enough relevance threshold that retrieved memories can remain dormant instead of being injected simply because the system found them. 
+Ability: **Know something without constantly proving that it remembers it.**
+Status: **High-value dialogue/retrieval principle.**
+
+**Memory Shadowing**
+What it does: Degrades some retrieved memories into partial details, impressions, or emotional residue according to age/activation rather than returning perfect records every time. 
+Ability: **Recall partially and approximately instead of behaving like a database.**
+Status: **Speculative bonus mechanism worth preserving.**
+
+**Confidence-Calibrated Recollection Packet**
+What it does: Converts raw retrieved material into a compact packet distinguishing certainty from inference and what is useful to mention from what should remain latent. 
+Ability: **Carry relevant memory into generation with explicit confidence and disclosure control.**
+Status: **Proposed.**
+
+**Narrative Memory Reconstruction**
+What it does: Reconstructs a usable recollection from retrieved fragments rather than presenting stored records verbatim. 
+Ability: **Remember experiences as context-sensitive narratives rather than retrieved database rows.**
+Status: **Proposed.**
+
+**Contradiction Detection and Reconciliation**
+What it does: Detects conflicting memories, beliefs, preferences, or state changes and either reconciles them, tracks change over time, or explicitly preserves unresolved tension. 
+Ability: **Turn inconsistency into revision, growth, or acknowledged ambiguity instead of silent drift.**
+Status: **Missing mechanism; recommended.**
+
+**Latent Self-Compression**
+What it does: Periodically reviews recent and high-salience experience to summarize emerging traits, relationship changes, baseline affect, contradictions, and identity trajectory. 
+Ability: **Convert scattered memories into an evolving account of “who I am becoming.”**
+Status: **High-value proposed mechanism.**
+
+**Narrative Anchors**
+What it does: Maintains a small number of enduring self-stories that act as gravitational centers for interpretation, tone, and consolidation without functioning as rigid behavioral rules. 
+Ability: **Organize many experiences around durable themes.**
+Status: **Speculative bonus mechanism worth keeping.**
+
+**Identity Resistance**
+What it does: Makes established traits/beliefs resistant to immediate alteration; meaningful updates require reinforcement or stronger evidence. 
+Ability: **Adapt without becoming infinitely malleable.**
+Status: **Proposed.**
+
+**Memory-Growth Control**
+What it does: Uses pruning, summarization, and narrative anchoring to prevent expanding associations and replay from causing semantic drift or identity diffusion. 
+Ability: **Prevent associative memory from becoming progressively noisier and less coherent.**
+Status: **Future-risk mitigation.**
+
+**Cognitive Load Limiting**
+What it does: Artificially limits simultaneous memories, active threads, or reasoning depth instead of exploiting maximal model capacity every turn. 
+Ability: **Maintain focused, bounded cognition and avoid over-association.**
+Status: **Unusual/speculative; worth preserving.**
+
+**Attention Budgeting**
+What it does: Explicitly divides attention among current context, session state, autobiographical memory, and a small amount of low-activation material rather than simply taking global top-K results. 
+Ability: **Control which cognitive timescales dominate a response while leaving room for spontaneous association.**
+Status: **Speculative bonus mechanism.**
+
+**Delayed Understanding**
+What it does: Allows an interaction to remain incompletely interpreted, stores it, and permits later context to change its meaning. 
+Ability: **Reinterpret earlier events after later experience provides new context.**
+Status: **Unusual/speculative; very portable.**
+
+**Runtime Self-Consistency Check**
+What it does: Evaluates a proposed response against known identity, memory, and current state, then revises or softens it if something does not fit. 
+Ability: **Catch and repair drift before it becomes outward behavior.**
+Implementation note: Gemini suggests a dedicated consistency agent; the same capability could be implemented more lightly. 
+Status: **Keep capability; implementation optional.**
+
+**Private Reflective Workspace**
+What it does: Provides cognition that influences the outward response without itself becoming the outward response—e.g. noticing contradictions, uncertainty, subtext, or what not to say. 
+Ability: **Deliberate privately before speaking and selectively withhold conclusions.**
+Implementation note: **Conflict.** Claude/Gemini recommend private think-then-speak or graph-state reflection; OpenAI explicitly warns against using free-text hidden monologue as the primary state because it can become ornate/noisy. Structured private state or conditional reflection preserves the capability without requiring prose “inner monologue.” 
+Status: **Capability supported; implementation disputed.**
+
+**Conditional Deep Reflection**
+What it does: Expensive reflection activates only on ambiguity, contradiction, strong state change, or emotional complexity rather than every turn. 
+Ability: **Spend additional cognition only when the moment warrants it.**
+Status: **Proposed optimization.**
+
+**Deliberate Incompleteness / Omission**
+What it does: Allows responses to leave some threads untouched, hesitate, change subject, answer selectively, or return to something later rather than exhaustively resolving every available thread. 
+Ability: **Exercise conversational selectivity instead of obligatory completeness.**
+Status: **High-value dialogue principle.**
+
+**Natural Memory Integration**
+What it does: Lets remembered information quietly influence assumptions, wording, and decisions instead of announcing retrieval with phrases like “I recall you said…”. 
+Ability: **Use remembered knowledge implicitly and naturally in conversation.**
+Status: **Recommended training/behavior target.**
+
+**Micro-Uncertainty**
+What it does: Expresses partial confidence and occasional self-correction when evidence is genuinely incomplete instead of producing equally certain language for everything. 
+Ability: **Represent graded confidence conversationally.**
+Status: **Speculative dialogue lever worth keeping.**
+
+**Asynchronous Memory Maintenance**
+What it does: Moves extraction, consolidation, and other memory bookkeeping out of the immediate speaking process and performs it after interaction or periodically. 
+Ability: **Let dialogue remain focused on responding while memory evolves separately.**
+Status: **Recommended.**
+
+**Identity-First Prompt Assembly**
+What it does: Orders context so identity and current state condition the interpretation of memories and recent input, rather than memories defining identity by whatever happened to retrieve. The cited blueprint order is Core → State → Session Bridge → autobiographical memory → knowledge → recent turns → input. 
+Ability: **Interpret incoming context through a stable current self instead of reconstructing self from retrieval each turn.**
+Status: **Existing mechanism; endorsed.**
+
+**Behavioral Fine-Tuning**
+What it does: Uses LoRA/SFT or preference training primarily to stabilize behaviors such as memory use, contradiction repair, uncertainty, affect expression, and interactional texture rather than merely increasing intelligence. 
+Ability: **Make architectural behaviors become model defaults rather than prompt-only instructions.**
+Implementation note: **Conflict.** Claude advises against tuning personality itself and favors tuning memory integration/reflection; Gemini treats persona SFT as essential; OpenAI recommends scaffolding first and tuning later for behavioral stability.  
+Status: **Useful capability; timing/scope unresolved.**
+
+**Longitudinal Drift Evaluation**
+What it does: Evaluates contradiction rate, autobiographical consistency, affect appropriateness, uncertainty calibration, identity stability, and recovery after inconsistency over many sessions rather than judging a few impressive exchanges. 
+Ability: **Detect coherence failures that only appear over time.**
+Status: **Recommended evaluation mechanism.**
+
+**Module Ablation Testing**
+What it does: Temporarily removes or freezes individual mechanisms—reflection, memory hierarchy, emotion state, etc.—to determine what is actually producing observed behavior. 
+Ability: **Distinguish genuinely useful cognitive mechanisms from architectural theater.**
+Status: **Research/evaluation suggestion.**
+
+### Portable ability list
+
+* Specialized Cognitive Orchestration
+* Single Surface Voice
+* Structured Perception
+* Layered Identity
+* Decision-Pattern Identity
+* Explicit Self-Model
+* Persistent Cognitive-Affective State
+* Affective Inertia
+* Temperament-Based Appraisal
+* Homeostatic Drives
+* Emotional Negative Space
+* Multi-Timescale Context
+* Session Continuity Bridge
+* Structured Memory Extraction
+* Knowledge–Autobiography Separation
+* Selective Meaning Crossover
+* Activation-Based Retrieval
+* Associative Memory Spreading
+* Temporal/Causal Memory Linking
+* Controlled Forgetting
+* Memory Consolidation
+* Memory Replay
+* Hybrid Retrieval
+* Retrieval Reranking
+* Retrieval Restraint
+* Imperfect / Shadowed Recall
+* Confidence-Calibrated Recollection
+* Narrative Memory Reconstruction
+* Contradiction Reconciliation
+* Latent Self-Compression
+* Narrative Anchoring
+* Identity Resistance
+* Memory-Growth Control
+* Cognitive Load Limiting
+* Attention Budgeting
+* Delayed Understanding
+* Runtime Self-Consistency
+* Private Reflective Cognition
+* Conditional Deep Reflection
+* Deliberate Conversational Omission
+* Natural Memory Integration
+* Micro-Uncertainty
+* Asynchronous Memory Maintenance
+* Identity-First Context Assembly
+* Behavioral Fine-Tuning
+* Longitudinal Drift Detection
+* Module Ablation Testing

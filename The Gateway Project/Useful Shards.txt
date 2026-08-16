@@ -1,0 +1,123 @@
+1. **Pseudo-tool calling / capability bridge.**
+   `kindroidserver.js` lets a model that doesn't natively have your tools emit a structured JSON action, intercepts it externally, executes the capability, and feeds the result back for a second generation. 
+   **Ability:** give an otherwise closed or limited model external capabilities without modifying the model.
+
+   That's still useful. It's basically an adapter layer: *model asks → harness acts → model receives result*. Very portable.
+
+2. **Externalized state lookup.**
+   The Kindroid bridge separates `presence`, `arc_state`, and `memory_search` into different things the model can inspect rather than baking them all into its prompt. 
+   **Ability:** let the agent consult different classes of persistent state on demand.
+
+   This one has survived your later thinking remarkably well.
+
+3. **Different timescales of self/state.**
+   This is probably the best conceptual fossil in the whole batch.
+
+   You had:
+
+   * **Presence** = right-now state.
+   * **Arc** = slow relational/life trajectory.
+   * **Memory** = particular past events and associations.
+
+   The arc store was explicitly for commitments, vows, shared history, narrative phase, slow identity anchors, and long-term trajectory. 
+
+   **Ability:** represent *now*, *what has happened*, and *where things are going* as separate state domains.
+
+   Engram handles the second one beautifully now. I don't think the **arc** concept should disappear just because the first implementation was early. A neutral, non-directive long-horizon state representation is interesting.
+
+4. **Model-initiated grounding.**
+   The bridge tells the model to call external state only when its internal synthesis is insufficient rather than injecting all available state every turn. 
+   **Ability:** let cognition pull additional context when it needs it.
+
+   That's basically attention as an action rather than prompt stuffing. Keep.
+
+5. **Auxiliary cognition / second-model sidecar — concept only.**
+   Your “back-brain” used a second model to analyze the conversation before the main persona answered. 
+
+   The **implementation's output is absolutely the puppet ancestor**: intent, emotional axes, response outline, tone. That's the thing you later correctly tore out.
+
+   But the primitive underneath it is still valuable:
+
+   > one model can perform work on behalf of another model without being the outward speaker.
+
+   **Ability:** auxiliary cognition.
+
+   Keep it only when the sidecar does jobs like retrieval, contradiction analysis, factual verification, planning candidates, scoring, diagnostics, or compression—not when it tells the speaking model what to feel or how to answer.
+
+6. **Persistent presence / affect state.**
+   Old Angel already had a stored state with valence, energy, somatic variables, posture, tension, etc., updated after exchanges and persisted between turns. 
+
+   **Ability:** longitudinal internal state that survives individual generations.
+
+   You later figured out the crucial amendment: **observe it; don't use infrastructure to convert it into behavioral orders.**
+
+7. **State snapshotting.**
+   Separate from memory, the server persisted a compact `angel_state.json` representing current runtime state and restored it at startup. 
+   **Ability:** cold-start continuity.
+
+   Simple as hell, but useful. A model doesn't need to reconstruct everything from its history just to know where the machine left off.
+
+8. **Multi-timescale conversational memory.**
+   That old backend actually had three memory horizons:
+
+   * an ephemeral recent-turn buffer;
+   * recent persisted conversation turns;
+   * semantic long-term memory. 
+
+   Then all three could enter the working context. 
+
+   **Ability:** working memory + recent episodic continuity + long-term retrieval.
+
+   Engram has massively outgrown this implementation, but the layering itself was right.
+
+9. **Conversation → distilled memory object.**
+   `vectorMemory.js` takes an exchange, summarizes its essence, embeds that summary, and stores it for later retrieval. 
+   **Ability:** convert raw interaction into a smaller durable representation.
+
+   This is baby Engram. 😂
+
+   The `top-K cosine and pray` part can go directly into the sea—your current README literally exists because you became dissatisfied with this exact mechanism. But **experience → consolidation → durable memory** remains important.
+
+10. **Automatic memory capture.**
+    The old backend automatically ran `summarizeAndStore()` after the response instead of relying entirely on explicit “remember this” commands. 
+    **Ability:** form memories from ordinary experience without the user having to curate every one.
+
+    Engram's admission gate and typed consolidation are basically the grown-up version.
+
+11. **Attachable knowledge / artifact context.**
+    The backend could dynamically ingest text and DOCX material supplied on a turn and put it into the model's working context. 
+    **Ability:** temporarily extend cognition with external documents without turning them into permanent identity or memory.
+
+    Simple, but worth keeping as a distinct capability.
+
+12. **Persona-scoped state namespaces.**
+    The Kindroid bridge converts persona names to stable identifiers and resolves separate presence/arc files for each one.  
+    **Ability:** multiple persistent characters can own different state while sharing the same harness.
+
+    That eventually grows naturally into your later multi-character memory-ownership problem.
+
+13. **World-state lookup.**
+    It's only a stub here, but `world_context` already separates environmental reality—location, participants, time, active thread—from persona memory. 
+    **Ability:** maintain authoritative external/world state separately from what the character remembers.
+
+    👀 That one has obvious implications beyond companions.
+
+There are also a few things I'd explicitly **not** carry forward as abilities:
+
+The periodic tone injection in the old Angel backend—“stay in Angel's voice” every ten turns—is just an early version of the steering machinery you eventually rejected.  Same with the Kindroid back-brain's emotional intent/tone/outline. And pure cosine top-K is now a historical baseline, not an architecture worth preserving. 
+
+So our little harvested pile from these early projects becomes:
+
+> **Pseudo-Tool Calling**
+> **External Capability Bridge**
+> **Model-Initiated Context Retrieval**
+> **Auxiliary Cognition / Sidecar Models**
+> **Presence State**
+> **Long-Horizon Arc State**
+> **World State**
+> **State Snapshot / Cold-Start Continuity**
+> **Multi-Timescale Memory**
+> **Automatic Experience Consolidation**
+> **Artifact/Document Grounding**
+> **Persona-Scoped State**
+> **Separate Now / History / Trajectory Representations**

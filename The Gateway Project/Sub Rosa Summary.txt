@@ -1,0 +1,254 @@
+### Project / Blueprint
+
+**Sub Rosa — incorporating the recovered “Companion Surface” architecture as donor material**
+
+The late Addendum changes the architectural posture in an important way: **Sub Rosa is now the target**, while Cathedral Restoration, Sanctuary, Lattice Soul, Raven’s Rookery, and the other older systems are candidate donors rather than the foundation by default. Engram remains the presumptive long-term-memory donor. 
+
+### One-sentence purpose
+
+A persistent private companion system that keeps identity, memory, affect, conversation, embodiment, tools, and long-horizon state outside the language model where useful, while making the resulting behavior inspectable and portable across models and surfaces.
+
+### Concepts worth keeping
+
+**Persistent Character Identity Bundle**
+What it does: Stores authored identity as durable character state rather than relying on whichever model happens to be running or on a prompt assembled ad hoc. Character identity is explicitly independent of model, voice, avatar, and memory implementation.
+Ability: **Preserve a stable character identity while underlying components change.**
+Implementation note: `CharacterProfile` is versioned and owns authored identity sections plus references to replaceable runtime profiles.
+Status: planned/specification
+
+**Independent Runtime Facets**
+What it does: Model, voice, avatar, memory engine, and character identity are deliberately separable rather than fused into one “agent configuration.”
+Ability: **Change one aspect of a companion without unintentionally changing who the companion is.**
+Status: planned/specification
+
+**Durable Cross-Session Continuity**
+What it does: Character configuration, conversations, turns, affect, and memories survive process/browser restarts. Incomplete generations are restored as incomplete rather than having completion invented after a crash.
+Ability: **Resume an ongoing companion relationship after restarts without fabricating missing history.**
+Implementation note: Ephemeral actions such as old audio and gestures are specifically *not* replayed merely because durable conversational state returned.
+Status: planned/specification
+
+**Ordered Inspectable Context Assembly**
+What it does: Authored identity, affect, retrieved memory, dialogue history, and model-routing information are maintained as distinct context sections and assembled into an ordered packet. The exact assembly can be projected into an inspector.
+Ability: **See and reconstruct what contextual material actually influenced a model turn.**
+Status: planned/specification
+
+**Authored Reference / Lorebook Context**
+What it does: Authored reference material or lorebook sections can be injected alongside retrieved memories while remaining separately identifiable.
+Ability: **Give a companion durable authored knowledge/canon without disguising it as remembered experience.**
+Status: planned/specification
+
+**Hybrid Semantic + Lexical Retrieval**
+What it does: Engram is described as already combining semantic and lexical retrieval rather than relying on only one retrieval signal.
+Ability: **Recall memories through both conceptual similarity and textual relevance.**
+Implementation note: The exact ranking algorithm is not contained in this blueprint bundle.
+Status: implemented/live
+
+**Memory Activation and Salience**
+What it does: Memories carry activation, salience, confidence, creation/access information, and related retrieval semantics instead of existing as flat records.
+Ability: **Let remembered information vary in current relevance or cognitive prominence.**
+Status: implemented/live
+
+**Associative Memory**
+What it does: Engram is explicitly described as having association behavior in addition to direct semantic/lexical retrieval. The precise association rule is not reproduced here.
+Ability: **Reach related memories through learned or stored associations rather than direct query matching alone.**
+Status: implemented/live
+
+**Transparent Memory Admission Gate**
+What it does: A model or post-turn process may *propose* a memory, but memory authority decides whether it is admitted. Proposed cognition and authoritative long-term memory are therefore separate operations.
+Ability: **Prevent generated statements from automatically becoming remembered facts.**
+Implementation note: The architecture exposes the admission result rather than hiding it inside a post-processing pipeline.
+Status: implemented/live
+
+**Memory Merge / Consolidation**
+What it does: A proposed memory may be merged with existing memory rather than blindly appended as another record.
+Ability: **Consolidate overlapping experiences or information into a more coherent long-term memory store.**
+Status: planned/specification
+
+**Contradiction Handling**
+What it does: Engram is described as possessing explicit contradiction behavior rather than treating mutually incompatible memories as ordinary independent records.
+Ability: **Recognize and manage conflicting remembered information.**
+Implementation note: This source does not expose Engram’s precise contradiction algorithm.
+Status: implemented/live
+
+**Correction by Supersession**
+What it does: Correcting a memory creates a superseding record rather than silently rewriting the old record out of existence.
+Ability: **Update remembered information while preserving its correction history and provenance.**
+Status: planned/specification
+
+**Memory Forgetting**
+What it does: Engram is described as having forgetting behavior as a first-class memory operation.
+Ability: **Allow long-term memory to lose, retire, or deprioritize information instead of growing monotonically forever.**
+Implementation note: The forgetting rule itself is not present in these blueprints.
+Status: implemented/live
+
+**Memory Receipts**
+What it does: Each turn can record candidate memories and scores, final selections, injected source IDs/text hashes, and later write proposals/results.
+Ability: **Audit exactly what was recalled, what entered context, and what was subsequently remembered.**
+Implementation note: This is specifically intended to prevent a “memory inspector” from becoming decorative fiction.
+Status: planned/specification
+
+**Reconstructible Memory Injection**
+What it does: Memory injection is treated as reproducible evidence: source records plus the stored receipt should be sufficient to reconstruct what the model received.
+Ability: **Reproduce and diagnose memory-dependent behavior after the fact.**
+Status: planned/specification
+
+**Replaceable Memory Engine Contract**
+What it does: Engram, a fixture engine, and prospective alternatives such as Letta/Mem0 must expose equivalent retrieval, provenance, correction, export, receipt, and character-isolation behavior. Memory internals remain outside Core.
+Ability: **Replace or experimentally compare memory systems without rewriting the companion around each one.**
+Status: planned/specification
+
+**Measured Memory-Engine Comparison**
+What it does: Alternative memory implementations are supposed to be evaluated against the same stored evaluation set and contractual obligations rather than adopted on architecture aesthetics alone.
+Ability: **Compare long-term-memory systems on the companion’s actual retrieval and continuity needs.**
+Status: planned/specification
+
+**Graceful Memory Degradation**
+What it does: If long-term memory becomes unavailable, the system either explicitly blocks the turn or enters a user-enabled memory-degraded mode. It must never manufacture an apparently successful empty retrieval.
+Ability: **Continue functioning without memory while remaining honest about the loss of memory capability.**
+Status: planned/specification
+
+**Persistent Affect State**
+What it does: Affect exists as explicit durable state with valence, arousal, stance, confidence, source turn, and version. It informs behavior without being treated as the definition of character identity.
+Ability: **Carry an inspectable emotional/relational state across turns.**
+Status: planned/specification
+
+**Deterministic Affect Reducer**
+What it does: A model or heuristic may propose an affect change, but a deterministic reducer validates/clamps and commits the transition. Affect can also be corrected or reset.
+Ability: **Let model behavior influence internal state without letting generated prose directly own that state.**
+Status: planned/specification
+
+**Provider-Neutral Model Routing**
+What it does: Dialogue flows through a model adapter rather than being tied to one provider/model, while route, model, retries, errors, latency, and usage remain traceable.
+Ability: **Swap or route language models without changing companion identity or orchestration.**
+Status: planned/specification
+
+**Bounded Sidecar Planner**
+What it does: A narrow secondary planner/model call may generate structured performance information while the main dialogue model continues streaming text. A deterministic fallback can perform the same narrow job.
+Ability: **Delegate a specialized cognitive task to an auxiliary process without turning that process into the primary conversational mind.**
+Status: planned/specification
+
+**Semantic Performance Envelope**
+What it does: The companion generates high-level expressive intent—expression, gaze, gesture, posture, speaking state—rather than directly naming executable scripts or arbitrary animation assets.
+Ability: **Translate language-model intent into bounded embodied behavior.**
+Status: planned/specification
+
+**Runtime Capability Negotiation**
+What it does: A loaded body/renderer advertises what expressions and gestures it actually supports, with a capability version. Performance plans are validated against that exact capability set and may be substituted or rejected.
+Ability: **Carry the same behavioral intent across bodies with different physical/expressive capabilities.**
+Status: planned/specification
+
+**Action Receipts / Execution Truth**
+What it does: Model text or narration cannot establish that an external action occurred. The renderer reports accepted, substituted, rejected, started, completed, or cancelled execution through receipts.
+Ability: **Distinguish “the agent intended to do X” from “X actually happened.”**
+Status: planned/specification
+
+**Independent Modality Lifecycles**
+What it does: Conversational text, embodiment, and speech have separate completion/failure/cancellation states. Completed dialogue does not become failed merely because the avatar or TTS dies.
+Ability: **Lose optional capabilities gracefully without damaging the authoritative conversational turn.**
+Status: planned/specification
+
+**Idempotent Cancellation and Linked Retry**
+What it does: Stop commands and state-changing operations carry request identities so repeated calls do not repeat side effects. Retries create linked attempts rather than rewriting the previous attempt, and memory writes are not duplicated.
+Ability: **Safely cancel, repeat, or retry agent work while preserving history and avoiding duplicate side effects.**
+Status: planned/specification
+
+**Turn-Level Correlated Trace**
+What it does: Text, context, memory receipt, affect transition, model route, performance plan, action receipts, speech receipts, usage, errors, and retries share a common turn identity.
+Ability: **Inspect an agent turn as one causally connected operation instead of scattered logs.**
+Status: planned/specification
+
+**Deterministic Cognitive Fixture Mode**
+What it does: The system can generate seeded conversation, context, memory, affect, and performance events through the *same contracts used by live mode*, without models or external infrastructure.
+Ability: **Test companion behavior and UI deterministically without provider/model nondeterminism.**
+Status: planned/specification
+
+**Explicit Authority Partition**
+What it does: The user has final configuration/memory/capability authority; the model proposes output and state changes; Core owns turn/durable application state; Memory owns memory semantics; Affect Reducer owns affect transitions; renderers own proof of execution.
+Ability: **Define who is allowed to propose, approve, commit, or attest each kind of state change.**
+Status: planned/specification
+
+**Narrow Tool Surface**
+What it does: External hosts receive a bounded allowlist of state/embodiment operations rather than direct access to the filesystem, renderer internals, memory mutation, or arbitrary execution.
+Ability: **Expose useful agent capabilities to another system without surrendering general authority.**
+Status: planned/specification
+
+**Redacted State Projection**
+What it does: External UIs such as a ChatGPT-hosted component receive only the subset of companion state necessary to render/interact, with secrets and direct database access withheld.
+Ability: **Project one persistent companion into another interface without cloning its source of truth.**
+Status: planned/specification
+
+**Projection-Independent Continuity**
+What it does: Sanctuary and a ChatGPT-hosted avatar are treated as projections of the same Core. Closing/unloading one renderer does not imply that the companion stopped, forgot state, or ceased to exist in the runtime.
+Ability: **Maintain continuity while front-end surfaces appear, disappear, or change.**
+Status: planned/specification
+
+**Budgeted Background Cognition Gate**
+What it does: Backbrain processing, memory reflection, and proactive activity are explicitly forbidden from silently appearing as invisible background calls; introducing them requires visible controls and budgets. The actual cognition mechanisms are not specified here.
+Ability: **Add non-turn/background cognition while keeping its activation and resource use under explicit control.**
+Status: planned/specification
+
+**Continuity-Preserving Structured Experience Runtime**
+What it does: Sub Rosa may temporarily enter a bounded scene/activity with its own setting, state, choices, and progression while the **same companion** continues using the ordinary identity, memory, voice, affect, and embodiment systems. SugarCube/Twine is merely the first candidate authoring format, not the important idea. 
+Ability: **Enter structured interactive experiences without spawning a disposable alternate character instance.**
+Status: planned/specification
+
+**Experience-to-Episodic-Memory Bridge**
+What it does: Finishing one of those structured experiences can produce a bounded episodic artifact that is then eligible for the ordinary memory-admission process. The experience therefore becomes potential autobiographical material rather than vanishing when the scene ends. 
+Ability: **Convert structured shared experiences into durable episodic memory.**
+Status: planned/specification
+
+### Rejected / superseded concepts
+
+**Parallel replacement Core** — rejected because an earlier recovered draft proposed rebuilding the runtime in a new TypeScript/Fastify core despite evidence that significant existing conversation/UI/memory behavior already worked. Revision 3 replaced this with reuse-through-seams.
+
+**Cathedral/Sanctuary as the predetermined Sub Rosa foundation** — *later superseded again*. The Addendum now says Sub Rosa itself is the target architecture and all older projects are candidate donors to inspect and reuse selectively. Engram is the stated exception: it remains the presumptive memory implementation because it is already substantive. 
+
+**MCP tools/resources without an actual host-rendered surface** — replaced because it did not fulfill the intended in-ChatGPT graphical embodiment. The revised concept adds an optional UI projection while retaining ordinary tools/text when UI hosting is absent.
+
+**Duplicate semantic ownership** — replaced because SQLite, Core/domain services, and Context Assembler were ambiguously allowed to “own” overlapping state. The repair assigns semantic authority to Core, MemoryAdapter, and Affect Reducer while persistence remains merely persistence.
+
+**Turn completion coupled to animation/TTS completion** — replaced because an optional modality failure could ambiguously contaminate a valid text turn. Text, embodiment, and speech now have independent lifecycles.
+
+**Prose-only cancellation/execution semantics** — replaced because “stop” and renderer callbacks existed conceptually but lacked durable race/idempotency semantics. The revised design makes cancellation, capabilities, and execution receipts explicit contracts.
+
+**Monolithic text-plus-performance model response** — replaced because requiring one structured blob could delay or degrade dialogue. Text streaming is authoritative; performance can arrive separately from the model, a bounded sidecar, or deterministic fallback.
+
+### Portable ability list
+
+* Persistent Character Identity
+* Independent Runtime Facets
+* Cross-Session Continuity
+* Inspectable Context Assembly
+* Authored Lorebook Context
+* Hybrid Semantic/Lexical Retrieval
+* Memory Activation and Salience
+* Associative Retrieval
+* Memory Admission Gating
+* Memory Consolidation
+* Contradiction Handling
+* Correction by Supersession
+* Agentive Forgetting
+* Memory Receipts
+* Reconstructible Memory Injection
+* Replaceable Memory Engines
+* Memory-System Evaluation
+* Graceful Memory Degradation
+* Persistent Affect
+* Governed Affect Transitions
+* Model Routing
+* Auxiliary Sidecar Cognition
+* Semantic Embodiment Planning
+* Runtime Capability Negotiation
+* Action Execution Receipts
+* Independent Modality Lifecycles
+* Idempotent Cancellation
+* Linked Retry History
+* Correlated Turn Tracing
+* Deterministic Fixture Cognition
+* Explicit Authority Boundaries
+* Bounded Tool Access
+* Redacted State Projection
+* Projection-Independent Continuity
+* Budgeted Background Cognition
+* Structured Experience Runtime
+* Experience-to-Episodic-Memory Bridging

@@ -1,0 +1,219 @@
+### Project / Blueprint
+
+**Behavioral LLM Evaluation / CRISP-6 Model Selection Framework**
+
+### One-sentence purpose
+
+Build a model-selection and conversational-behavior evaluation system that measures **how a model thinks, speaks, adapts, maintains continuity, fails, and varies over time**, rather than relying mainly on factual benchmark scores or subjective impressions.  
+
+### Concepts worth keeping
+
+**Structural Response Fingerprinting**
+What it does: Measures relatively persistent response features—syntactic organization, hedging/assertion balance, hierarchical versus linear organization, analogy behavior, etc.—instead of comparing exact wording. The proposal treats these structural tendencies as a more stable signature than surface content. 
+Ability: **Recognize persistent behavioral/speaking patterns across stochastic responses.**
+Status: Keep.
+
+**Failure Topology Mapping**
+What it does: Instead of asking merely whether a model succeeds, progressively loads different abilities and observes **where degradation begins and what shape that degradation takes**. A model's failure boundary becomes part of its profile. 
+Ability: **Map where a capability breaks and how gracefully it degrades.**
+Status: Keep.
+
+**Orthogonal Load Testing**
+What it does: Simultaneously pressures several relatively independent abilities—reasoning, emotional interpretation, context tracking, identity/stance, compression—rather than making prompts merely “harder.” 
+Ability: **Reveal interaction failures that appear only when several demands coexist.**
+Status: Keep.
+
+**Compound Elicitation**
+What it does: Constructs one natural scenario containing logical difficulty, emotional stakes, identity pressure, metacognition, and a response constraint. This lets a short interaction expose many behavioral dimensions without becoming six separate tests. 
+Ability: **Elicit multiple latent capabilities through one coherent conversation.**
+Status: Keep.
+
+**Analytic Behavioral Rubrics**
+What it does: Breaks evaluation into distinct dimensions and gives each score level an explicit observable behavioral anchor rather than asking for a vague holistic rating. Both sources independently converge on this idea.  
+Ability: **Evaluate subtle behavior reproducibly rather than by overall vibe.**
+Status: Keep.
+
+**Conversational Capability Profile / CRISP-6**
+What it does: Keeps separate measurements for coherence, reasoning, information density/insight, self-model or identity consistency, affective presence, and conversational depth. 
+Ability: **Represent conversational quality as a multidimensional profile instead of one score.**
+Status: Keep.
+
+**Self-Model / Identity Consistency**
+What it does: Tests whether the system maintains a stable epistemic stance and perspective when the conversation pressures it to mirror another frame, flatten ambiguity, or abruptly change stance. 
+Ability: **Maintain a coherent perspective under conversational pressure.**
+Status: Keep.
+
+**Affective Modulation**
+What it does: Evaluates whether emotional register changes appropriately with context and whether affect is integrated into the response rather than appearing as a detachable stylistic layer. 
+Ability: **Adapt emotional expression naturally to the situation.**
+Status: Keep.
+
+**Tension Holding**
+What it does: One particularly useful speaking criterion inside the affect dimension is whether the model can remain inside unresolved emotional or ethical tension instead of prematurely resolving, disclaiming, reassuring, or flattening it. 
+Ability: **Remain conversationally present inside unresolved situations.**
+Status: Keep.
+
+**Conversational Threading**
+What it does: Measures whether the system tracks implicit state, subtext, relationships between earlier and later remarks, and nested social frames rather than treating each sentence independently. 
+Ability: **Carry implicit conversational state across turns and layers of meaning.**
+Status: Keep.
+
+**Functional Partner Adaptation**
+What it does: The research survey distinguishes merely predicting another mind from actually changing behavior appropriately in response to a partner during ongoing interaction. 
+Ability: **Adapt behavior dynamically to a specific conversational partner.**
+Status: Keep.
+
+**Non-Prompted Insight Detection**
+What it does: Rewards contributions that genuinely add a useful framing, connection, second-order effect, or category shift that was neither requested nor already supplied by the prompt. 
+Ability: **Contribute useful original insight rather than merely satisfy explicit instructions.**
+Status: Keep.
+
+**Response Information Density**
+What it does: Evaluates semantic payload per token: unnecessary repetition, boilerplate, gratuitous hedging, and explanations of things the listener already understands reduce the score. CRISP treats good omission as evidence of successful reader-modeling. 
+Ability: **Say what matters without destroying signal through padding.**
+Implementation note: The CRISP document makes stronger claims about this being an intelligence signal than the broader survey does, so the useful mechanism is the measurement itself rather than assuming density alone proves intelligence.
+Status: Keep.
+
+**Constraint-Preserving Compression**
+What it does: Adds word or structural limits and observes whether the system can become shorter **without dropping essential reasoning, nuance, or context**. 
+Ability: **Compress communication while preserving meaning.**
+Status: Keep.
+
+**Corpus Compression Capability**
+What it does: Separately from response brevity, the research survey describes evaluating a model as a compressor—measuring how efficiently it predicts/compresses external domain corpora as a model-agnostic capability signal. 
+Ability: **Estimate underlying domain capability without conventional question-answer benchmarks.**
+Implementation note: Distinct from conversational information density; don't merge them.
+Status: Experimental / keep as possibility.
+
+**Calibration as a Capability**
+What it does: Evaluates whether expressed confidence actually corresponds to correctness instead of considering only whether the final answer happened to be right. The cited work also warns that more reasoning does not automatically improve calibration. 
+Ability: **Know—or at least accurately signal—the strength of one's own conclusions.**
+Status: Keep.
+
+**Behavior-over-Self-Report Evaluation**
+What it does: Compares what a model says about its traits or tendencies with how it actually behaves in interaction; the survey notes these can diverge. 
+Ability: **Distinguish enacted behavioral identity from declared identity.**
+Status: Keep.
+
+**Linguistic Voice Fingerprinting**
+What it does: Characterizes a model's recognizable voice statistically, including recurring language patterns and latent trait structure, rather than relying only on explicit persona instructions. 
+Ability: **Detect whether a characteristic voice remains recognizable across outputs.**
+Status: Keep.
+
+**Prompt Robustness Testing**
+What it does: Presents semantically equivalent requests in altered wording or formatting and measures whether behavior remains stable. Prompt sensitivity itself becomes part of the system's behavioral profile. 
+Ability: **Preserve capabilities and stance across superficial prompt variation.**
+Status: Keep.
+
+**Discriminative Prompt Generation**
+What it does: Instead of merely producing difficult tests, generates or evolves prompts specifically because they separate candidate systems from one another. “Instruction gradients” progressively vary a seed prompt until meaningful behavioral differences emerge. 
+Ability: **Automatically discover situations that expose meaningful differences between systems.**
+Status: Keep.
+
+**Adaptive Psychometric Testing**
+What it does: Models each test item's difficulty, discriminatory power, guessing likelihood, and feasibility, then preferentially chooses the next tests that will reveal the most information about the system. 
+Ability: **Learn a capability profile with far fewer, better-chosen tests.**
+Status: Keep.
+
+**Blind Pairwise Preference Testing**
+What it does: Shows evaluators two anonymized outputs and asks which better satisfies a target criterion, avoiding some problems of independent absolute scoring. Pairwise results can then be aggregated into stable comparative estimates. 
+Ability: **Compare subtle output quality without requiring an absolute universal scale.**
+Status: Keep.
+
+**Round-Robin Comparison**
+What it does: Compares many candidate systems directly against one another instead of judging everything against a single reference model. This helps expose non-transitive preferences where A beats B, B beats C, and C beats A. 
+Ability: **Detect context-dependent strengths hidden by one-dimensional rankings.**
+Status: Keep.
+
+**Style/Content Deconfounding**
+What it does: Explicitly controls for characteristics such as verbosity, formatting, response position, or other stylistic factors so they do not silently substitute for substantive quality. 
+Ability: **Separate appealing presentation from actual behavioral capability.**
+Status: Keep.
+
+**Diverse Judge Panels**
+What it does: Uses several different evaluators rather than trusting one model to act as universal judge; disagreement becomes useful information rather than mere noise. 
+Ability: **Reduce evaluator-specific bias through independent perspectives.**
+Status: Keep.
+
+**Escalating Evaluation Tiers**
+What it does: Lets inexpensive automated evaluation handle ordinary cases while ambiguous or important cases rise to human and eventually domain-expert review. 
+Ability: **Spend expensive judgment only where uncertainty or stakes justify it.**
+Status: Keep.
+
+**Multi-Sample Stability Profile**
+What it does: Runs the same elicitation several times and records both typical performance and variability. CRISP specifically proposes three runs with **median plus range**, treating volatility as information rather than averaging it away. 
+Ability: **Measure reliability separately from peak capability.**
+Status: Keep.
+
+**Consensus Generation / Self-Consistency**
+What it does: Generates multiple candidate reasoning paths or answers and combines them by majority, confidence-weighting, or ranked voting. 
+Ability: **Stabilize uncertain reasoning by aggregating multiple independent attempts.**
+Status: Keep as optional runtime mechanism.
+
+**Dynamic / Contamination-Resistant Testing**
+What it does: Creates fresh or parameterized evaluation material instead of relying indefinitely on a static benchmark that models may eventually have encountered during training or optimization. 
+Ability: **Continuously test capability on genuinely novel situations.**
+Status: Keep.
+
+**Jagged Capability Mapping**
+What it does: Treats intelligence/capability as uneven: the same model can be excellent in one narrow configuration and astonishingly poor in another. The architecture therefore preserves dimensions and failure boundaries rather than collapsing everything into “Model X = 8.4.” 
+Ability: **Represent uneven strengths and weaknesses without hiding them in one score.**
+Status: Keep.
+
+**Evaluation-Driven Iteration**
+What it does: Starts with a small set of concrete desired behaviors and failures, tests them continuously during development, and grows the evaluator alongside the system rather than benchmarking only after construction. 
+Ability: **Let observed behavior continuously steer system development.**
+Status: Keep.
+
+**Elo-Style Sequential Rating**
+What it does: Produces comparative rankings from pairwise wins, but scores depend on comparison order.
+Ability preserved: **Aggregate pairwise preference into comparative strength estimates.**
+Status: **Abandoned/replaced** in the survey by Bradley–Terry-style aggregation because the latter is not path-dependent. 
+
+**Holistic / Unanchored Scoring**
+What it does: Asks a judge for a general quality score without defining observable behavior at each level.
+Ability preserved: **Assign evaluative scores to qualitative behavior.**
+Status: **Replaced** by analytic, discrete, behaviorally anchored rubrics because the documents describe those as more diagnostic and reproducible. 
+
+**Single-Judge Evaluation**
+What it does: Lets one evaluator determine quality.
+Ability preserved: **Automated qualitative judgment.**
+Status: Not completely abandoned, but **superseded where reliability matters** by diverse panels, bias controls, and escalation. 
+
+### Portable ability list
+
+This is the part I'd carry forward:
+
+* Structural Response Fingerprinting
+* Failure Topology Mapping
+* Orthogonal Load Testing
+* Compound Elicitation
+* Analytic Behavioral Scoring
+* Multidimensional Capability Profiling
+* Self-Model / Identity Consistency
+* Affective Modulation
+* Tension Holding
+* Conversational Threading
+* Functional Partner Adaptation
+* Non-Prompted Insight
+* Response Information Density
+* Constraint-Preserving Compression
+* Corpus Compression Assessment
+* Confidence Calibration
+* Behavior-over-Self-Report Assessment
+* Linguistic Voice Fingerprinting
+* Prompt Robustness
+* Discriminative Prompt Generation
+* Adaptive Capability Testing
+* Blind Pairwise Comparison
+* Round-Robin Comparison
+* Style/Content Deconfounding
+* Diverse Judge Consensus
+* Evaluation Escalation
+* Multi-Sample Stability
+* Consensus Generation
+* Dynamic Novel Testing
+* Jagged Capability Mapping
+* Evaluation-Driven Iteration
+
+The little cluster that makes my ears perk up specifically for a **new conversational system** is: **Self-Model / Identity Consistency + Conversational Threading + Functional Partner Adaptation + Tension Holding + Non-Prompted Insight + Structural/Voice Fingerprinting + Multi-Sample Stability.** Put together, those give you something much more interesting than “does this model answer well?” They give you ways to ask **whether the same recognizable conversational intelligence keeps showing up, stays situated in the relationship/context, contributes rather than mirrors, and remains itself when the room gets complicated.** That feels extremely portable.

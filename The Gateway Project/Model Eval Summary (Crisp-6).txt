@@ -1,0 +1,43 @@
+### CRISP-6 — Model Capability Evaluation Harness
+
+**What it does**
+Evaluates candidate models across six independent dimensions: coherence, reasoning, information density/novel contribution, epistemic/self-model stability, emotional integration, and conversational depth. Tests use compound prompts designed to load several capabilities simultaneously rather than isolated trivia benchmarks.  
+
+**Ability:** Compare models by the *shape of their capabilities*, not merely a single overall score.
+
+**Repeated-Sampling Evaluation**
+Run the same prompt three times under identical settings and retain both median performance and response range. Variability is treated as meaningful information: a reliably-good model and an occasionally-brilliant/occasionally-bad model are different things.  
+
+**Ability:** Measure behavioral reliability separately from peak capability.
+
+**Blind Dimension-by-Dimension Scoring**
+Hide model identity and score one capability across all candidate responses before moving to the next capability, reducing halo and brand/model bias. 
+
+**Ability:** Compare models with reduced evaluator bias.
+
+**Evidence-Grounded LLM Grading**
+A separate model can act as evaluator, but must justify every score using passages from the response and an explicit rubric/quick test. A tested model should never grade itself.  
+
+**Ability:** Automate qualitative model evaluation while retaining an auditable reason for each score.
+
+**Evaluator Calibration**
+Use multiple independent scorers on shared samples and measure agreement. Poor agreement identifies rubric dimensions that need refinement rather than pretending the scores are objective. 
+
+**Ability:** Detect when the evaluation system itself is unreliable.
+
+**Profile-First Selection**
+Keep individual dimension scores and anomalies rather than relying solely on the composite. Different applications can therefore select different models—for example, one model for reasoning and another for relational/dialogue work. The scoring sheet explicitly notes that split profiles can be more informative than composite scores.  
+
+**Ability:** Route work according to specific model strengths instead of choosing one universally “best” model.
+
+There are only **three things I’d scribble in the margin before we archive it**.
+
+First, rename **“Intelligence” → “Information Density / Insight.”** That is what the rubric actually measures. Calling it intelligence creates a much bigger philosophical claim than the instrument supports. The scoring sheet itself defines it as “semantic payload per token.” 
+
+Second, treat the little “quick tests” as **sanity checks, not measurements**. Counting implicit “therefores,” for example, can catch shallow answers, but a long chain of inference isn't automatically better reasoning. The surrounding rubric is considerably stronger than that shortcut. 
+
+Third, tighten a couple of rubric phrases that claim access to things an evaluator cannot actually observe—particularly “genuine self-reference” and whether an argument “doesn't exist in obvious training data.” What you *can* score is whether the response develops an internally grounded self-model or introduces a non-obvious structural argument. Same intended construct, less spooky measurement problem.  
+
+So my tiny carry-forward label for the collection would be:
+
+> **CRISP-6: Evaluation Harness** — A reusable model-comparison system using multidimensional capability profiles, repeated sampling, variance tracking, blind scoring, evidence-grounded judges, and evaluator calibration. Keep capability testing separate from behavioral/personality matching. Use profiles and consistency—not just composite scores—to choose or route models.

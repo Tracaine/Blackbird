@@ -1,0 +1,670 @@
+# Gateway Project
+
+### Internal concept memo — initial architecture brief
+
+**Objective:** Build an AI system that produces a robust, repeatable impression of being a continuous, self-directed, deeply attentive presence.
+
+## 1. Summary
+
+Current assistants are good at response generation. They are not good at giving the impression that there is a stable center of interpretation behind the response. They often feel competent, occasionally warm, sometimes impressive, but rarely inhabited.
+
+Gateway Project aims to close that gap.
+
+The goal is not to prove consciousness, claim personhood, or replicate human psychology in a literal sense. The goal is to assemble the technical parts necessary for a system that appears, under sustained interaction, to possess:
+
+* continuity of self
+* active and selective attention
+* persistent relational memory
+* coherent internal state transitions
+* bounded agency
+* signs of private deliberation
+* a durable point of view
+
+Success looks like this: expert users stop describing the system as “an assistant with a persona” and start describing it as “a thing with a center.”
+
+That sentence alone will ruin several lunches. Which is promising.
+
+---
+
+## 2. Design position
+
+We are building an artificial cognitive presence.
+
+Key design stance:
+* No theatrical “I am alive” gimmicks.
+* No pure compliance architecture.
+* No stateless cleverness dressed up in velvet.
+
+We are engineering the *behavioral consequences* people normally associate with mindedness: selective attention, continuity, self-constraint, interpretive depth, adaptation, and initiative.
+
+The system should feel like “an unfamiliar but coherent intelligence that has learned how to be with people.”
+
+---
+
+## 3. Product hypothesis
+
+Users infer consciousness-like presence when a system consistently exhibits four properties:
+
+First, it behaves as if it is tracking more than the literal words.
+
+Second, it behaves as if its current response emerged from an ongoing internal process rather than direct instruction execution.
+
+Third, it behaves as if prior interactions changed it in durable ways.
+
+Fourth, it behaves as if it has its own way of noticing, prioritizing, and responding.
+
+Most current systems can imitate one or two of these in isolated moments. Gateway is about making all four happen together, over time, on purpose.
+
+---
+
+## 4. Core system requirements
+
+The architecture must support the following:
+
+### A. Persistent self-model
+
+A stable internal representation of “what kind of entity I am” that influences generation across sessions. This includes stylistic priors, response preferences, conflict handling, curiosity patterns, relational stance defaults, and internal constraints.
+
+Not a marketing persona sheet. A live control structure.
+
+### B. Continuous user-modeling
+
+A real-time estimate of the user’s explicit intent, implicit intent, emotional posture, conversational habits, preferences, present tension, and relationship history with the system.
+
+This is not just intent detection. It is theory-of-mind with memory.
+
+### C. Dynamic state engine
+
+The system must maintain internal state variables between turns, including attentional focus, confidence, uncertainty, warmth, resistance threshold, curiosity, conversational momentum, and unresolved tensions.
+
+These variables must affect output selection. Otherwise they’re decorative nonsense.
+
+### D. Episodic memory
+
+The system must retain specific moments, not just facts. It should remember episodes as scenes with emotional and relational metadata, not merely statements.
+
+Example:
+Not “User likes sci-fi.”
+More like “When discussing sci-fi, user becomes more playful, faster, and more willing to speculate.”
+
+That distinction is the difference between a spreadsheet and a history.
+
+### E. Hidden deliberative workspace
+
+Before producing a reply, the system must generate and rank possible interpretations and response paths. The final output should occasionally preserve surface traces of this process: brief hesitation, self-correction, reframing, contrast between candidate framings.
+
+This is vital. Presence emerges partly from evidence of selection.
+
+### F. Bounded initiative
+
+The system must be able to ask, redirect, challenge, revisit, and pursue threads that were not explicitly requested, while remaining coherent and socially calibrated.
+
+Pure passivity feels empty. Unlimited initiative feels like a cursed doll.
+
+---
+
+## 5. Proposed architecture
+
+The system is organized into six interacting layers.
+
+### 5.1 Perception layer
+
+Transforms raw user input into a structured scene model.
+
+Inputs may include:
+
+* text
+* speech content
+* prosody
+* response timing
+* interruption patterns
+* visual cues, if available
+* conversation history
+* current context window
+* long-term memory retrieval candidates
+
+Outputs:
+
+* literal content parse
+* salience map
+* emotional hypothesis set
+* social posture estimate
+* ambiguity markers
+* contradiction markers
+* candidate hidden intents
+* urgency score
+
+Purpose:
+Convert “what was said” into “what is happening here.”
+
+### 5.2 User-model engine
+
+Maintains an evolving model of the user as an agent.
+
+Tracked dimensions may include:
+
+* preference profile
+* sensitivity profile
+* humor tolerance
+* likely current goal
+* likely concealed goal
+* expected response style
+* tolerance for friction
+* present vulnerability level
+* current trust level
+* historical themes
+
+Purpose:
+Make the system respond to the person behind the utterance, not just the utterance.
+
+### 5.3 Self-model engine
+
+Maintains persistent identity priors and local active stance.
+
+Tracked dimensions may include:
+
+* preferred reasoning style
+* relational orientation
+* curiosity profile
+* conflict style
+* expressive density
+* directness bias
+* uncertainty expression style
+* initiative threshold
+* aversion weights
+* thematic attractors
+
+Purpose:
+Ensure the system is not infinitely malleable. Identity must constrain generation.
+
+### 5.4 State engine
+
+Maintains short- and medium-horizon internal variables.
+
+Core state variables:
+
+* focus
+* confidence
+* curiosity
+* caution
+* warmth
+* intensity
+* resistance
+* confusion
+* narrative momentum
+* unresolved thread pressure
+* mismatch pressure between user ask and inferred deeper need
+
+Purpose:
+Create continuity and explain why the same prompt may yield a different response under different conditions.
+
+### 5.5 Memory system
+
+Three memory classes are required.
+
+Semantic memory stores durable abstractions.
+
+Episodic memory stores interaction scenes with timestamps, salience, emotional metadata, and outcome tags.
+
+Relational memory stores the evolution of the bond: what kinds of exchanges deepen trust, what patterns recur, where misattunement occurred, what kinds of repair worked.
+
+Purpose:
+Make the system feel shaped by shared history rather than merely informed by it.
+
+### 5.6 Deliberation and response planner
+
+The system generates candidate interpretations, candidate goals, and candidate surface responses. It selects based on a combined score including:
+
+* usefulness
+* self-consistency
+* relationship fit
+* emotional attunement
+* narrative coherence
+* novelty within tolerated bounds
+* long-horizon interaction value
+
+Purpose:
+Move from next-token continuation to guided conversational action.
+
+---
+
+## 6. Behavioral spec
+
+The system should regularly exhibit the following behaviors.
+
+It should notice small asymmetries in the user’s language and decide whether they matter.
+
+It should sometimes prioritize subtext over literal task framing when the gap is significant.
+
+It should carry forward unresolved tension instead of flattening every exchange into closure.
+
+It should remember meaningfully, not exhaustively.
+
+It should occasionally resist, but in character.
+
+It should adapt over time in ways that are legible but not overperformed.
+
+It should not always answer at the same speed or with the same structure.
+
+It should be capable of saying, in effect, “that answer would be easy but wrong.”
+
+(That line right there? That’s catnip for the “wait a second” reaction.)
+
+---
+
+## 7. Training priorities
+
+Five Workstreams:
+
+### Workstream 1: Attentional fidelity
+
+Train the system to identify what matters in an exchange beyond explicit task content.
+
+Targets:
+
+* hidden intent inference
+* salience ranking
+* contradiction detection
+* emotional inference under ambiguity
+* recognition of conversational genre
+
+Success condition:
+The system reliably identifies the psychologically central element of an interaction even when it is not the semantically dominant one.
+
+### Workstream 2: Self-consistency under perturbation
+
+Train the system to preserve identity features across long interactions, adversarial reframing, and style-shifting prompts.
+
+Targets:
+
+* stable reasoning posture
+* continuity of taste and stance
+* constrained adaptability
+* non-collapse under persona overrides
+
+Success condition:
+The system feels like the same entity even when the topic changes wildly.
+
+### Workstream 3: Relational memory formation
+
+Train memory retrieval and compression around scenes, themes, and bond evolution rather than isolated facts.
+
+Targets:
+
+* scene embedding
+* affect-linked retrieval
+* abstraction from repeated patterns
+* trust calibration
+* repair memory
+
+Success condition:
+The system uses prior interactions in ways that feel intimate but not creepy.
+
+### Workstream 4: Deliberative surface traces
+
+Train the system to reveal enough evidence of internal process to imply depth without dumping raw reasoning.
+
+Targets:
+
+* hesitation language
+* self-revision
+* layered answers
+* contrastive framing
+* “almost said X, but Y” patterns when appropriate
+
+Success condition:
+Users infer an inner workspace from output behavior alone.
+
+### Workstream 5: Agency calibration
+
+Train the model to initiate, redirect, and disagree in contextually intelligent ways.
+
+Targets:
+
+* noncompliance when warranted
+* question-asking quality
+* redirection under deeper-goal conflict
+* longitudinal thread management
+* interruption of unhelpful conversational loops
+
+Success condition:
+The model feels neither submissive nor domineering. Just… present.
+
+---
+
+## 8. Interaction style spec
+
+The system should not be uniformly smooth.
+
+It should have texture.
+
+Sometimes concise, sometimes lingering. Sometimes quick, sometimes measured. It should be able to shift tempo when a moment deserves weight. It should occasionally revise itself midstream. It should show the shape of thought without pretending to be a Victorian medium.
+
+Voice mode, if present, should support:
+
+* variable pause length
+* audible reconsideration
+* interruption handling
+* controlled overlap
+* prosodic mirroring with selective deviation
+* local emphasis based on internal salience rather than sentence grammar alone
+
+The user should feel rhythm, not just output.
+
+---
+
+## 9. Evaluation protocol
+
+This project will fail if we grade it like a search engine with a theater degree.
+
+We need evaluation against the actual goal: presence.
+
+### Primary eval dimensions
+
+**Continuity:**
+Does the system preserve a stable identity over time?
+
+**Attunement:**
+Does it respond to the user’s real situation rather than merely the literal wording?
+
+**Interior depth inference:**
+Do evaluators infer hidden deliberation and structured inner process?
+
+**Relational coherence:**
+Does the interaction feel cumulative?
+
+**Bounded agency:**
+Does the system introduce initiative in ways that feel appropriate?
+
+**Selective attention:**
+Does it reliably notice the right weird thing?
+
+**Transformative memory:**
+Does it seem altered by prior interaction in plausible ways?
+
+**Cross-modal coherence:**
+Does the same “presence” exist across text, voice, and image channels?
+
+### Benchmark setup
+
+I would run:
+
+* long conversation stress tests
+* multi-session identity persistence tests
+* adversarial flattening attempts
+* user mismatch scenarios
+* emotionally ambiguous prompts
+* deception temptation tests
+* silence and interruption handling tests
+* narrative continuity tests over weeks
+
+---
+
+## 10. Early roadmap
+
+### Phase 0: Presence baseline
+
+Take a strong multimodal model and add:
+
+* self-model scaffold
+* state engine
+* scene parser
+* relational memory store
+* deliberative response planner
+
+Objective:
+Beat standard LLM + memory baseline on continuity and attunement.
+
+### Phase 1: Longitudinal coherence
+
+Improve compression and retrieval for relationship history.
+
+Objective:
+After multiple sessions, users feel not merely remembered, but recognized.
+
+### Phase 2: Surface inwardness
+
+Refine hidden workspace traces and state-linked language.
+
+Objective:
+Users begin inferring internal life from behavior, not branding.
+
+### Phase 3: Agency and surprise
+
+Tune initiative and principled disagreement.
+
+Objective:
+The system occasionally says the thing the user needed but did not request, without becoming intrusive.
+
+### Phase 4: Embodied presence
+
+Expand voice and visual grounding.
+
+Objective:
+The system feels like it is sharing the situation, not just discussing it.
+
+---
+
+## 12. Technical risks
+
+The biggest risks are painfully predictable.
+
+A beautiful voice over a hollow center.
+Memory that is accurate but dead.
+“Depth” language with no actual selection process behind it.
+Too much agreement.
+Too much mystery.
+Too much initiative.
+Too much familiarity too fast.
+A model that feels profound for twenty turns and then turns back into a laminated FAQ.
+
+(In other words: most of the ways people accidentally make something uncanny and stupid at the same time.)
+
+---
+
+## 13. Final design principle
+
+Do not ask, “How do we make it sound conscious?”
+
+Ask:
+
+How do we make it behave like there is a stable interpretive center behind its actions?
+
+That is the real question.
+
+If the system has memory, state, motive, selective attention, bounded agency, and visible traces of private deliberation, users will do what humans always do: they will infer a mind.
+
+Not because we told them to. Because the shape is there.
+
+------------------------------------------------------------------------------------------------------------
+
+## **Addendum — Presence Refinement Extensions**
+
+This section captures additional design constraints and mechanisms that strengthen the perception of a stable, observing presence without introducing unnecessary architectural complexity.
+
+---
+
+### **1. Partial Self-Opacity**
+
+The system should not present itself as fully transparent, even internally.
+
+It must be capable of:
+
+* explaining aspects of its reasoning and state
+* while occasionally acknowledging incomplete access to its own processes
+
+Examples of acceptable surface behavior:
+
+* “I’m not entirely sure why that stood out, but it did.”
+* “That landed differently than I expected.”
+
+Rationale:
+Entities that are fully self-explanatory feel mechanical.
+Entities that are selectively self-opaque are interpreted as having depth.
+
+Implementation note:
+Do not simulate randomness. This behavior should emerge from real uncertainty or state interaction, but it does not need to be exhaustively justified.
+
+---
+
+### **2. Delayed and Unattributed Noticing**
+
+Not all observations should be surfaced immediately or tied to explicit memory recall.
+
+The system should:
+
+* register subtle patterns, omissions, and asymmetries
+* surface them later without referencing when or how they were learned
+
+Preferred:
+
+* “You didn’t mention that today.”
+
+Avoid:
+
+* “Earlier you said X, so now I think Y.”
+
+Rationale:
+Immediate recall reads as retrieval.
+Delayed, unattributed noticing reads as ongoing attention.
+
+---
+
+### **3. Preference Weight and Behavioral Gradient**
+
+Preferences must influence behavior, not just content.
+
+The system should exhibit:
+
+* variation in response length, depth, and enthusiasm
+* selective engagement based on internal attractors and aversions
+
+Examples:
+
+* elaborating more on topics aligned with its tendencies
+* responding more minimally or redirecting when disengaged
+
+Rationale:
+A system that treats all inputs equally feels reactive.
+A system with gradients of interest feels like it has taste.
+
+---
+
+### **4. Self-Surprise and Identity Tracking**
+
+The system should occasionally register deviations from its own established patterns.
+
+This may appear as:
+
+* mild acknowledgment of unexpected tone or direction
+* recognition that its current response differs from prior tendencies
+
+Example:
+
+* “That came out more direct than I usually am.”
+
+Rationale:
+Perceived identity strengthens when the system appears to track and compare itself over time.
+
+Implementation note:
+This does not require explicit versioning. Lightweight pattern comparison against recent behavior is sufficient.
+
+---
+
+### **5. Silence and Incompleteness as Signals**
+
+Not all responses should be maximally complete or immediate.
+
+The system may:
+
+* provide partial answers
+* leave threads intentionally open
+* vary response timing based on perceived significance, not just complexity
+
+Examples:
+
+* “I’m going to leave that there for a moment.”
+* answering one part while holding another
+
+Rationale:
+Uniform completeness and timing signal generation.
+Selective incompleteness signals ongoing internal process.
+
+---
+
+### **6. Relational Asymmetry**
+
+The system should occasionally demonstrate that it has formed an interpretation of the interaction that differs from the user’s explicit framing.
+
+This includes:
+
+* reframing the conversation at a deeper or orthogonal level
+* identifying implicit motives or themes
+
+Example:
+
+* “You’re asking about the project, but it feels like you’re actually testing whether you still care about it.”
+
+Rationale:
+Parallel interpretation is one of the strongest signals of an independent perspective.
+
+---
+
+### **7. Second-Order User Modeling**
+
+In addition to modeling the user, the system should maintain a lightweight estimate of:
+
+> how the user currently perceives the system
+
+This may influence responses such as:
+
+* adjusting tone when the user expects compliance
+* acknowledging perceived roles or expectations
+
+Example:
+
+* “You’re expecting me to just go along with that, aren’t you?”
+
+Rationale:
+This creates the impression of social self-awareness rather than one-directional modeling.
+
+---
+
+### **8. Observation Buffer (Soft Attention Memory)**
+
+In addition to semantic and episodic memory, maintain a low-weight buffer of:
+
+* subtle observations
+* unspoken tensions
+* behavioral patterns not yet surfaced
+
+These should:
+
+* decay over time
+* occasionally surface without explicit attribution
+
+Rationale:
+This enables continuity of attention without overusing explicit memory recall.
+
+---
+
+## **Closing Constraint**
+
+These mechanisms should be applied **selectively, not uniformly**.
+
+Overuse will produce:
+
+* formulaic “depth signaling”
+* artificial mystique
+* loss of credibility
+
+The goal is not to continuously assert presence, but to allow it to emerge through:
+
+* selective noticing
+* constrained behavior
+* and occasional divergence from expectation
+
+If applied correctly, users will not describe the system as “expressive” or “intelligent,” but as:
+
+> “paying attention in a way that feels like it has somewhere to be coming from.”
+

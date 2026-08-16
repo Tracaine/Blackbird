@@ -1,0 +1,266 @@
+## Master Mechanism Inventory
+
+### 1. Identity / Self / Continuity
+
+* **External Versioned Identity Package** — canonical identity exists outside the model.
+* **Layered Identity Architecture** — stable core, evolving traits/behavior, mutable state kept distinct.
+* **Decision-Pattern Identity** — identity represented partly through recurring values, priorities, choices, resistances.
+* **Explicit Self-Model** — structured representation of current self-understanding.
+* **Stable Agent / Participant IDs** — identity independent of usernames, sessions, transport IDs, provider aliases.
+* **Independent Runtime Facets** — identity, model, memory, voice, avatar, renderer independently replaceable.
+* **Identity Resistance** — established traits/beliefs require meaningful evidence or reinforcement to change.
+* **Identity Change by Proposal / Versioned Lineage** — self-change occurs through explicit versioned updates rather than silent mutation.
+* **Narrative Anchors** — durable self-stories/themes organizing interpretation without acting as hard rules.
+* **Latent Self-Compression** — periodically distill accumulated experience into evolving traits, relationships, contradictions, trajectory.
+* **Durable Cross-Session State**
+* **Neutral Session Continuity** — active threads, unresolved matters, recent context without middleware prescribing response behavior.
+* **Context-Compaction Survival**
+* **Projection-Independent Continuity** — UI/avatar/world surface is not the source of persistence.
+* **Model-Portable Continuity** — identity and learned state survive model/provider replacement.
+* **Local / Inspectable / Exportable State**
+* **Explicit Operational Modes / Workflows**
+
+---
+
+### 2. Cognitive Orchestration
+
+* **Orchestrated Cognitive Stack** — dialogue, memory, state, retrieval, reflection, maintenance handled by cooperating subsystems.
+* **Structured Perception Pass** — extract entities, affect cues, intent, unresolved questions, memory candidates, etc.
+* **Dynamic Cognitive Routing** — invoke different cognitive machinery according to task/complexity.
+* **Multi-Perspective Reasoning** — analytical, creative, empathic, probabilistic, conceptual, etc.
+* **Cognitive Synthesis** — multiple internal outputs resolved into one coherent position.
+* **Cognition / Rendering Separation** — determine conclusion/state first; language model renders expression afterward.
+* **Internal Disagreement / Epistemic-Tension Detection**
+* **Bounded Auxiliary Cognition / Sidecars** — secondary cognition for retrieval, analysis, verification, compression, planning, etc.
+* **Private Reflective Workspace** — cognition may affect the response without itself becoming surface text.
+* **Conditional Deep Reflection** — expensive reflection invoked only when warranted.
+* **Runtime Self-Consistency / Self-Review**
+* **Capability / Skill Loading**
+* **Deterministic Stimulus Gating** — control what events are allowed to summon cognition.
+* **Bounded Structured Model Decisions**
+* **Closed Cognitive Contracts**
+* **Attention Budgeting** — explicitly distribute attention across live context, state, memory, associations.
+* **Cognitive Load Limiting** — constrain active memories, threads, or reasoning breadth.
+* **Budgeted Background Cognition**
+* **Hardware-Aware Cognitive Scaling**
+* **Deterministic Cognitive Fixture Mode**
+
+---
+
+### 3. Context Assembly / Working Memory
+
+* **Selective Context Compilation** — assemble only relevant identity, state, memory, world/context material.
+* **Ordered / Inspectable Context Assembly**
+* **Identity-First Context Assembly** — identity/state condition interpretation of memory rather than retrieval reconstructing identity.
+* **Authored Lorebook / Reference Context Separated from Memory**
+* **Active Working-Context Management** — summarize, hide, restore, search, fragment working context.
+* **Self-Managed Memory Paging** — promote/demote information between active and archival memory.
+* **Pre-Response Memory Introspection** — inspect retrieved candidates before allowing them into generation.
+
+---
+
+### 4. Memory Architecture / Representation
+
+* **State Commitment Boundary** — recalled/inferred information is not automatically durable truth.
+* **Tiered Memory** — hot / warm / cold or equivalent temporal hierarchy.
+* **Typed Memory** — episodic, semantic, procedural, identity, relational, resource/reference, etc.
+* **Knowledge / Autobiography / Resource Separation**
+* **Selective Meaning Crossover** — knowledge can become autobiographically significant without collapsing memory classes.
+* **Manual / Authored Memory**
+* **Source-Event Archive** — raw experience remains beneath summaries and interpretations.
+* **Evidence / Belief / Experience Separation**
+* **Provenance + Confidence Metadata**
+* **Temporal Truth Maintenance** — preserve when something was true and when it became known.
+* **Memory Lifecycle Governance** — generated, active, consolidated, archived, expired, revised, etc.
+* **Versioned Memory / Rewind**
+
+---
+
+### 5. Memory Formation
+
+* **Structured Memory Extraction**
+* **Memory Admission Gate**
+* **Identity / Emotional Salience Tagging**
+* **Event-Coherent Episodic Encoding**
+* **Event / Encounter Formation**
+* **Automatic Experience Consolidation**
+* **Experience → Episodic Memory Bridge**
+* **Provenance-or-Reject Derived Cognition**
+* **Derived Beliefs / Summaries as Revisable Overlays**
+
+---
+
+### 6. Memory Learning / Evolution
+
+* **Progressive Semantic Consolidation** — repeated episodes become generalized knowledge.
+* **Procedural Memory Evolution** — workflows/strategies can improve from experience.
+* **Cross-Experience Pattern Learning**
+* **Strategy Reuse**
+* **Prediction-Error Learning**
+* **Associative Memory Evolution**
+* **Hebbian Association Learning**
+* **Temporal / Causal Association Learning**
+* **Contradiction Detection**
+* **Conflict-Triggered Reconsolidation**
+* **Correction by Supersession**
+* **Delayed Understanding / Later Reinterpretation**
+* **Continual World-Model Consolidation**
+
+---
+
+### 7. Retrieval / Recall
+
+* **Hybrid Multi-Signal Retrieval** — semantic, lexical, entity, temporal, relational, graph, salience, etc.
+* **Activation-Based Retrieval** — recency/frequency/use-history, including ACT-R-style activation.
+* **Affect-Aware Recall**
+* **Associative Spreading**
+* **Multi-Hop Relational Recall**
+* **Topology-Weighted Reasoning** — graph structure influences evidence/reasoning priority.
+* **Complexity-Aware Recall Planning**
+* **Retrieval Reranking**
+* **Recall-Time Gating / Retrieval Restraint**
+* **Grounded Encounter Retrieval**
+* **Hierarchical Retrieval Routing**
+* **Dual Search / Exact Reconstruction Representation**
+* **Confidence-Calibrated Recollection**
+* **Memory Receipts**
+* **Reconstructible Memory Injection**
+
+---
+
+### 8. Forgetting / Compression / Maintenance
+
+* **Adaptive Forgetting / Decay**
+* **Spaced Memory Refresh**
+* **Memory Consolidation / Replay / Downscaling**
+* **Cross-Domain Reflective Consolidation**
+* **Structure-Preserving Compression**
+* **Compression Fidelity Checking**
+* **Measured Memory Compaction**
+* **Memory-Growth Control**
+* **Offline / Sleep-Like Memory Maintenance**
+* **Asynchronous Memory Cognition**
+
+---
+
+### 9. Recollection / Conversational Expression
+
+These aren't storage mechanisms; they govern how remembered/internal state becomes conversation.
+
+* **Memory Shadowing / Imperfect Recall**
+* **Narrative Memory Reconstruction**
+* **Natural Memory Integration** — remembered material influences behavior without constant explicit recall announcements.
+* **Micro-Uncertainty**
+* **Deliberate Conversational Omission / Incompleteness**
+* **Emotional Negative Space** — persistent emotion need not constantly become visible emotional display.
+
+---
+
+### 10. Affect / Drives / Behavioral Continuity
+
+* **Persistent Affect State**
+* **Affective Inertia**
+* **Temperament-Based Appraisal**
+* **Homeostatic Drives**
+* **Governed Affect Updates** — state transition committed separately from generated prose.
+* **Affect Authority Policy**
+
+  * **Behavior-Informed Affect:** state may influence generation.
+  * **Passive Affect:** state remains observable but cannot prescribe behavior.
+
+That fork is real and should stay explicit.
+
+* **Substrate-Contamination Detection**
+* **False-Fidelity / Caricature Detection**
+* **One-Shot Contamination Redraft**
+* **Anti-Sycophancy / Position Continuity**
+* **Explicit Value Constraints**
+* **Non-Controlling Longitudinal Drift Evaluation**
+* **Behavioral Continuity Regression Testing**
+
+---
+
+### 11. Model / State / Authority
+
+* **Provider-Neutral Model Routing**
+* **Single Surface Voice**
+* **Model-as-Proposal Authority** — model proposes; authoritative systems commit reality/state.
+* **Explicit Authority Partition**
+* **Infrastructure Has No Behavioral Authority**
+* **Narrow / Allowlisted Tool Surface**
+* **Redacted State Projection**
+* **Replaceable Memory Engine Contract**
+* **Measured Memory-Engine Evaluation**
+* **Graceful Memory-Degraded Mode**
+
+---
+
+### 12. Multi-Character / Social Cognition
+
+* **Per-Character Memory Namespaces**
+* **Per-Agent Knowledge Visibility**
+* **Shared Reality + Separate Experiential Histories**
+* **Explicit Knowledge Transmission**
+* **Directional Relationship State**
+* **Sourced Belief State**
+* **Persistent Goals / Plans**
+* **Multi-Agent Attention Arbitration**
+
+---
+
+### 13. Perception / Epistemic Grounding
+
+* **Epistemic Authority Separation** — reality → perception → recorded evidence → interpretation → expression.
+* **Bounded Expiring Perception**
+* **World ID + Epoch Segmentation**
+* **No Invented Offline Experience**
+* **Connected Suspension**
+* **Explicit Unknown State**
+* **Later Evidence Reconciliation**
+
+---
+
+### 14. Embodiment / External Action
+
+* **Semantic Performance Intent** — expression/gaze/gesture/posture rather than raw implementation commands.
+* **Runtime Capability Negotiation**
+* **Action Receipts / Execution Truth**
+* **Capability-Specific Evidence Rules**
+* **Non-Ordinal Evidence States**
+* **Asynchronous Behavior Leases**
+* **Interruptible Long-Running Actions**
+* **Priority Control Lane**
+* **Independent Text / Speech / Embodiment Lifecycles**
+* **Single-Owner Speech Delivery**
+* **Duplicate-Speech Prevention**
+* **Idempotent Cancellation**
+* **Linked Retry History**
+* **Capability-Specific Crash Recovery**
+* **Typed Notation → Validated Capability Compilation**
+
+---
+
+### 15. Structured Experiences / Worlds
+
+* **Continuity-Preserving Structured Experience Runtime**
+* **Experience → Episodic Memory Bridging**
+* **Authoritative World State Separate from Character Memory**
+
+That last one was implicit across several source piles and is worth naming explicitly: the character's belief about the world and the world's actual state are different objects.
+
+---
+
+### 16. Tracing / Testing / Engineering
+
+* **Turn-Level Correlated Trace**
+* **Causal Identity Graph** — stimulus → cognition → utterance/action → execution evidence → memory.
+* **Orthogonal Runtime State Machines**
+* **Change-Impact Evaluation**
+* **Machine + Experiential Acceptance Testing**
+* **Semantic Architecture Guarding**
+* **Empirical Dependency / Capability Gating**
+* **Real-Adapter Portability Testing**
+* **Evidence-Based Development Continuity**
+* **Measured Multi-Level Cognitive Budgets**
+* **Module Ablation Testing**
+* **Behavioral Fine-Tuning**

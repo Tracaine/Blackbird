@@ -1,0 +1,283 @@
+### Project / Blueprint
+
+**Persistent Memory / Continuity Architecture — Consolidated Research**
+
+### One-sentence purpose
+
+Build a persistent, model-portable cognitive memory layer that can preserve experiences, knowledge, learned behavior, identity, relationships, and emotional context across long timelines while actively controlling retrieval, contradiction, consolidation, forgetting, and drift. The strongest common theme is that this is fundamentally a **state-management problem rather than a storage problem**. 
+
+### Concepts worth keeping
+
+**State Governance / Commitment Boundary**
+What it does: Separates information that has merely been recalled or inferred from information allowed to become durable state. Retrieved material can influence reasoning without automatically rewriting the system's long-term beliefs. 
+Ability: **Distinguish recalled evidence from committed state.**
+Status: Keep.
+
+**Tiered Hot / Warm / Cold Memory**
+What it does: Maintains high-fidelity recent context in a small hot layer, compressed or hierarchical medium-term state in a warm layer, and a much larger retrievable archive underneath. Kindroid, Nomi, Letta/MemGPT, and the research architectures independently converge on this shape.  
+Ability: **Preserve long histories without loading the whole history into context.**
+Status: Keep; very strong convergence.
+
+**Typed Episodic / Semantic / Procedural Memory**
+What it does: Gives experiences, generalized facts, and learned ways of acting different stores and different update rules rather than treating every memory as interchangeable text. 
+Ability: **Remember events, knowledge, and learned behavior differently.**
+Status: Keep.
+
+**Protected Identity Store**
+What it does: Holds slowly changing traits, values, preferences, boundaries, and other identity-defining information separately from ordinary recall, with higher thresholds for modification. ID-RAG, Nomi's Identity Core, and the local blueprint all point toward this pattern.  
+Ability: **Maintain a stable self-model while still permitting gradual evolution.**
+Status: Keep.
+
+**Manual Memory Lane**
+What it does: Allows deliberately authored or edited memories—journals, pinned facts, shared notes, current-situation fields—to coexist with automatically inferred memory. Kindroid and Nomi both independently expose versions of this. 
+Ability: **Explicitly establish or repair important memories without relying on automatic extraction.**
+Status: Keep.
+
+**Event-Coherent Episodic Encoding**
+What it does: Segments conversation according to actual topics/events and rewrites fragments into coherent narrative episodes instead of blindly storing individual messages or arbitrary chunks. Nemori specifically argues that arbitrary chunking can reconstruct events incorrectly. 
+Ability: **Recall whole experiences rather than disconnected textual fragments.**
+Status: Keep.
+
+**Temporal Memory Hierarchy**
+What it does: Consolidates information through increasingly abstract timescales—roughly segment → session → day → week → profile—so short-lived state and long-term patterns can coexist without being confused. 
+Ability: **Represent both immediate experience and long-term development at appropriate timescales.**
+Status: Keep.
+
+**Progressive Semantic Consolidation**
+What it does: Repeated episodic observations gradually become generalized semantic knowledge or profile-level patterns instead of remaining an indefinitely growing pile of events. 
+Ability: **Learn durable patterns from repeated experience.**
+Status: Keep.
+
+**Procedural Memory Evolution**
+What it does: Treats instructions, strategies, workflows, and behavioral policies as editable memories that can improve when previous approaches succeed or fail. 
+Ability: **Learn how to behave or solve recurring problems from experience.**
+Status: Keep.
+
+**Prediction-Calibrate Learning**
+What it does: Nemori compares what the system predicted or expected against what actually happened and uses the mismatch as a signal for memory/model evolution. 
+Ability: **Learn proactively from prediction errors rather than only explicit corrections.**
+Status: Keep; comparatively experimental.
+
+**Memory Admission Control**
+What it does: Decides whether an interaction deserves durable storage before writing it. SAMD makes the standard context-dependent, allowing different criteria for personal facts, relationships, events, etc. 
+Ability: **Choose what is worth remembering.**
+Status: Keep.
+
+**Identity / Emotional Salience Tagging**
+What it does: Gives memories additional importance based on relational, emotional, or identity significance rather than semantic similarity alone. BMAM's amygdala-inspired component is an explicit example. 
+Ability: **Protect unusually meaningful memories from being drowned out by ordinary conversation.**
+Status: Keep.
+
+**Affect-Aware Recall**
+What it does: Stores emotional context alongside events and uses current affect as part of retrieval. Some systems retrieve not only similar situations but response/support strategies that worked in similar emotional contexts. 
+Ability: **Recall context according to emotional and relational similarity.**
+Status: Keep.
+
+**Provenance-Linked Abstraction**
+What it does: Connects generalized facts, beliefs, summaries, and profile traits back to the specific experiences that produced them instead of losing the evidence during compression. 
+Ability: **Trace abstract memory back to its originating experiences.**
+Status: Keep.
+
+**Evidence / Belief / Experience Separation**
+What it does: Maintains different logical classes for immutable experiences, externally grounded facts, synthesized summaries, and mutable beliefs rather than collapsing all of them into one truth store. Hindsight explicitly proposes this separation. 
+Ability: **Revise interpretations without rewriting what actually happened.**
+Status: Keep.
+
+**Temporal Truth Maintenance**
+What it does: Stores facts with validity periods and preserves superseded facts historically rather than simply overwriting or retaining contradictory copies. Graphiti distinguishes when something was true from when the system learned it. 
+Ability: **Remember changing truths without confusing past and present.**
+Status: Keep.
+
+**Conflict-Triggered Reconsolidation**
+What it does: New contradictory or refining information actively causes older representations to be invalidated, revised, or re-linked instead of merely appending another chunk. 
+Ability: **Update memories when reality changes while preserving their history.**
+Status: Keep.
+
+**Associative Link Evolution**
+What it does: New memories create or strengthen links to existing memories, and nearby memories can have their metadata/context revised when new information changes their meaning. A-Mem treats memory more like an evolving Zettelkasten than a static vector pile. 
+Ability: **Discover and maintain learned associations between memories.**
+Status: Keep.
+
+**Semantic Mind Map / World Model**
+What it does: Builds a higher-order concept layer from episodic memories—people, places, topics, goals, relationships, etc.—which can then contextualize individual memories. Nomi's Mind Map is the clearest product example, though whether its backend is literally a graph is unknown. 
+Ability: **Maintain an organized conceptual model above individual memories.**
+Status: Keep; exact implementation uncertain.
+
+**Hybrid Retrieval**
+What it does: Combines semantic embeddings with exact/full-text, entity, relational, temporal, or graph retrieval rather than asking vector similarity to solve everything. 
+Ability: **Retrieve by meaning, identity, relation, wording, and time simultaneously.**
+Status: Keep; pure vector-only retrieval is effectively superseded in these blueprints.
+
+**Multi-Hop Relational Recall**
+What it does: Traverses connected concepts to retrieve information that is relevant because of relationships rather than direct textual similarity—for example linking a person, workplace, event, and current concern. 
+Ability: **Recall indirectly related context through chains of relationships.**
+Status: Keep.
+
+**Topology-Weighted Reasoning**
+What it does: Uses graph structure itself to identify pivotal evidence and allocate more reasoning attention/budget to structurally important nodes. 
+Ability: **Spend more deliberation on evidence that connects many relevant facts.**
+Status: Keep; unusual/speculative.
+
+**Complexity-Aware Recall Planning**
+What it does: Estimates what sort of question is being answered and selects which memory levels or stores need searching before retrieval begins. TiMem explicitly couples query complexity with memory breadth. 
+Ability: **Scale memory search depth to the problem being solved.**
+Status: Keep.
+
+**Recall-Time Gating**
+What it does: Retrieves broadly, then performs a second filter that decides which candidate memories should actually enter working context. This makes forgetting/selectivity happen at read time as well as write time. 
+Ability: **Suppress irrelevant memories even when retrieval initially finds them.**
+Status: Keep.
+
+**Retrieval Introspection Before Speaking**
+What it does: Inserts a deliberate selection/reasoning stage between memory retrieval and final generation. Nomi publicly describes a "chain of introspection" and appears to trade additional latency for deeper memory integration. 
+Ability: **Consider candidate memories before deciding what actually matters to the reply.**
+Status: Keep.
+
+**Topical Cue Recall**
+What it does: Retrieves primarily from conceptual/topic cues rather than treating chronological closeness as the dominant signal. Nomi explicitly exhibits the odd but useful signature of recalling something months old when appropriately cued while missing yesterday's detail. 
+Ability: **Recover old memories through semantic cues rather than requiring dates or chronology.**
+Status: Keep.
+
+**Active Working-Context Management**
+What it does: Allows portions of the live context to be summarized, hidden, restored, fragmented, or searched instead of treating the entire prompt as an immutable scroll. Sculptor and Letta Context Repositories implement variants. 
+Ability: **Actively reshape working memory to reduce interference.**
+Status: Keep.
+
+**Self-Managed Memory Paging**
+What it does: Allows an agent/controller to decide what belongs in active memory versus archival memory and potentially edit important core blocks as its state evolves. 
+Ability: **Move information between working and long-term memory according to need.**
+Implementation note: The ability is useful; making model-driven function calls the dominant mechanism is not mandatory.
+Status: Keep capability.
+
+**Function-Call-Led Memory Management**
+What it does: Has the model explicitly invoke memory-management functions as the main route for recall/update.
+Ability: **Autonomously manipulate memory.**
+Implementation note: Kindroid's founder specifically characterized MemGPT-style function-call-heavy memory as too slow/compute-heavy for their design; Kindroid appears to preserve memory-management capabilities using other mechanisms. 
+Status: **Abandoned/replaced in Kindroid; not universally rejected.**
+
+**Sleep-Like Memory Maintenance**
+What it does: Periodically scans memory for supersession, stale associations, redundancies, and consolidation opportunities rather than doing all maintenance during conversation. SleepGate provides the biological analogy; the local blueprint proposes doing the equivalent over external memory. 
+Ability: **Maintain and reorganize memory away from the interactive loop.**
+Status: Keep.
+
+**Adaptive Forgetting**
+What it does: Downweights, expires, compresses, or discards stale/low-value memories according to importance, age, sensitivity, interference, or other policies rather than preserving everything equally forever. 
+Ability: **Forget selectively instead of accumulating unlimited competing state.**
+Status: Keep.
+
+**Dream / Cross-Domain Consolidation**
+What it does: Separates ordinary redundancy compression from a second reflective pass whose job is to notice higher-order or cross-domain relationships among memories. The report describes these metaphorically as NREM compression and REM abstraction. 
+Ability: **Generate new abstractions and connections from accumulated experience.**
+Status: Keep; speculative but interesting.
+
+**Spaced Memory Refresh**
+What it does: Periodically refreshes important memories in the retrieval/indexing system so significant information remains accessible while trivial information naturally fades. 
+Ability: **Preserve accessibility of important long-term memories over time.**
+Status: Keep; experimental.
+
+**Structure-Preserving Compression**
+What it does: Compresses older material while explicitly preserving entities, chronology, commitments, relationships, unresolved threads, emotions, causality, and provenance instead of generating a generic summary blob. 
+Ability: **Shrink memory without flattening the relationships that make it meaningful.**
+Status: Keep.
+
+**Compression Fidelity Checking**
+What it does: Measures whether compressed memory has drifted semantically or emotionally from its source instead of assuming every summary is adequate. The Gemini report describes a Semantic Decay Score and affect-tagged compression as examples. 
+Ability: **Detect when memory compression has changed the meaning of what was remembered.**
+Status: Keep; implementation can vary.
+
+**Dual Search / Reconstruction Representation**
+What it does: Stores one cheap representation optimized for fast approximate retrieval and another lossless representation used to reconstruct the original memory precisely after a candidate is found. 
+Ability: **Search enormous memory cheaply without sacrificing exact recall once located.**
+Status: Keep when scale warrants it.
+
+**Hierarchical Retrieval Routing**
+What it does: Routes queries down an addressable hierarchy of memories instead of comparing every query globally against every stored item. 
+Ability: **Navigate large memory collections without exhaustive search.**
+Status: Keep for larger systems.
+
+**Memory Namespaces and Selective Sharing**
+What it does: Separates memories by agent, character, conversation/room, or group while allowing explicitly chosen information to bridge those boundaries. Kindroid appears to separate participant memory namespaces; Nomi appears to combine global-to-agent episodic memory with room-local semantic views.  
+Ability: **Control who remembers what and which contexts share memory.**
+Status: Keep.
+
+**Source-of-Truth Episodic Archive**
+What it does: Retains immutable raw interactions/trajectories beneath compressed memories so abstractions can be audited, rebuilt, or corrected later. 
+Ability: **Reconstruct or verify derived memories from original experience.**
+Status: Keep.
+
+**Versioned Memory / Rewind**
+What it does: Records updates as reversible changes rather than destructive edits, allowing rollback when a correction, branch, or conversation rewind invalidates later consolidation. Kindroid's later architecture explicitly references de-consolidation on rewind; Letta-style repositories use versioning for similar reasons. 
+Ability: **Return memory to an earlier valid state.**
+Status: Keep.
+
+**Memory Lifecycle Management**
+What it does: Treats memory objects as having explicit lifecycle stages such as generation, activation, fusion, archive, expiration, and revision rather than only "stored/not stored." 
+Ability: **Govern how memories change state throughout their lifetime.**
+Status: Keep.
+
+**Background Memory Cognition**
+What it does: Uses separate background processes or subagents to consolidate memory, improve context, update skills, and perform maintenance without making the conversational model do every operation inline. Letta explicitly describes background memory subagents; several blueprints independently separate fast conversational writes from slower maintenance. 
+Ability: **Think about and maintain memory outside the immediate conversation turn.**
+Status: Keep.
+
+**Personal / Resource / Knowledge Separation**
+What it does: Distinguishes memories about the ongoing person/relationship from reusable task procedures, external resources, and general knowledge. MIRIX's expanded memory taxonomy makes this particularly explicit. 
+Ability: **Prevent personal history, skills, and reference knowledge from contaminating one another.**
+Status: Keep.
+
+**Model-Portable Continuity**
+What it does: Keeps durable identity, memory, and learned state outside any one underlying model so the cognition layer can survive model replacement or routing changes. MemOS and Letta both explicitly lean toward portable external memory/state. 
+Ability: **Preserve continuity across model swaps or upgrades.**
+Status: Keep.
+
+**Continual World-Model Consolidation**
+What it does: Makes reflection/consolidation an ongoing process whose endpoint is not merely more summaries but an increasingly coherent model of the user, relationships, environment, and historical patterns. The Gemini report identifies this as the likely next step beyond ordinary retrieval memory. 
+Ability: **Build a progressively richer internal model from accumulated experience.**
+Status: Keep; forward-looking.
+
+### Portable ability list
+
+* State Commitment Control
+* Tiered Memory
+* Typed Memory
+* Persistent Identity
+* Manual Memory
+* Event-Coherent Recall
+* Multi-Timescale Memory
+* Semantic Consolidation
+* Procedural Learning
+* Prediction-Calibrated Learning
+* Selective Memory Formation
+* Salience-Weighted Memory
+* Affect-Aware Recall
+* Provenance Tracking
+* Evidence–Belief Separation
+* Temporal Truth Tracking
+* Memory Reconsolidation
+* Associative Memory Evolution
+* Semantic World Modeling
+* Hybrid Retrieval
+* Multi-Hop Relational Recall
+* Topology-Weighted Reasoning
+* Complexity-Aware Recall
+* Recall Gating
+* Pre-Response Introspection
+* Topical Cue Recall
+* Active Working Memory
+* Self-Managed Memory Paging
+* Offline Memory Maintenance
+* Agentive Forgetting
+* Cross-Domain Memory Abstraction
+* Spaced Memory Refresh
+* Structure-Preserving Compression
+* Compression Drift Detection
+* Efficient Exact Reconstruction
+* Hierarchical Retrieval
+* Memory Namespace Control
+* Source-of-Truth Recall
+* Memory Versioning
+* Memory Lifecycle Governance
+* Auxiliary Memory Cognition
+* Knowledge-Type Isolation
+* Model-Portable Continuity
+* Continual World-Model Building

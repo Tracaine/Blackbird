@@ -1,0 +1,61 @@
+**PARALLAX-LATTICE = a model-agnostic companion/agent harness that gives an LLM durable identity, structured long-term memory, controlled access to capabilities, background continuity maintenance, and measurable resistance to drift — while keeping all of that inspectable and outside the model itself.** 
+
+The “abilities” version:
+
+**Persistent Identity** — Persona/relationship/style live in an external package rather than depending on the model remembering who it is. A bounded compiler supplies the relevant identity context each turn. 
+→ **Ability:** remain substantially the same character across sessions and even across underlying model swaps.
+
+**Layered Memory** — It distinguishes raw conversational recall, current state, timeline, episodic memories, durable facts, reflections, and semantic archival memory instead of throwing everything into one vector database. Conflicts and provenance remain visible. 
+→ **Ability:** remember different *kinds* of things differently.
+
+**Memory Metabolism** — Conversations are captured automatically, then a background daemon processes them into more useful forms: clusters salient events, creates episodes, archives relevant material, updates current state, etc. 
+→ **Ability:** experience gradually becomes organized memory without manually saying “remember this” every time.
+
+**Context Compilation** — It doesn't shove the whole identity and memory corpus into every prompt. It constructs a small, provenance-labeled context capsule containing whatever identity/state/memory is relevant now. 
+→ **Ability:** carry a large persistent life while only loading a small working set into cognition.
+
+**Capability Loading** — Tools exist outside the initial prompt and are loaded through skills/bundles as needed. Build mode can unlock filesystem, shell, git, research, testing, artifacts, etc. 
+→ **Ability:** gain broad agent powers without carrying the instructions for every possible power in every conversation.
+
+**Explicit Modes / Workflows** — Companion, builder, autonomous-task, and maintenance operation are separate modes, deliberately entered rather than inferred from mood or message classification. 
+→ **Ability:** same persistent entity can talk, build software, run tasks, or maintain itself without becoming four unrelated agents.
+
+**Inspectable Affect** — It maintains decaying internal variables like curiosity, warmth, frustration, connection, engagement, focus, etc. The agent can inspect them, but infrastructure deliberately doesn't use them to force behavior. 
+→ **Ability:** have persistent internal state across turns without turning emotions into a deterministic state machine.
+
+**Identity Change by Proposal** — The agent can notice that its identity/style should change and propose a patch, but it cannot silently rewrite its own canonical identity. 
+→ **Ability:** evolve while preserving a stable, auditable identity lineage.
+
+**Corrections That Stick** — A correction isn't just another chat message. It becomes a first-class record that can update the appropriate memory surface and later be checked for regression.
+→ **Ability:** “No, that's wrong” can become a persistent behavioral/data correction rather than disappearing three sessions later.
+
+**Compaction Survival** — Before context gets compacted, important state is flushed into durable memory and a continuity digest is rebuilt. 
+→ **Ability:** survive context-window turnover without losing the thread.
+
+**Drift Detection** — It periodically compares the companion against baselines/goldens to measure whether distinctive identity/behavior is collapsing toward generic-model output. 
+→ **Ability:** detect “she's technically still running but doesn't fucking sound like herself anymore.”
+
+**Sovereign / Inspectable State** — Identity, memories, journals, corrections, settings, and artifacts live in ordinary local files/databases that can be inspected, edited, backed up, diffed, and version-controlled. The design explicitly avoids hidden cloud orchestration and opaque vector-only memory. 
+→ **Ability:** the person/system exists independently of any one model provider or chat session.
+
+And there is one more interesting thing buried in there:
+
+**Multiple Persistent Characters** — The memory architecture can support fully shared memory, completely isolated characters, or shared factual reality with separate relational/experiential histories. 
+→ **Ability:** multiple companions can inhabit the same world/user context without necessarily becoming one amorphous memory soup.
+
+So if we're collecting little ability cards like we did with Codette:
+
+> **PARALLAX-LATTICE**
+>
+> Persistent Identity
+> Layered Long-Term Memory
+> Automatic Memory Consolidation
+> Selective Context Assembly
+> Tool/Skill Loading
+> Persistent Internal State
+> Identity Evolution With Lineage
+> Correction Persistence
+> Context-Compaction Survival
+> Behavioral Drift Detection
+> Multi-Character Memory Separation
+> Local / Model-Agnostic Continuity

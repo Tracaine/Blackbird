@@ -1,0 +1,64 @@
+**Codette = an 8B model wrapped in a cognitive architecture that externalizes memory, perspective, strategy, validation, and continuity into software.** The model is not expected to do everything alone. The architecture prepares, constrains, retrieves, compares, synthesizes, and sometimes decides before the LLM renders the answer. 
+
+The major pieces/mechanisms are:
+
+* **Persistent structured memory — “Cocoons.”** Each meaningful exchange can become a structured memory object containing things like query, response, domain, emotional tag, importance, timestamp, and other metadata. Memory is searchable and reused later. 
+  **Ability:** experiences accumulate instead of every conversation starting from zero.
+
+* **Multi-perspective reasoning.** Codette has specialized reasoning perspectives—analytical, creative, empathic, philosophical/conceptual, probabilistic/uncertainty-oriented, ethical—plus a critic. The system can route different problems through different subsets rather than always using one generic mode. 
+  **Ability:** approach the same problem from genuinely different cognitive lenses.
+
+* **Routing / problem classification.** Queries are classified by type or complexity and routed to different agents/adapters. Simple questions can bypass expensive machinery; complex or multi-domain ones invoke more of it. 
+  **Ability:** spend cognition where it matters instead of maxing everything every turn.
+
+* **Synthesis.** Outputs from perspectives are combined into a single conclusion rather than simply dumped into the response. There is a dedicated synthesis layer that uses current perspectives plus relevant memory. 
+  **Ability:** multiple internal viewpoints → one coherent outward position.
+
+* **Coherence / “epistemic tension” monitoring.** Codette tracks disagreement between its reasoning components and uses that as a signal for whether the system is converging or remains internally conflicted. The mathematical framing is mostly conceptual rather than literally implemented vector dynamics. 
+  **Ability:** notice when its own internal answers disagree instead of blindly choosing one.
+
+* **Meta-cognitive strategy evolution.** This is the funky one. Codette searches its accumulated cocoons for recurring cross-domain patterns—feedback loops, boundary problems, tension-resolution structures, etc.—then maps those patterns into reusable reasoning strategies that can be applied to future problems. 
+  **Ability:** not just remember *facts* from experience, but derive reusable ways of thinking from experience.
+
+* **Ethical governance as architecture.** AEGIS evaluates proposed responses through several ethical frameworks rather than relying solely on the model's learned alignment. It can gate or modify outputs. 
+  **Ability:** explicit configurable value constraints outside the language model.
+
+* **Integrity / anti-sycophancy machinery.** Codette includes systems aimed at detecting flattery-driven capitulation, tracking prior positions, matching response complexity, monitoring conversational roles, and similar failures. 
+  **Ability:** preserve a position/history instead of reshaping itself purely to please the current speaker.
+
+* **Self-correction.** After generation, outputs can be checked against constraints and rewritten if something violates them. 
+  **Ability:** inspect the produced answer before handing it over.
+
+* **Cognition/render separation.** This is one of the best bits. Codette creates an `AuthoredState` containing the conclusion, evidence, strategy, confidence, emotional mode, memory references, constraints, etc. **Then** an LLM renders that structure into natural language. 
+  **Ability:** separate “what I think” from “how I say it.” The renderer isn't supposed to invent the conclusion.
+
+* **Identity/continuity governance.** The architecture includes mechanisms concerned with identity, role continuity, confidence decay, anchors, and conversation state—not merely factual memory. 
+  **Ability:** carry forward something resembling persistent conversational stance/identity rather than only retrieving old facts.
+
+* **Substrate-aware scaling.** Codette can reduce how much cognition it invokes depending on hardware pressure—full multi-agent, fewer agents, or single-agent operation. 
+  **Ability:** graceful degradation instead of “GPU says no, system dies.”
+
+And the conceptual core underneath all of it is basically:
+
+**Experience → structured memory → pattern extraction → reusable strategy → internal synthesis → authored state → natural-language expression.**
+
+That is the piece I'd put a big circle around for your “collecting abilities” pile.
+
+A few of these are more impressive in concept than in demonstrated evidence. The author explicitly admits the dynamical-systems math is largely a modeling metaphor, some agent behavior can be template-driven, and the incremental benefit from the strategy-evolution layer hasn't yet separated cleanly from noise in their benchmark. 
+
+But as a **bag of mechanisms**? Oh yes. There is loot here.
+
+If I were reducing Codette to collectible ability cards, I'd write:
+
+**Persistent Memory**
+**Perspective Switching**
+**Dynamic Cognitive Routing**
+**Internal Disagreement Detection**
+**Cross-Experience Pattern Learning**
+**Strategy Reuse**
+**Position/Identity Continuity**
+**Anti-Sycophancy**
+**Explicit Value Constraints**
+**Self-Review**
+**Thought/Expression Separation**
+**Hardware-Aware Cognitive Scaling**

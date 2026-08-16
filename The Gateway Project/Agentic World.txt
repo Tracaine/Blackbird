@@ -1,0 +1,307 @@
+### Project / Blueprint
+
+**Agentic World Platform — Revision 2**
+
+### One-sentence purpose
+
+Build a persistent AI character embodied in a Minecraft world whose conversation can cause validated physical behavior, whose cognition suspends honestly during absence, and whose grounded continuity survives complete world/runtime shutdown and restart.
+
+### Concepts worth keeping
+
+**Epistemic Authority Ladder**
+What it does: Separates physical world facts, bounded observations, durable source events, deterministic encounter records, subjective interpretations/beliefs, and character narration into distinct epistemic layers. Information does not automatically gain authority merely because a model transformed or repeated it.
+Ability: Distinguish reality, perception, memory evidence, interpretation, and expression.
+Implementation note: The ordering is explicit: world fact → observation → source event → encounter → belief/interpretation → utterance.
+Status: planned/specification
+
+**Model-as-Proposal Authority**
+What it does: The language model proposes speech and actions but does not determine whether an action happened, whether speech was delivered, whether a memory is true, or whether it has permission to act. Runtime architecture resolves those questions.
+Ability: Use generative cognition without granting the model authority over external reality.
+Status: planned/specification
+
+**Bounded Expiring Perception**
+What it does: Gives cognition an agent-scoped world snapshot with capture time, expiration time, bounded radius/entity count, explicit omissions, and stable world identity. It therefore represents what the character could presently perceive rather than dumping global state into context.
+Ability: Give an agent limited, temporally grounded perception rather than omniscience.
+Status: planned/specification
+
+**Stable Identity Behind Transport Aliases**
+What it does: Separates durable identities such as `AgentId` and `PrincipalId` from usernames, UUIDs, entity IDs, provider sessions, or process instances. External identifiers are treated as aliases rather than identity itself.
+Ability: Preserve character and participant identity across reconnects, providers, sessions, and infrastructure changes.
+Status: planned/specification
+
+**World Epoch Segmentation**
+What it does: A stable `WorldId` represents intended world continuity while a monotonic `WorldEpoch` marks incompatible resets, replacements, or restores. Older memories remain historical but cannot silently become evidence about the new world state.
+Ability: Prevent memories from incompatible world histories contaminating current reality.
+Status: planned/specification
+
+**Orthogonal Runtime State**
+What it does: Replaces one monolithic lifecycle with independent connection, availability, component-health, cognition, action, and behavior state machines. For example, the world connection can be healthy while cognition is suspended, or the model provider can fail while deterministic safety remains available.
+Ability: Represent multiple simultaneous operational conditions without collapsing them into one vague agent state.
+Status: planned/specification
+
+**Connected Suspension**
+What it does: When the authorized player leaves, the character remains connected to the environment but cognition, planning, movement, behaviors, and model calls stop. Minimal deterministic presence observation continues so actual return can be observed.
+Ability: Become dormant without losing the ability to detect when interaction should resume.
+Status: planned/specification
+
+**No Invented Offline Experience**
+What it does: Complete runtime absence is recorded as an offline gap with wall-clock endpoints, but the character gains no subjective events merely because time passed externally.
+Ability: Preserve temporal continuity without fabricating experiences during periods when the agent did not exist operationally.
+Status: planned/specification
+
+**Decision Actor with Asynchronous Behavior Leases**
+What it does: A per-agent actor serializes decisions and state mutation but releases immediately after dispatching long-running physical behavior. Behavior continues under a stable lease/`BehaviorId` and reports later progress or terminal events.
+Ability: Perform long-running actions without freezing cognition or blocking later decisions.
+Implementation note: “Started” explicitly means dispatched, not successful.
+Status: planned/specification
+
+**Priority Control Lane**
+What it does: Stop, hazard, suspension, shutdown, and emergency-stop signals bypass the ordinary cognition mailbox and can interrupt behavior even while a model request is pending.
+Ability: Interrupt agent behavior promptly without waiting for ordinary reasoning or queued work.
+Status: planned/specification
+
+**Capability-Specific Evidence Rules**
+What it does: Each capability declares what environmental evidence is sufficient to call it active, completed, interrupted, etc. Evidence valid for movement is deliberately not generalized to ownership, inventory transfer, building, or other unrelated effects.
+Ability: Determine action outcomes using evidence appropriate to the action rather than one universal success rule.
+Status: planned/specification
+
+**Non-Ordinal Evidence States**
+What it does: Uses states such as `unknown`, `dispatch_acknowledged`, `client_observed`, `server_confirmed`, and `reconciled` without pretending they form one universal confidence ladder. Their meaning depends on the capability involved.
+Ability: Represent heterogeneous evidence without falsely collapsing it into a single confidence score.
+Status: planned/specification
+
+**Honest Unknown and Later Reconciliation**
+What it does: If an external effect may have happened but cannot be confirmed, the system records `unknown` rather than guessing or blindly repeating it. Later observations may add reconciled evidence without rewriting the historical uncertainty.
+Ability: Survive partial failures without fabricating certainty or duplicating external effects.
+Status: planned/specification
+
+**Single-Owner Utterance Delivery**
+What it does: Character speech has exactly one runtime owner that validates, IDs, records, and submits each accepted utterance. Speech is deliberately separated from physical actions and tool execution.
+Ability: Maintain coherent dialogue delivery without competing components speaking for the same character.
+Status: planned/specification
+
+**One-Attempt External Speech Semantics**
+What it does: Where the environment cannot deduplicate speech reliably, an utterance is submitted at most once. An interrupted/unconfirmed submission becomes `unknown` rather than being replayed after restart.
+Ability: Prevent duplicate outward expression when delivery certainty is unavailable.
+Status: planned/specification
+
+**Closed Cognitive Contracts**
+What it does: World observations, model decisions, actions, control requests, behavior events, evidence, and persisted events use explicit discriminated unions instead of generic payload maps. Unknown provider/vendor objects are parsed before entering cognition.
+Ability: Constrain the kinds of information and operations that can flow between cognition and external systems.
+Status: planned/specification
+
+**Bounded Structured Model Decision**
+What it does: A model call produces one structured decision containing an optional utterance and at most the allowed action proposal rather than entering an unrestricted tool loop. Speech and action can then succeed or fail independently.
+Ability: Turn open-ended reasoning into narrowly bounded proposed behavior.
+Status: planned/specification
+
+**Deterministic Stimulus Gate**
+What it does: Only explicitly allowed stimuli can wake cognition; duplicate, ambient, unauthorized, coalesced, cooldown-limited, queue-overflow, and suspended stimuli are rejected with explicit reasons. Routine world movement and time passage do not automatically trigger model calls.
+Ability: Control when an agent thinks rather than allowing environmental noise to summon cognition arbitrarily.
+Status: planned/specification
+
+**Source-Event Memory Foundation**
+What it does: Complete structured events—utterances, decisions, actions, outcomes, evidence, lifecycle changes—are retained as the durable base layer of continuity. Model-generated summaries never replace them.
+Ability: Preserve reconstructable experiential history independently of later interpretations.
+Status: planned/specification
+
+**Deterministic Encounter Formation**
+What it does: Related source events can be promoted into an encounter using explicit runtime rules rather than asking a model whether something “felt important.” Gate A uses explicit remember requests and a designated meaningful interaction as its promotion rules.
+Ability: Form episodic memory units without requiring autonomous salience judgment.
+Status: planned/specification
+
+**Grounded Encounter Retrieval**
+What it does: Prior encounters are retrieved using participant, world/epoch, conversational cues, structured fields, and text search, then supplied as labelled source excerpts rather than database dumps. Recall is considered successful only if it naturally affects later dialogue or behavior.
+Ability: Bring relevant prior experiences back into active cognition after restart.
+Status: planned/specification
+
+**Provenance-or-Reject Derived Cognition**
+What it does: A model-authored belief, episodic summary, or relationship interpretation must point to visible source events and survive validation before being accepted. Even accepted provenance does not make the interpretation automatically true.
+Ability: Create higher-level memories and beliefs while retaining traceability to underlying experience.
+Status: planned/specification
+
+**Replaceable Interpretive Memory**
+What it does: Beliefs, summaries, relationship implications, salience, and similar derived cognition are treated as revisable overlays on durable source history rather than the canonical history itself.
+Ability: Update or discard mistaken interpretations without losing the experiences from which they were derived.
+Status: planned/specification
+
+**Measured Memory Compaction**
+What it does: Compacted interpretations are contemplated only as an optimization layer and must be compared against uncompacted events for provenance retention, key facts, contradictions, retrieval usefulness, behavioral continuity, and token savings. Complete source history remains available.
+Ability: Reduce memory/context cost without making compressed summaries the sole surviving memory.
+Status: planned/specification
+
+**Evidence-Triggered Semantic Retrieval**
+What it does: Embedding/semantic retrieval is preserved as a seam but is not introduced until fixed retrieval tests repeatedly demonstrate that simpler structured/full-text retrieval fails.
+Ability: Escalate retrieval sophistication only when observed memory failures justify it.
+Status: planned/specification
+
+**Context Assembly as an Architectural Function**
+What it does: Cognition receives a deliberately assembled package containing current perception, recent conversation, retrieved encounter evidence, persona context, trigger provenance, allowed actions, world/epoch identity, and deadlines.
+Ability: Externalize context selection from the language model and control exactly what cognition can reason from.
+Status: planned/specification
+
+**External Persona Package Authority**
+What it does: Authored identity, voice, relationship framing, examples, and character directives live in an externally owned versioned persona package. The runtime stores only stable character identity plus a reference/version/hash and loads bounded compiled persona context.
+Ability: Preserve persona identity independently of runtime persistence, provider sessions, and world implementation.
+Status: planned/specification
+
+**Causal Identity Graph**
+What it does: Stable IDs connect stimulus → conversation → model run → utterance/action → behavior → evidence → encounter. This creates an explicit causal chain rather than relying on chronological logs alone.
+Ability: Trace why an agent said or did something back through the cognition and evidence that caused it.
+Status: planned/specification
+
+**Behavioral Continuity Regression Suite**
+What it does: Fixed fixtures test identity consistency, contradictions, invented memories, retrieval failure, foolish actions, duplicate speech, interruption, suspension, and restart behavior after changes to prompts, persona, models, memory, or orchestration.
+Ability: Detect continuity and behavioral drift caused by system changes.
+Status: planned/specification
+
+**Change-Impact Evaluation**
+What it does: Prompt, persona, model, retrieval, memory, action-policy, and orchestration hashes are intended to determine when continuity/experience evaluations must be rerun.
+Ability: Identify when a system change is substantial enough to require behavioral revalidation.
+Status: planned/specification
+
+**Machine + Experiential Acceptance**
+What it does: Mechanical evidence verifies causal correctness, while a separate human experiential gate asks whether the character is recognizably consistent, natural, grounded, and actually worth continuing. Neither is allowed to substitute for the other.
+Ability: Evaluate both architectural correctness and lived character coherence.
+Status: planned/specification
+
+**Per-Agent Knowledge Visibility**
+What it does: Future multi-character retrieval and context are scoped by viewer `AgentId`; one character's private memory cannot enter another character's context merely because they share a database or runtime.
+Ability: Maintain genuinely separate knowledge states for multiple agents.
+Status: planned/specification
+
+**Explicit Knowledge Transmission**
+What it does: Private knowledge crosses characters only through an explicit transmission event, after which the recipient gains its own source-linked record rather than directly inheriting the sender's private memory.
+Ability: Let agents learn from one another without collapsing their distinct epistemic histories.
+Status: planned/specification
+
+**Deterministic Multi-Agent Attention Arbitration**
+What it does: The future two-character design assigns addressed interaction through an explicit attention/arbitration policy instead of allowing every nearby agent to react independently.
+Ability: Coordinate which character should respond to a shared stimulus.
+Status: planned/specification
+
+**Directional Social State**
+What it does: Relationship records are conceived as sourced, directional interpretations rather than one shared relationship variable; beliefs may be contested, and goals/plans remain distinct state with their own lifecycle.
+Ability: Maintain asymmetric, character-specific social and motivational state.
+Status: planned/specification
+
+**Incremental Cognitive Evolution**
+What it does: Rich cognition is introduced one dimension at a time—belief, relationship, goal/intention, or plan—and must demonstrate behavioral usefulness before another dimension is added. Records include sources, visibility, lifecycle, confidence/status, and supersession.
+Ability: Evolve an agent's cognitive architecture in controlled, individually testable increments.
+Status: planned/specification
+
+**Measured Multi-Level Cognitive Budgets**
+What it does: Future run/session/daily call, token, cost, queue, and concurrency limits are intended to be derived from measured behavior rather than invented ahead of time. Budget gates reserve capacity before calls while safety controls remain exempt.
+Ability: Bound autonomous cognition and model expenditure across long-running or multi-agent systems.
+Status: planned/specification
+
+**Evidence-Based Development Continuity**
+What it does: A fresh implementation agent resumes from declared checkpoints, inspects actual artifacts, classifies work as unstarted/partial/complete/contradicted, and stops if claims conflict with evidence.
+Ability: Preserve project continuity across stateless or replaceable coding agents.
+Status: planned/specification
+
+**Semantic Architecture Guarding**
+What it does: In addition to structural validation, the blueprint proposes automated checks for semantic contradictions such as duplicated timeouts, illegal state combinations, multiple speech owners, missing identity/evidence rules, and dependency leakage.
+Ability: Detect architectural drift that ordinary schema validation or compilation cannot catch.
+Status: planned/specification
+
+**Empirical Compatibility Gating**
+What it does: External dependencies are treated as hypotheses that must pass progressively harder real-world gates—join, presence, chat, movement, pathfinding, interruption, restart—before cognition and persistence work expands around them.
+Ability: Prevent unverified environmental assumptions from becoming load-bearing architecture.
+Status: planned/specification
+
+**Real-Adapter Portability Proof**
+What it does: Replaceable interfaces are treated only as portability seams until a second materially different real environment is implemented and the abstractions are allowed to change in response.
+Ability: Distinguish architectural modularity from demonstrated portability.
+Status: planned/specification
+
+**Typed Notation-to-Capability Compilation**
+What it does: The speculative LSL/action-tag idea permits compact expressive or action notation only if it compiles into already validated utterance/control/capability boundaries rather than creating another executable authority channel.
+Ability: Add expressive agent notation without giving it unrestricted execution authority.
+Status: planned/specification
+
+**Capability-Specific Crash Recovery Matrix**
+What it does: Future recovery work classifies interruption at every mutation phase—before intent, after intent, dispatch, observation, commit, shutdown, migration, restore—and assigns retry/unknown/reconciliation behavior per capability instead of using one global recovery rule.
+Ability: Recover from crashes according to where an external effect may actually have occurred.
+Status: planned/specification
+
+### Rejected / superseded concepts
+
+**Exclusive `IDLE ↔ COGNIZING ↔ ACTING` lifecycle** — replaced because cognition and physical duration can overlap; orthogonal states plus asynchronous behaviors describe reality more accurately.
+
+**`DEGRADED` as an agent lifecycle state** — replaced by independent component-health axes so infrastructure health does not overwrite connection or availability.
+
+**Disconnect-on-player-absence** — replaced because a disconnected character cannot truthfully detect the player's return; healthy connected suspension is used instead.
+
+**Duration-holding model/tool callbacks** — replaced because a long-running follow action should not occupy a model run or actor mailbox.
+
+**Speech as a physical `ActionRequest`** — rejected in favor of a separate utterance-delivery lifecycle.
+
+**Multiple speech routes and automatic speech retries** — `speak`, `finalSpeech`, callback/fallback/reconnect resend paths were explicitly retired because they could duplicate dialogue.
+
+**Universal “server-confirmed success”** — replaced with capability-specific minimum environmental evidence.
+
+**Internally owned full `AgentProfile`** — replaced with external Parallax/Lattice persona-package authority plus a runtime reference/version/hash.
+
+**Summary-first durable memory** — replaced by complete source events and deterministic encounters; summaries and interpretations may exist but cannot replace the underlying experience.
+
+**Autonomous Gate-A significance scoring** — removed from the first proof; encounter formation is deterministic until later evidence demonstrates a need for autonomous salience.
+
+**Mandatory Agents SDK architecture** — replaced with provider-neutral `ModelPort`; the SDK is optional rather than structurally load-bearing.
+
+**Fixed Minecraft/Java versions as architecture truth** — replaced with empirically selected and re-tested dependency intersections.
+
+**Toy-adapter portability proof / generic capability catalogue** — explicitly rejected because interface seams alone do not demonstrate environment portability.
+
+**Generic operator `replacement` / correction object** — removed from Gate A; any future correction mechanism must be record-specific, versioned, sourced, and audited.
+
+### Portable ability list
+
+* Epistemic Authority Separation
+* Model Proposal Authority
+* Bounded Perception
+* Stable Agent Identity
+* Stable Participant Identity
+* World-Epoch Tracking
+* Orthogonal Runtime State
+* Connected Suspension
+* Offline-Time Honesty
+* Asynchronous Physical Behavior
+* Interruptible Behavior Leases
+* Priority Safety Control
+* Capability-Specific Evidence
+* Explicit Uncertainty
+* Post-Failure Reconciliation
+* Single-Owner Speech
+* Duplicate-Speech Prevention
+* Closed Cognitive Boundaries
+* Structured Model Decisions
+* Deterministic Stimulus Gating
+* Cognitive Load Suppression
+* Source-Event Memory
+* Deterministic Encounter Formation
+* Grounded Memory Retrieval
+* Provenance-Backed Derived Cognition
+* Revisable Interpretive Memory
+* Measured Memory Compaction
+* Threshold-Gated Semantic Retrieval
+* Controlled Context Assembly
+* External Persona Persistence
+* Causal Action Tracing
+* Continuity Regression Testing
+* Drift Detection
+* Machine-and-Experiential Evaluation
+* Per-Agent Knowledge Isolation
+* Explicit Knowledge Transmission
+* Multi-Agent Attention Arbitration
+* Directional Relationship State
+* Sourced Belief State
+* Goal and Plan Persistence
+* Controlled Cognitive Evolution
+* Multi-Level Cognitive Budgets
+* Development-Agent Continuity
+* Semantic Architecture Self-Checking
+* Empirical Capability Gating
+* Real-Adapter Portability Testing
+* Typed Action-Notation Compilation
+* Capability-Specific Crash Recovery
