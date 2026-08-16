@@ -14,7 +14,7 @@ Preferred choices, in order of simplicity:
 1. Read-only inspect a designated project file/change manifest.
 2. Read-only inspect a designated local build-status artifact or run a known read-only status command.
 
-Do not choose file mutation merely to make agency look dramatic. An investigation, durable opinion, Workbench item, or decision to tell Bill is enough to prove consequence.
+Do not choose file mutation merely to make agency look dramatic. An investigation, durable opinion, Workbench item, decision to tell Bill, or a completed inference with no outward effect is enough to prove consequence where the model protocol can represent that disposition honestly.
 
 ## Allowed scope
 
@@ -26,7 +26,9 @@ No general shell, arbitrary filesystem, browser automation, network search, mess
 
 ## Contracts and invariants
 
-Implement INT-007 and receipt views. Preserve INV-002, INV-004, INV-006, INV-008, INV-010–012. Core records attempt before dispatch. A read result is external evidence, not identity or memory until Raven explicitly uses an authored operation.
+Implement INT-007 and receipt views. Preserve INV-002, INV-004, INV-006, INV-008, INV-010–013. Core records attempt before dispatch. A read result is external evidence, not identity or memory until Raven explicitly uses an authored operation.
+
+If the configured model protocol supports the INT-003 `NO_OUTWARD_EFFECT` disposition, implement and verify it here as a completed inference with no external delivery. Do not treat missing output, malformed output, parser failure, timeout, or an unfinished generation as intentional silence. If the model cannot reliably produce the disposition, mark that capability unsupported in v0.1 rather than fabricating it.
 
 ## Ordered implementation
 
@@ -35,14 +37,16 @@ Implement INT-007 and receipt views. Preserve INV-002, INV-004, INV-006, INV-008
 3. Implement attempt-before-dispatch and terminal/unknown receipt handling.
 4. Add fake success, denied scope, duplicate, failure, and crash-after-dispatch fixtures.
 5. Make receipts available as neutral current-event evidence and in Glass Box.
-6. Rehearse First Presence with a test event, then run the Bill-observed real scenario.
-7. Restart and conduct the later conversation/context inspection.
-8. Prepare final checkpoint; stop regardless of outcome.
+6. If supported by the model protocol, add a fixture proving explicit `NO_OUTWARD_EFFECT` terminates normally and produces no external action or message.
+7. Rehearse First Presence with a test event, then run the Bill-observed real scenario.
+8. Restart and conduct the later conversation/context inspection.
+9. Prepare final checkpoint; stop regardless of outcome.
 
 ## Acceptance
 
 - An authored wake introduces a real event while Bill is away from conversation.
-- Primary Raven—not a router—chooses inspect, act, defer, message, create work, or silence.
+- Primary Raven—not a router—chooses inspect, act, defer, message, create work, or, if the model protocol supports it, explicitly complete with no outward effect.
+- A no-outward-effect result is accepted only from the explicit model disposition; absence or failure is never reinterpreted as choice.
 - Every capability attempt has an evidenced receipt; narration is insufficient.
 - Result and Raven-authored consequences survive restart.
 - A later conversation can receive the relevant neutral evidence without a canned “remember this” prompt.
