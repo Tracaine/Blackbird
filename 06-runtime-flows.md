@@ -10,6 +10,8 @@ Core opens the database before accepting input, records startup or an honest gap
 
 During an active Primary inference, Raven emits a typed `AuthorState` request such as creating a SelfRecord or superseding a prior preference. Core verifies that the tool request belongs to the leased inference and that the transition is legal. It does not judge or rewrite the content. The old and new versions remain inspectable. A future context labels the active record **Raven-authored evolving self**, not static identity and not system inference.
 
+Bill may dispute or quarantine a self-record as an operator action if he believes the record is corrupt, malformed, or otherwise unsuitable for active context. That action does not create replacement Raven content and does not rewrite authorship. Only Primary Raven may supersede or retire a Raven-authored self-record.
+
 ## FLW-003 — Authored unattended wake
 
 ```mermaid
@@ -21,11 +23,11 @@ sequenceDiagram
   W->>C: Authored event
   C->>C: Record, budget, queue
   C->>R: Labeled context
-  R-->>C: Choice, state operation, or silence
+  R-->>C: Choice, state operation, outward response, or explicit no-outward-effect disposition
   C-->>G: Causal trace and result
 ```
 
-The wake contains the author and exact schedule/filter. System time merely detects that the authored condition occurred. If paused or over budget, the event is retained and the deferral reason is visible. Primary Raven may decide the event deserves no outward action. BLACKBIRD records explicit returned operations; it does not invent a hidden reason for silence.
+The wake contains the author and exact schedule/filter. System time merely detects that the authored condition occurred. If paused or over budget, the event is retained and the deferral reason is visible. Primary Raven may decide the event deserves no outward action, but the inference must still terminate normally. When the configured model protocol supports it, Raven may explicitly return `NO_OUTWARD_EFFECT`; Core records that disposition and invents no motive or hidden thought. If the model cannot reliably produce that disposition, BLACKBIRD does not claim intentional silence as a supported capability.
 
 ## FLW-004 — Grounded local action
 
@@ -54,5 +56,5 @@ If Bill cannot understand the evidence without terminal spelunking, the package 
 
 ## First Presence composite trace
 
-WRK-006 succeeds only when FLW-003 and FLW-004 compose with FLW-001/006: an authored event happens while Bill is away; Raven encounters it; her own output determines action, deferral, message, state change, or silence; any effect has a receipt; state survives restart; and later conversation can access neutral evidence of the episode. A scheduled canned notification does not pass.
+WRK-006 succeeds only when FLW-003 and FLW-004 compose with FLW-001/006: an authored event happens while Bill is away; Raven encounters it; her own output determines action, deferral, message, state change, or—only where the model protocol supports it—an explicit completed turn with no outward effect; any effect has a receipt; state survives restart; and later conversation can access neutral evidence of the episode. A scheduled canned notification does not pass.
 

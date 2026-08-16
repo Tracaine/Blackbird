@@ -68,7 +68,7 @@ interface CompiledContext {
 }
 ```
 
-Section order is fixed as listed. Content may be selected/truncated, never behaviorally rewritten. Failure codes: `IDENTITY_SEED_MISSING`, `EVENT_MISSING`, `BUDGET_IMPOSSIBLE`, `MEMORY_DEGRADED`. The last may return context with an explicit marker; the first three stop inference.
+Section order is fixed as listed. Content may be selected/truncated, never behaviorally rewritten. A Bill operator quarantine may omit a Raven-authored self record from active `RAVEN_SELF`, but the omission must be listed and operator-authored prose may never be substituted into that section. Failure codes: `IDENTITY_SEED_MISSING`, `EVENT_MISSING`, `BUDGET_IMPOSSIBLE`, `MEMORY_DEGRADED`. The last may return context with an explicit marker; the first three stop inference.
 
 ## INT-003 — Infer v1
 
@@ -84,11 +84,14 @@ interface InferRequest {
 type InferEvent =
   | { kind: "TOKEN"; text: string }
   | { kind: "TOOL_CALL"; callId: Id; name: string; arguments: unknown }
+  | { kind: "TURN_DISPOSITION"; disposition: "NO_OUTWARD_EFFECT" }
   | { kind: "COMPLETED"; usage?: unknown }
   | { kind: "FAILED"; code: string; detail: string; retryable: boolean };
 ```
 
 The adapter reports the actual endpoint/model identifier. It has no fallback policy. Only Core may issue a valid executive lease. Timeout, connection, and model errors end the run visibly.
+
+`NO_OUTWARD_EFFECT` is not a null inference and does not mean the model literally emitted nothing. It is an explicit terminal disposition produced by Primary Raven through the model protocol after completing cognition. The underlying generation must still terminate normally. Core may record the disposition and suppress outward delivery, but it must not invent a motive, feeling, or hidden thought. If the configured model cannot reliably emit this disposition, v0.1 must not claim intentional silence as a supported capability; Raven may instead complete through an ordinary utterance or explicit state/tool operation.
 
 ## INT-004 — AuthorState v1
 
@@ -109,6 +112,8 @@ interface AuthorStateResult { recordId: Id; version: number; eventId: Id; }
 ```
 
 Core validates author proof, schema, optimistic version, and legal lifecycle transition only. It does not classify consistency, health, sentiment, values, or identity fidelity. It stores `statedReason` as authored text, not verified fact. Errors never trigger automatic content repair.
+
+For `recordKind: "SELF"`, `authorKind` MUST be `PRIMARY_RAVEN` for `CREATE`, `SUPERSEDE`, and `RETIRE`. Bill cannot create replacement Raven self-content through INT-004. Bill's intervention path is INT-009 operator status (`DISPUTE_SELF_RECORD`, `QUARANTINE_SELF_RECORD`, `RESTORE_SELF_RECORD`), which preserves original authorship and lineage without impersonating Raven.
 
 ## INT-005 — CommitCausalBatch v1
 
@@ -194,15 +199,20 @@ type ControlCommand =
   | { kind: "CANCEL_INFERENCE"; inferenceRunId: Id }
   | { kind: "EXPORT"; destination: string }
   | { kind: "BACKUP"; label: string }
-  | { kind: "SUPERSEDE_RECORD"; recordId: Id; replacement: unknown }
+  | { kind: "DISPUTE_SELF_RECORD"; recordId: Id; note?: string }
+  | { kind: "QUARANTINE_SELF_RECORD"; recordId: Id; note?: string }
+  | { kind: "RESTORE_SELF_RECORD"; recordId: Id; note?: string }
+  | { kind: "SUPERSEDE_NON_SELF_RECORD"; recordId: Id; replacement: unknown }
   | { kind: "CHECKPOINT_DECISION"; workItemId: Id; decision: "APPROVE" | "REVISE" | "STOP"; notes?: string };
 ```
 
 All commands are Bill-authored and audited. `PAUSE` is idempotent and priority. `RESUME` does not automatically fire missed events except by each authored catch-up policy. File destinations stay inside configured operations roots.
 
+`SUPERSEDE_NON_SELF_RECORD` MUST reject a `SelfRecord`. Dispute/quarantine/restore operations change operator status only; they cannot alter the original Raven-authored content or its `authorKind`. Quarantine removes the record from active self-context while preserving it in lineage and causal inspection. Restore returns that same Raven-authored record to eligibility; it does not create a new Raven claim.
+
 ## INT-010 — Converse v1
 
-Input is a Bill-authored SourceEvent and ConversationTurn. Core acknowledges durable commit before inference begins. Output stream identifies inference run and provisional text; a completed Raven turn is durable only after model completion or an explicitly represented interrupted output. Reconnection retrieves committed turns and current stream status.
+Input is a Bill-authored SourceEvent and ConversationTurn. Core acknowledges durable commit before inference begins. Output stream identifies inference run and provisional text; a completed Raven turn is durable only after model completion or an explicitly represented interrupted output. A `NO_OUTWARD_EFFECT` disposition is a completed turn with no outward delivery, not an incomplete or null inference. Reconnection retrieves committed turns and current stream status.
 
 ## Error envelope
 

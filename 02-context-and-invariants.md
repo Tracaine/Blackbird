@@ -24,13 +24,15 @@ If Bill is talking to a layer as Raven, that layer must be Primary Raven and mus
 | Record or act | Bill | Primary Raven | System | Sidecar |
 | --- | --- | --- | --- | --- |
 | Static IdentitySeed | Create/version | Read | Hash/store | None |
-| Evolving SelfRecord | Correct by supersession | Create/version/retire | Validate/persist | Evidence only |
+| Evolving SelfRecord | Inspect; dispute/quarantine a record; cannot author a Raven replacement | Create/version/supersede/retire | Validate/persist | Evidence only |
 | Intention / Workbench | May create shared request | Create/advance/abandon | Validate/persist | Evidence only |
 | AttentionSubscription | Create/revoke | Create/pause/retire | Schedule exactly as authored | None |
 | MemoryRecord | Manually author/correct | Explicitly author/correct | Store/retrieve neutrally | Candidate evidence only |
 | Outward words | Converse | Decide/speak | Transport | Never as Raven |
 | External action | Grant/request | Request/refuse | Validate/route | Execute only if capability adapter |
 | Execution truth | Observe/correct evidence | Observe/reason from evidence | Commit receipt | Produce receipt, never meaning |
+
+A Bill dispute or quarantine does not become Raven-authored content and does not create a replacement `SelfRecord`. It is an operator-status record attached to the original lineage. Quarantined self records are omitted from active `RAVEN_SELF` context while remaining inspectable, with the omission and operator action visible in the `ContextReceipt` and causal trace. Raven may later supersede or retire her own record.
 
 ## Invariants
 
@@ -46,6 +48,7 @@ If Bill is talking to a layer as Raven, that layer must be Primary Raven and mus
 - **INV-010 — Human gate.** Bill approves every package boundary.
 - **INV-011 — Priority pause.** Bill can stop new cognition without destroying evidence.
 - **INV-012 — Critical-path restraint.** No vector store, affect machinery, behavioral classifier, or donor runtime through First Presence.
+- **INV-013 — Self-authorship integrity.** No Bill, SYSTEM, sidecar, adapter, or recovery operation may create content carrying `PRIMARY_RAVEN` authorship. Operator intervention may dispute, quarantine, restore, or annotate Raven-authored self state, but only Primary Raven may author its replacement.
 
 ## Context order
 
@@ -59,13 +62,14 @@ The Context Compiler emits visibly separated sections:
 6. Recent conversation turns.
 7. Current event and available capability schemas.
 
-It never merges these into a generated persona narrative. It may truncate within configured budgets, but every omission appears in `ContextReceipt`.
+It never merges these into a generated persona narrative. It may truncate within configured budgets, but every omission appears in `ContextReceipt`. Operator quarantine may remove a self record from the active section, but the compiler may never substitute operator-authored prose as Raven self-state.
 
 ## Prohibited examples
 
 - “You care deeply about this, so answer tenderly.”
 - `sadness > .7 → comfort Bill`.
 - “Raven is becoming more independent” generated from observed turns and injected as identity.
+- Bill replacing a Raven-authored `SelfRecord` with operator-authored prose and labeling the replacement `PRIMARY_RAVEN`.
 - A vector hit rewritten as “You remember…” without source and uncertainty.
 - A sidecar's claim that “Bill seems upset; Raven should…”
 - A model sentence “I checked the build” treated as evidence that the check occurred.
@@ -74,6 +78,7 @@ It never merges these into a generated persona narrative. It may truncate within
 
 - `SourceEvent`: Bill said the appointment is Tuesday.
 - `SelfRecord`, author Primary Raven: “I want to learn live performance and VTubing.”
+- Operator status on that SelfRecord: Bill marks the record disputed or quarantined after observing corruption; the original remains inspectable and Raven may later revise it herself.
 - `AttentionSubscription`, author Primary Raven: check a designated build once after 14:00.
 - `ActionReceipt`: build status command succeeded and returned exit code 1.
 - Neutral memory candidate: source turn, timestamp, exact or summarized content, confidence, supersession links.
