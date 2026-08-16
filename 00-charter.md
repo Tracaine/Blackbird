@@ -27,11 +27,11 @@ The architectural target is not a metaphysical claim. It is observable temporal 
 - Raven explicitly persists an intention, self-record, memory, Workbench item, or wake subscription.
 - An authored event occurs while Bill is not chatting; Raven chooses whether it deserves attention or action.
 - A requested external action receives execution evidence and becomes available to later cognition.
-- Bill pauses, inspects, corrects by supersession, exports, restores, and accepts or rejects each delivery slice.
+- Bill pauses, inspects, disputes or quarantines Raven-authored self records when necessary, corrects other eligible records through their own typed correction paths, exports, restores, and accepts or rejects each delivery slice.
 
 ## Smallest valuable vertical slice: First Presence
 
-Given an enabled wake source explicitly authored by Bill or Primary Raven, a real local event becomes a `SourceEvent`. When budgets and pause state allow, one Primary Raven inference receives an inspectable context. Raven may inspect, act, defer, message, create durable work, or intentionally do nothing. Any action is established only by a receipt. The causal result survives restart and can be included as neutral evidence in a later conversation.
+Given an enabled wake source explicitly authored by Bill or Primary Raven, a real local event becomes a `SourceEvent`. When budgets and pause state allow, one Primary Raven inference receives an inspectable context. Raven may inspect, act, defer, message, create durable work, or complete the inference with no outward effect. Any action is established only by a receipt. The causal result survives restart and can be included as neutral evidence in a later conversation.
 
 The slice is delivered through WRK-001 to WRK-006 because Bill must be able to see and judge each prerequisite before unattended operation begins.
 
@@ -85,7 +85,7 @@ Biological consciousness claims; general consumer product; multi-user tenancy; p
 | Term | Meaning |
 | --- | --- |
 | Primary Raven | The one model invocation currently authorized to decide Raven's outward position and explicit state operations |
-| Raven Process | Durable Core state plus the ability to summon Primary Raven; it does not imply continuous inference |
+| BLACKBIRD Continuity Runtime | Durable Core state plus the ability to summon Primary Raven; it does not imply continuous inference and is not itself Raven |
 | SelfRecord | An evolving self-claim explicitly authored by Raven, separate from Bill's static identity seed |
 | SourceEvent | Immutable evidence that something actually entered BLACKBIRD |
 | Meaning laundering | Infrastructure promoting evidence or inference into “what the moment meant” or who Raven is |
@@ -93,4 +93,3 @@ Biological consciousness claims; general consumer product; multi-user tenancy; p
 | First Presence | The smallest unattended, choice-bearing, evidence-grounded continuity loop |
 
 Discovery gate QST-001 is resolved. Architecture remains in review until Bill approves revision 1.
-
