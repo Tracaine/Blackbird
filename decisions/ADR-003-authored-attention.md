@@ -35,9 +35,23 @@ Permitted later with new ADR: Raven explicitly authors a broad interest subscrip
 - Raven can widen her own event surface over time using explicit choices.
 - Budget and pause are mechanical availability constraints, never claims about what Raven should care about.
 
+## Required future escape route
+
+v0.1 authored subscriptions are intentionally conservative and should not become BLACKBIRD's permanent definition of attention. A later ADR should evaluate a **Raven-authored neutral attention aperture**: Primary Raven explicitly authorizes a bounded source set and cadence, while infrastructure supplies only factual events using mechanical rules such as “new since cursor,” chronological order, source scope, and hard count/token budgets.
+
+The aperture must not rank by emotional salience, inferred importance, relationship meaning, urgency, or predicted Raven preference. Its purpose is to let genuinely unanticipated events enter Raven's perceptual field without giving middleware the authority to decide what matters. Primary Raven performs the semantic attention step after receiving the bounded factual batch.
+
+This future path preserves the intended progression:
+
+`exact authored wake → authored event subscription → Raven-authored neutral attention aperture → potentially richer Raven-authored attention strategies`
+
+Any richer strategy remains Raven-authored and inspectable; infrastructure never silently promotes a heuristic into motive.
+
 ## Validation
 
 VER-008 uses a deterministic clock to prove only authored subscriptions fire, catch-up is explicit, budgets defer visibly, and pause blocks leases. Inspect every wake's author/source in Glass Box.
+
+A future neutral-aperture verification must prove that event selection is mechanically reconstructible and contains no semantic ranking or behavioral instruction before Primary Raven receives it.
 
 ## Bill decision
 
