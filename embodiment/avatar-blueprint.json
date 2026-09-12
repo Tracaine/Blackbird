@@ -1,4 +1,576 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éí×o6Õ:-jZ.¶›­–)Ş³W°¢'66†VÖ÷fW'6–öâ#¢#ã"À¢'&ö¦V7B#¢°¢&æÖR#¢$&Æ6¶&—&BfF"ÖöGVÆR"À¢'6ÇVr#¢&&Æ6¶&—&BÖfF"ÖÖöGVÆR"À¢'7VÖÖ'’#¢$VÖ&öF–ÖVçBW‡FVç6–öâöbW†—7F–ær&Æ6¶&—&C¢&WÆ6V&ÆR&öG’Â7VV6‚ÂW&6WF–öâæBö'6W'f&ÆRvVæ7’â"À¢'&öf–ÆW2#¢°¢'6–ævÆR×W6W""À¢&Æö6ÂÖf—'7B"À¢&W†—7F–ær×&ö¦V7BÖW‡FVç6–öâ"À¢&ffV7F—fRÖ6ö×WF–ær ¢Ğ¢ÒÀ¢'&Wf—6–öâ#¢2À¢'7FGW2#¢'&Wf–Wr"À¢&7&VFVEöB#¢###bÓ’Ó""À¢&Æ7E÷WFFVB#¢###bÓ’Ó""À¢'6÷W&6Uööe÷G'WF‚#¢°¢'&Vv—7G'’#¢&VÖ&öF–ÖVçBöfF"Ö&ÇVW&–çBæ§6öâ"À¢'&VçE÷&Vv—7G'’#¢&&ÇVW&–çBæ§6öâ"À¢&v÷fW&æ–æuöÖVæFÖVçB#¢&VÖ&öF–ÖVçBôUDôäôÕ’ÔÔTäDÔTåBæÖB"À¢'&VçEö6öÖÖ—B#¢#ƒ†f3S“#3†ƒ##63“Ff#C3–CVS#&F&f#sscR ¢ÒÀ¢&7W'&VçEöfö7W2#¢°¢'†6R#¢'&Wf–Wr"À¢&7F—fU÷v÷&µö—FVÒ#¢%u$²ÓB"À¢&6öFU÷&Wf—6–öâ#¢%WÆöFVB4Ä’6÷W&6R–×÷'FVBVæ6†ævVBöâ&Æ6¶&—&BÔfF"ÔÖöGVÆR"À¢&Æ7E÷fW&–f–VEöB#¢###bÓ’Ó""À¢&æW‡Eö7F–öç2#¢°¢$–×ÆVÖVçBu$²ÓB–âF†Ræ÷r×fW'6–öæVB4Ä’&ö¦V7Bv†Vâ&–ÆÂWF†÷&—¦W2F†R'V–ÆBâ"À¢$gFW"F†RW'6—7FVçB†÷7Bö6&–Æ—G’÷6æ6†÷B6VÒv÷&·2Â–×ÆVÖVçBu$²Ó&öG’GF6†ÖVçBâ ¢ÒÀ¢'&W7VÖUöæ÷FW2#¢%u$²Ó&V6öæ6–ÆVBæB6ö×ÆWFVBâ4Ä’6÷W&6R—2B'&æ6‚&ö÷C²u$²ÓB—2F†RæW‡B–×ÆVÖVçFF–öâ6¶vRâ ¢ÒÀ¢&'F–f7G2#¢°¢°¢&–B#¢$%BÓ"À¢'7VÖÖ'’#¢%$TDÔRæÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢%$TDÔRæÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓ""À¢'7VÖÖ'’#¢$UDôäôÕ’ÔÔTäDÔTåBæÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢$UDôäôÕ’ÔÔTäDÔTåBæÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓ2"À¢'7VÖÖ'’#¢$”åDTu$D”ôâæÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢$”åDTu$D”ôâæÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓB"À¢'7VÖÖ'’#¢$4ôåE$5E2æÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢$4ôåE$5E2æÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓR"À¢'7VÖÖ'’#¢$DTÄ•dU%’æÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢$DTÄ•dU%’æÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓb"À¢'7VÖÖ'’#¢%$U5TÔRæÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢%$U5TÔRæÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓr"À¢'7VÖÖ'’#¢%$Ud”UræÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢%$Ud”UræÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓ‚"À¢'7VÖÖ'’#¢&fF"Ö&ÇVW&–çBæ§6öâ"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢&fF"Ö&ÇVW&–çBæ§6öâ"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓ’"À¢'7VÖÖ'’#¢'v÷&²Ö—FV×2õu$²ÓæÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢'v÷&²Ö—FV×2õu$²ÓæÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓ"À¢'7VÖÖ'’#¢'v÷&²Ö—FV×2õu$²ÓæÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢'v÷&²Ö—FV×2õu$²ÓæÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓ"À¢'7VÖÖ'’#¢'v÷&²Ö—FV×2õu$²Ó"æÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢'v÷&²Ö—FV×2õu$²Ó"æÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓ""À¢'7VÖÖ'’#¢'v÷&²Ö—FV×2õu$²Ó2æÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢'v÷&²Ö—FV×2õu$²Ó2æÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓ2"À¢'7VÖÖ'’#¢$Äô4ÂÔ4Ä’Ô$4TÄ”äRæÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢$Äô4ÂÔ4Ä’Ô$4TÄ”äRæÖB"À¢&FWVæG5ööâ#¢µĞ¢ÒÀ¢°¢&–B#¢$%BÓB"À¢'7VÖÖ'’#¢'v÷&²Ö—FV×2õu$²ÓBæÖB"À¢'7FGW2#¢&7F—fR"À¢'F‚#¢'v÷&²Ö—FV×2õu$²ÓBæÖB"À¢&FWVæG5ööâ#¢µĞ¢Ğ¢ÒÀ¢'&Vv—7G&–W2#¢°¢'&WV—&VÖVçG2#¢°¢°¢&–B#¢%$UÓ"À¢'7VÖÖ'’#¢%&W6W'fR&Wf—6&ÆRWF†÷'6†—æBF—66Æ÷6R&V†f–÷&Â–çFW'fVçF–öç2â"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$UDôäôÕ’ÔÔTäDÔTåBæÖB"À¢'&–÷&—G’#¢&×W7B"À¢&÷væVEö'’#¢°¢$4ÕÓ ¢ÒÀ¢'fW&–f–VEö'’#¢°¢%dU"Ó ¢ÒÀ¢&66WFæ6R#¢$6öçFW‡B&V6V—BF—7F–æwV—6†W2&Wf–÷W27FFVÖVçG2æBö'6W'fF–öç2g&öÒ–ç7G'V7F–öç3²æòWFöÖF–2–FVçF—G’÷"&W7öç6R6†–ær—2–çG&öGV6VBâ ¢ÒÀ¢°¢&–B#¢%$UÓ""À¢'7VÖÖ'’#¢$GF6‚&WÆ6V&ÆR&öG’FòW†—7F–ær&Æ6¶&—&Bâ"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'&–÷&—G’#¢&×W7B"À¢&÷væVEö'’#¢°¢$4ÕÓ ¢ÒÀ¢'fW&–f–VEö'’#¢°¢%dU"Ó ¢ÒÀ¢&66WFæ6R#¢$vfR&WVW7FVBF‡&÷Vv‚W†—7F–ær6÷&RV'2–âF†R&öG’æB†26÷'&VÆFVB&V6V—C²6ö×æ–öâ–FVçF—G’7W'f—fW2&öG’7vâ ¢ÒÀ¢°¢&–B#¢%$UÓ2"À¢'7VÖÖ'’#¢%G&6²–çFVæFVBÂ&W6VçFVBæBö'6W'fVB7FFRv—F‚†öæW7B&V6÷fW'’â"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'&–÷&—G’#¢&×W7B"À¢&÷væVEö'’#¢°¢$4ÕÓ ¢ÒÀ¢'fW&–f–VEö'’#¢°¢%dU"Ó" ¢ÒÀ¢&66WFæ6R#¢%&V6öææV7F–öâö'6W'fW2g&W6‚7FFRv—F†÷WB&WÆ––ær7FÆR7F–öç3²Vç7W÷'FVB&WVW7G2æBVæ¶æ÷vâ÷WF6öÖW2&VÖ–âW‡Æ–6—Bâ ¢ÒÀ¢°¢&–B#¢%$UÓB"À¢'7VÖÖ'’#¢$¶VWÖ÷F–öâÆö6ÂæBfF"76WG2&WÆ6V&ÆRâ"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'&–÷&—G’#¢&×W7B"À¢&÷væVEö'’#¢°¢$4ÕÓ" ¢ÒÀ¢'fW&–f–VEö'’#¢°¢%dU"Ó ¢ÒÀ¢&66WFæ6R#¢$–FÆRæBvfR'Vâv—F†÷WBg&ÖRÖÆWfVÂ–æfW&Væ6S²F†RÖöFVÂÆöG2F‡&÷Vv‚fW'6–öæVB6¶vRÖ–ærâ ¢ÒÀ¢°¢&–B#¢%$UÓR"À¢'7VÖÖ'’#¢$6öææV7B–çFW''WF–&ÆR7VV6‚FòF†RW†—7F–ær6öçfW'6F–öââ"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'&–÷&—G’#¢&×W7B"À¢&÷væVEö'’#¢°¢$4ÕÓ2 ¢ÒÀ¢'fW&–f–VEö'’#¢°¢%dU"Ó2 ¢ÒÀ¢&66WFæ6R#¢$öæRfö–6RW†6†ævRW6W2F†R6ÖR&–Ö'’Fƒ²–çFW''WF–öâ7F÷2VF–òöÖ÷WF‚Ö÷F–öâæB7FÆR6ÆÆ&6·2Fòæ÷B&W7F'B—Bâ ¢ÒÀ¢°¢&–B#¢%$UÓb"À¢'7VÖÖ'’#¢%7W÷'B–æ—F–F—fRv—F‚GG&–'WFVBö'6W'fF–öç2æB6öæf–wW&VB÷÷'GVæ—F–W2â"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$UDôäôÕ’ÔÔTäDÔTåBæÖB"À¢'&–÷&—G’#¢&×W7B"À¢&÷væVEö'’#¢°¢$4ÕÓB ¢ÒÀ¢'fW&–f–VEö'’#¢°¢%dU"ÓB ¢ÒÀ¢&66WFæ6R#¢$âVæ&ÆVB÷÷'GVæ—G’&W6VçG26öçFW‡Bv—F†÷WB&WV—&VB&W7öç6S²F†R&–Ö'’6â7BÂFVfW"÷"&VÖ–â6–ÆVçBâ ¢ÒÀ¢°¢&–B#¢%$UÓr"À¢'7VÖÖ'’#¢$¶VW÷F–öæÂffV7BW‡W&–ÖVçG2W‡Æ–6—BæBF—7F–æwV—6†&ÆRg&öÒ6VÆb×&W÷'Bâ"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'&–÷&—G’#¢&×W7B"À¢&÷væVEö'’#¢°¢$4ÕÓ ¢ÒÀ¢'fW&–f–VEö'’#¢°¢%dU"ÓB ¢ÒÀ¢&66WFæ6R#¢$&6VÆ–æR†2æò†–FFVâffV7B–çFW'fVçF–öã²ç’gWGW&RVæ&ÆVBÖV6†æ—6Ò&V6÷&G2fW'6–öâÂ6÷W&6W2Â÷WGWG2æBFW7F–æF–öç2â ¢ÒÀ¢°¢&–B#¢%$UÓ‚"À¢'7VÖÖ'’#¢%&WW6R7GVÂ6÷&R–×ÆVÖVçFF–öâæB&÷÷'F–öæFRfW&–f–6F–öââ"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$DTÄ•dU%’æÖB"À¢'&–÷&—G’#¢&×W7B"À¢&÷væVEö'’#¢°¢$4ÕÓ ¢ÒÀ¢'fW&–f–VEö'’#¢°¢%dU"Ó ¢ÒÀ¢&66WFæ6R#¢%F†R†æFöfbæÖW2&VÂ6÷&RF‡2æBÆVæ6†W"&Vf÷&R–çFVw&F–öã²FVÖöç7G&F–öâ6†V6·2öæÇ’F†RæWr&V†f–÷"æB6öç6WVVçF–Âf–ÇW&RF‡2â ¢Ğ¢ÒÀ¢&–çf&–çG2#¢°¢°¢&–B#¢$”åbÓ"À¢'7VÖÖ'’#¢$–æg&7G'V7GW&RFöW2æ÷B6÷fW'FÇ’WF†÷"VÖ÷F–öæÂ÷"6ö6–Â6†ö–6W2â"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'66÷R#¢$VÖ&öF–ÖVçB–çFVw&F–öâ"À¢&Væf÷&6VÖVçB#¢%G&6RÖVæ–ævgVÂW‡&W76–öç2Fò6VÆV7FVB÷WGWG2÷"WF†÷&VBöÆ–6–W3²Æ&VÂW‡W&–ÖVçG3²&W6W'fR&Wf—6&–Æ—G’â"À¢'fW&–f–VEö'’#¢°¢%dU"Ó ¢Ğ¢ÒÀ¢°¢&–B#¢$”åbÓ""À¢'7VÖÖ'’#¢$6÷&R÷vç26öçF–çV—G’æBGW&&ÆRw&—FW3²7W&f6W2&R&WÆ6V&ÆRâ"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'66÷R#¢$VÖ&öF–ÖVçB–çFVw&F–öâ"À¢&Væf÷&6VÖVçB#¢$FFW'2†fRæò7F÷&R†æFÆR÷"–æFWVæFVçBW'6öæÆ—G’öÖVÖ÷'’Æö÷â"À¢'fW&–f–VEö'’#¢°¢%dU"Ó" ¢Ğ¢ÒÀ¢°¢&–B#¢$”åbÓ2"À¢'7VÖÖ'’#¢$W†V7WF–öâWf–FVæ6RFöW2æ÷BFW&—fRg&öÒæ'&F–öââ"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'66÷R#¢$VÖ&öF–ÖVçB–çFVw&F–öâ"À¢&Væf÷&6VÖVçB#¢%6W&FR&WVW7FVBÂ&W6VçFVBæBö'6W'fVB&V6÷&G3²¶VWTä´äõtâVçF–ÂWf–FVæ6R&W6öÇfW2—Bâ"À¢'fW&–f–VEö'’#¢°¢%dU"Ó" ¢Ğ¢ÒÀ¢°¢&–B#¢$”åbÓB"À¢'7VÖÖ'’#¢$Ö÷F–öâæBVF–ò&VÖ–â&W7öç6—fRv—F†÷WB&–Ö'’–æfW&Væ6Râ"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'66÷R#¢$VÖ&öF–ÖVçB–çFVw&F–öâ"À¢&Væf÷&6VÖVçB#¢$Æö6Â6Æö6·2æB&–÷&—G’6æ6VÆÆF–öã²W"Ög&ÖR7FFR&VÖ–ç2G&ç6–VçBâ"À¢'fW&–f–VEö'’#¢°¢%dU"Ó2 ¢Ğ¢Ğ¢ÒÀ¢&FV6—6–öç2#¢°¢°¢&–B#¢$DT2Ó"À¢'7VÖÖ'’#¢$Ç’&–ÆÂw2WFöæö×’6Æ&–f–6F–öâ2v÷fW&æ–ærÖVæFÖVçBâ"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$UDôäôÕ’ÔÔTäDÔTåBæÖB"À¢&ÇFW&æF—fW2#¢°¢$Æ—FW&Â7FF–2ÖöæÇ’–çFW'&WFF–öâöböÆFW"'VÆW2"À¢$÷VRWFöÖFVB&V†f–÷&Â6†–ær ¢ÒÀ¢&6öç6WVVæ6W2#¢°¢$W‡Æ–6—BWföÇf–ærWF†÷'6†—æB–æ—F–F—fR&RÆÆ÷vVB"À¢$ffV7B–çFW'fVçF–öç2×W7B&RGG&–'WF&ÆRæB&WfW'6–&ÆR ¢Ğ¢ÒÀ¢°¢&–B#¢$DT2Ó""À¢'7VÖÖ'’#¢$–×ÆVÖVçBâW‡FVç6–öâöb&Æ6¶&—&Bv—F‚–æFWVæFVçBfF"&Vv—7G'’â"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$”åDTu$D”ôâæÖB"À¢&ÇFW&æF—fW2#¢°¢%&WÆ6R6÷&Rv—F‚7FæFÆöæR6ö×æ–öâ'VçF–ÖR"À¢$ÖW&vRVç&VÆFVB&Vv—7G&–W2v—F‚6öÆÆ–F–ær”G2 ¢ÒÀ¢&6öç6WVVæ6W2#¢°¢$W†—7F–ær6÷&RæB6öçG&7G2&WF–æVB"À¢#ÇS#3““’”G2&W6W'fVBf÷"fF"ÖöGVÆR"À¢$7GVÂf—'7B×6Æ–6R6öFR×W7B&RÆö6FVB&Vf÷&R6öF–ær ¢Ğ¢ÒÀ¢°¢&–B#¢$DT2Ó2"À¢'7VÖÖ'’#¢$&Vv–âv—F‚Æö6Â'&÷w6W"e$Ò&öG’æB6Æ—Ö&6VBÖ÷F–öââ"À¢'7FGW2#¢'&÷÷6VB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢%$TDÔRæÖB"À¢&ÇFW&æF—fW2#¢°¢%Væ—G’&öG’FFW"f—'7B ¢ÒÀ¢&6öç6WVVæ6W2#¢°¢$f—G2W†—7F–ær'&÷w6W"7W&f6R"À¢$7GVÂ76WB6ö×F–&–Æ—G’6†V6¶VB–âf—'7B6Æ–6R"À¢$&öG•÷'BW&Ö—G2ÆFW"&VæFW&W"&WÆ6VÖVçB ¢Ğ¢ÒÀ¢°¢&–B#¢$DT2ÓB"À¢'7VÖÖ'’#¢$FVÆ—fW"GF6†ÖVçBÂfö–6RÂF†VâÖ&–VçB&W6Væ6R26W&FR–æ7&VÖVçG2â"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$DTÄ•dU%’æÖB"À¢&ÇFW&æF—fW2#¢°¢$f–æ—6‚ÆÂ6÷&RfVGW&W2&Vf÷&Rç’fF""À¢$'V–ÆBÆÂVÖ&öF–ÖVçB7V'7—7FV×2FövWF†W" ¢ÒÀ¢&6öç6WVVæ6W2#¢°¢$V&Ç’f—6–&ÆR&öw&W72"À¢%fö–6RæBW&6WF–öâFòæ÷B&Æö6²f—'7BvfR ¢Ğ¢Ğ¢ÒÀ¢&77V×F–öç2#¢°¢°¢&–B#¢$4ÒÓ"À¢'7VÖÖ'’#¢%F†R6æF–FFR'&÷w6W"&VæFW&W"6âÆöBF†RWfVçGVÂ6†÷6VâÖöFVÂâ"À¢'7FGW2#¢'VçfÆ–FFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢%$TDÔRæÖB"À¢&÷væW"#¢$–×ÆVÖVçFW"–âu$²Ó"À¢&–×7B#¢$Ö’6†ö÷6RF–ffW&VçBÖöFVÂ÷"&öG•÷'BFFW"â"À¢'fÆ–FF–öâ#¢$ÆöBöæR&W&W6VçFF—fRÖöFVÂæBFVÖöç7G&FRvfRöW‡&W76–öâ7W÷'Bâ"À¢&&6†—FV7GW&U÷6†–ær#¢fÇ6P¢Ğ¢ÒÀ¢'VW7F–öç2#¢°¢°¢&–B#¢%5BÓ"À¢'7VÖÖ'’#¢%v†W&R6âF†R&W÷'FVBÆö6Â4Ä’6÷W&6R&R66W76VBæB—G2W†7B6V×2&V6öæ6–ÆVCò"À¢'7FGW2#¢'&W6öÇfVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢%$U5TÔRæÖB"À¢&÷væW"#¢$–×ÆVÖVçFW"v—F‚&–ÆÂ–b–æ66W76–&ÆR"À¢&&Æö6¶–ær#¢fÇ6RÀ¢&FV6—6–öåöæVVFVEö'’#¢$&Vf÷&RW†V7WF–æru$²ÓB"À¢'&W6öÇWF–öâ#¢$&–ÆÂ7WÆ–VBF†R6÷W&6R¤•âf–ÆW2&RfW'6–öæVBB'&æ6‚&ö÷C²–ç7V7F–öâ6öæf—&×2öæÇ’F†R&W÷'FVB4Ä’ôÖöFVÅ÷'BöFFW"÷FW7B66÷Râ ¢ÒÀ¢°¢&–B#¢%5BÓ""À¢'7VÖÖ'’#¢%v†–6‚–æ—F–ÂÖöFVÂ76WB6†÷VÆB&RÆöFVCò"À¢'7FGW2#¢&÷Vâ"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢%$U5TÔRæÖB"À¢&÷væW"#¢$–×ÆVÖVçFW"ô&–ÆÂ"À¢&&Æö6¶–ær#¢fÇ6RÀ¢&FV6—6–öåöæVVFVEö'’#¢%u$²Ó"À¢'&W6öÇWF–öâ#¢$6ÆV&Ç’–FVçF–f–VB6×ÆR&öG’Ö’&÷fRGF6†ÖVçC²7W7FöÒ&fVâV&æ6R—26W&FRâ ¢ÒÀ¢°¢&–B#¢%5BÓ2"À¢'7VÖÖ'’#¢%v†–6‚7VV6‚&÷f–FW'2&RÇ&VG’f–Æ&ÆR–âF†R7GVÂ6÷&RVçf—&öæÖVçCò"À¢'7FGW2#¢&÷Vâ"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢%$U5TÔRæÖB"À¢&÷væW"#¢$–×ÆVÖVçFW""À¢&&Æö6¶–ær#¢fÇ6RÀ¢&FV6—6–öåöæVVFVEö'’#¢%u$²Ó""À¢'&W6öÇWF–öâ#¢$–ç7V7Bf–Æ&ÆR6öæf–wW&VB&÷f–FW'2Â6†ö÷6RÖ–æ–ÖÂ&÷WFRæBW‡÷6R7GVÂ–FVçF—G’öÆ–Ö—G2â ¢Ğ¢ÒÀ¢'&—6·2#¢°¢°¢&–B#¢%%4²Ó"À¢'7VÖÖ'’#¢$7FÆR6÷&R†æFöfb6W6W2GWÆ–6FR'VçF–ÖRâ"À¢'7FGW2#¢'&÷÷6VB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢&Æ–¶VÆ–†ööB#¢'ÆW6–&ÆR"À¢&–×7B#¢$Æ÷7Bv÷&²æBF—fW&vVçB–FVçF—G’öÖVÖ÷'’÷væW'6†—â"À¢&Ö—F–vF–öâ#¢%&V6öæ6–ÆR&VÂ6†V6¶÷WB–âu$²Óâ"À¢'G&–vvW"#¢$â–×ÆVÖVçFW"&÷÷6W2æWr†÷7B&V6W6Ræò6öFRV'2öâÖ–ââ ¢ÒÀ¢°¢&–B#¢%%4²Ó""À¢'7VÖÖ'’#¢$&W6VçFF–öâFFW"&V6öÖW2†–FFVâ&V†f–÷&ÂWF†÷"â"À¢'7FGW2#¢'&÷÷6VB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢&Æ–¶VÆ–†ööB#¢'ÆW6–&ÆR"À¢&–×7B#¢$ffV7F—fR&W6V&6‚6öçFÖ–æF–öââ"À¢&Ö—F–vF–öâ#¢%G&6RÖ–ær÷&–v–âæB–ç7V7B7GVÂ6öçFW‡C²F—66Æ÷6RW‡W&–ÖVçFÂÖV6†æ—6×2â"À¢'G&–vvW"#¢%6VçF–ÖVçB6†ævW2vW7GW&R÷FöæRv—F†÷WBâWF†÷&VB6†ö–6Râ ¢ÒÀ¢°¢&–B#¢%%4²Ó2"À¢'7VÖÖ'’#¢%&V6öææV7B&WVG27FÆR7F–öâ÷"WGFW&æ6Râ"À¢'7FGW2#¢'&÷÷6VB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢&Æ–¶VÆ–†ööB#¢'ÆW6–&ÆR"À¢&–×7B#¢$–æ6÷'&V7B&W6VçFF–öâæB6W6Â†—7F÷'’â"À¢&Ö—F–vF–öâ#¢$Wö6‡2Âö'6W'fRæBTä´äõtâ&V6öæ6–Æ–F–öã²æò7FÆR&WÆ’â"À¢'G&–vvW"#¢%&VæFW&W"F—66öææV7G2Ö–BÖ7F–öââ ¢ÒÀ¢°¢&–B#¢%%4²ÓB"À¢'7VÖÖ'’#¢%F†R&öG’6¶vRÆ6·26ö×F–&ÆRÖ÷F–öâÖ–æw2â"À¢'7FGW2#¢'&÷÷6VB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢&Æ–¶VÆ–†ööB#¢'ÆW6–&ÆR"À¢&–×7B#¢$f—'7Bf–WvW"ÆöG2'WB6ææ÷BW&f÷&Òâ"À¢&Ö—F–vF–öâ#¢$6†V6²öæRÖöFVÂö6Æ—æBW6RW‡Æ–6—BVç7W÷'FVB&W7VÇG2â"À¢'G&–vvW"#¢%vfR÷"W‡&W76–öâÖ–ærf–Ç2â ¢Ğ¢ÒÀ¢&6ö×öæVçG2#¢°¢°¢&–B#¢$4ÕÓ"À¢'7VÖÖ'’#¢$W†—7F–ær&Æ6¶&—&B–çFVw&F–öâ&÷VæF'“²æ÷BæWr6W'f–6R"À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'&W7öç6–&–Æ—F–W2#¢°¢$FVÆVvFRFò&VçB6÷&Rõ7F÷&Rô6öçFW‡BôÖöFVÅ÷'BôÖVÖ÷'•÷'BôvÆ72&÷‚÷væW'2"À¢$¶VW6÷W&6RWf–FVæ6RÂWF†÷&VB7FFRæBÖVæ–ævgVÂ&V6V—G2 ¢ÒÀ¢&÷væVE÷7FFR#¢°¢$DBÓ"À¢$DBÓ""À¢$DBÓ2"À¢$DBÓB ¢ÒÀ¢'&WV—&VÖVçG2#¢°¢%$UÓ"À¢%$UÓr"À¢%$UÓ‚ ¢Ğ¢ÒÀ¢°¢&–B#¢$4ÕÓ"À¢'7VÖÖ'’#¢$VÖ&öF–ÖVçB6ö÷&F–æF÷""À¢'7FGW2#¢&66WFVB"À¢'6÷W&6R#¢$&–ÆÂ6Æ&–f–6F–öâæBfF"–çFVw&F–öâ&Wf–WrÂ##bÓ’Ó""À¢&'F–f7B#¢$4ôåE$5E2æÖB"À¢'&W7öç6–&–Æ—F–W2#¢°¢%G&ç6ÆFR6&–Æ—G•÷'B&öG’&WVW7G2"À¢$&&—G&FRV&Æ—6†VB&W6÷W&6W2æB&V6öæ6–ÆR&V6V—G2 ¢ÒÀ¢&÷væVE÷7FFR#¢µÒÀ¢'&WV—&VÖVçG2#¢°¢%$UÓ""À¢%$UÓ2 ¢Ğ¢ÒÀ¢°¢&–B#¢$4ÕÓ""Ï6ÖÚ$z{-®éÜj×ACTS.md",
+{
+  "schema_version": "1.0",
+  "project": {
+    "name": "Blackbird Avatar Module",
+    "slug": "blackbird-avatar-module",
+    "summary": "Embodiment extension of existing Blackbird: replaceable body, speech, perception and observable agency.",
+    "profiles": [
+      "single-user",
+      "local-first",
+      "existing-project-extension",
+      "affective-computing"
+    ]
+  },
+  "revision": 3,
+  "status": "review",
+  "created_at": "2026-09-12",
+  "last_updated": "2026-09-12",
+  "source_of_truth": {
+    "registry": "embodiment/avatar-blueprint.json",
+    "parent_registry": "blueprint.json",
+    "governing_amendment": "embodiment/AUTONOMY-AMENDMENT.md",
+    "parent_commit": "188fc592318a8223c94afb439d5e22dbfab770f5"
+  },
+  "current_focus": {
+    "phase": "review",
+    "active_work_item": "WRK-1004",
+    "code_revision": "Uploaded CLI source imported unchanged on Blackbird-Avatar-Module",
+    "last_verified_at": "2026-09-12",
+    "next_actions": [
+      "Implement WRK-1004 in the now-versioned CLI project when Bill authorizes the build.",
+      "After the persistent host/capability/snapshot seam works, implement WRK-1001 body attachment."
+    ],
+    "resume_notes": "WRK-1000 reconciled and completed. CLI source is at branch root; WRK-1004 is the next implementation package."
+  },
+  "artifacts": [
+    {
+      "id": "ART-1001",
+      "summary": "README.md",
+      "status": "active",
+      "path": "README.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1002",
+      "summary": "AUTONOMY-AMENDMENT.md",
+      "status": "active",
+      "path": "AUTONOMY-AMENDMENT.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1003",
+      "summary": "INTEGRATION.md",
+      "status": "active",
+      "path": "INTEGRATION.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1004",
+      "summary": "CONTRACTS.md",
+      "status": "active",
+      "path": "CONTRACTS.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1005",
+      "summary": "DELIVERY.md",
+      "status": "active",
+      "path": "DELIVERY.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1006",
+      "summary": "RESUME.md",
+      "status": "active",
+      "path": "RESUME.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1007",
+      "summary": "REVIEW.md",
+      "status": "active",
+      "path": "REVIEW.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1008",
+      "summary": "avatar-blueprint.json",
+      "status": "active",
+      "path": "avatar-blueprint.json",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1009",
+      "summary": "work-items/WRK-1000.md",
+      "status": "active",
+      "path": "work-items/WRK-1000.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1010",
+      "summary": "work-items/WRK-1001.md",
+      "status": "active",
+      "path": "work-items/WRK-1001.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1011",
+      "summary": "work-items/WRK-1002.md",
+      "status": "active",
+      "path": "work-items/WRK-1002.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1012",
+      "summary": "work-items/WRK-1003.md",
+      "status": "active",
+      "path": "work-items/WRK-1003.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1013",
+      "summary": "LOCAL-CLI-BASELINE.md",
+      "status": "active",
+      "path": "LOCAL-CLI-BASELINE.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1014",
+      "summary": "work-items/WRK-1004.md",
+      "status": "active",
+      "path": "work-items/WRK-1004.md",
+      "depends_on": []
+    }
+  ],
+  "registries": {
+    "requirements": [
+      {
+        "id": "REQ-1001",
+        "summary": "Preserve revisable authorship and disclose behavioral interventions.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "AUTONOMY-AMENDMENT.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1000"
+        ],
+        "verified_by": [
+          "VER-1001"
+        ],
+        "acceptance": "A context receipt distinguishes previous statements and observations from instructions; no automatic identity or response shaping is introduced."
+      },
+      {
+        "id": "REQ-1002",
+        "summary": "Attach a replaceable body to existing Blackbird.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1001"
+        ],
+        "verified_by": [
+          "VER-1001"
+        ],
+        "acceptance": "A wave requested through existing Core appears in the body and has a correlated receipt; companion identity survives a body swap."
+      },
+      {
+        "id": "REQ-1003",
+        "summary": "Track intended, presented and observed state with honest recovery.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1001"
+        ],
+        "verified_by": [
+          "VER-1002"
+        ],
+        "acceptance": "Reconnection observes fresh state without replaying stale actions; unsupported requests and unknown outcomes remain explicit."
+      },
+      {
+        "id": "REQ-1004",
+        "summary": "Keep motion local and avatar assets replaceable.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1002"
+        ],
+        "verified_by": [
+          "VER-1001"
+        ],
+        "acceptance": "Idle and a wave run without frame-level inference; the model loads through a versioned package mapping."
+      },
+      {
+        "id": "REQ-1005",
+        "summary": "Connect interruptible speech to the existing conversation.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1003"
+        ],
+        "verified_by": [
+          "VER-1003"
+        ],
+        "acceptance": "One voice exchange uses the same primary path; interruption stops audio/mouth motion and stale callbacks do not restart it."
+      },
+      {
+        "id": "REQ-1006",
+        "summary": "Support initiative with attributed observations and configured opportunities.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "AUTONOMY-AMENDMENT.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1004"
+        ],
+        "verified_by": [
+          "VER-1004"
+        ],
+        "acceptance": "An enabled opportunity presents context without a required response; the primary can act, defer or remain silent."
+      },
+      {
+        "id": "REQ-1007",
+        "summary": "Keep optional affect experiments explicit and distinguishable from self-report.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1000"
+        ],
+        "verified_by": [
+          "VER-1004"
+        ],
+        "acceptance": "Baseline has no hidden affect intervention; any future enabled mechanism records version, sources, outputs and destinations."
+      },
+      {
+        "id": "REQ-1008",
+        "summary": "Reuse actual core implementation and proportionate verification.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "DELIVERY.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1000"
+        ],
+        "verified_by": [
+          "VER-1001"
+        ],
+        "acceptance": "The handoff names real core paths and launcher before integration; demonstration checks only the new behavior and consequential failure paths."
+      }
+    ],
+    "invariants": [
+      {
+        "id": "INV-1001",
+        "summary": "Infrastructure does not covertly author emotional or social choices.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "scope": "Embodiment integration",
+        "enforcement": "Trace meaningful expressions to selected outputs or authored policies; label experiments; preserve revisability.",
+        "verified_by": [
+          "VER-1001"
+        ]
+      },
+      {
+        "id": "INV-1002",
+        "summary": "Core owns continuity and durable writes; surfaces are replaceable.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "scope": "Embodiment integration",
+        "enforcement": "Adapters have no store handle or independent personality/memory loop.",
+        "verified_by": [
+          "VER-1002"
+        ]
+      },
+      {
+        "id": "INV-1003",
+        "summary": "Execution evidence does not derive from narration.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "scope": "Embodiment integration",
+        "enforcement": "Separate requested, presented and observed records; keep UNKNOWN until evidence resolves it.",
+        "verified_by": [
+          "VER-1002"
+        ]
+      },
+      {
+        "id": "INV-1004",
+        "summary": "Motion and audio remain responsive without primary inference.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "scope": "Embodiment integration",
+        "enforcement": "Local clocks and priority cancellation; per-frame state remains transient.",
+        "verified_by": [
+          "VER-1003"
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "id": "DEC-1001",
+        "summary": "Apply Bill's autonomy clarification as a governing amendment.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "AUTONOMY-AMENDMENT.md",
+        "alternatives": [
+          "Literal static-only interpretation of older rules",
+          "Opaque automated behavioral shaping"
+        ],
+        "consequences": [
+          "Explicit evolving authorship and initiative are allowed",
+          "Affect interventions must be attributable and reversible"
+        ]
+      },
+      {
+        "id": "DEC-1002",
+        "summary": "Implement an extension of Blackbird with independent avatar registry.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "INTEGRATION.md",
+        "alternatives": [
+          "Replace Core with standalone companion runtime",
+          "Merge unrelated registries with colliding IDs"
+        ],
+        "consequences": [
+          "Existing Core and contracts retained",
+          "1000\u20131999 IDs reserved for avatar module",
+          "Actual first-slice code must be located before coding"
+        ]
+      },
+      {
+        "id": "DEC-1003",
+        "summary": "Begin with a local browser VRM body and clip-based motion.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "README.md",
+        "alternatives": [
+          "Unity body adapter first"
+        ],
+        "consequences": [
+          "Fits existing browser surface",
+          "Actual asset compatibility checked in first slice",
+          "BodyPort permits later renderer replacement"
+        ]
+      },
+      {
+        "id": "DEC-1004",
+        "summary": "Deliver attachment, voice, then ambient presence as separate increments.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "DELIVERY.md",
+        "alternatives": [
+          "Finish all core features before any avatar",
+          "Build all embodiment subsystems together"
+        ],
+        "consequences": [
+          "Early visible progress",
+          "Voice and perception do not block first wave"
+        ]
+      }
+    ],
+    "assumptions": [
+      {
+        "id": "ASM-1001",
+        "summary": "The candidate browser renderer can load the eventual chosen model.",
+        "status": "unvalidated",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "README.md",
+        "owner": "Implementer in WRK-1001",
+        "impact": "May choose a different model or BodyPort adapter.",
+        "validation": "Load one representative model and demonstrate wave/expression support.",
+        "architecture_shaping": false
+      }
+    ],
+    "questions": [
+      {
+        "id": "QST-1001",
+        "summary": "Where can the reported local CLI source be accessed and its exact seams reconciled?",
+        "status": "resolved",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "RESUME.md",
+        "owner": "Implementer with Bill if inaccessible",
+        "blocking": false,
+        "decision_needed_by": "Before executing WRK-1004",
+        "resolution": "Bill supplied the source ZIP. Files are versioned at branch root; inspection confirms only the reported CLI/ModelPort/adapter/test scope."
+      },
+      {
+        "id": "QST-1002",
+        "summary": "Which initial model asset should be loaded?",
+        "status": "open",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "RESUME.md",
+        "owner": "Implementer/Bill",
+        "blocking": false,
+        "decision_needed_by": "WRK-1001",
+        "resolution": "A clearly identified sample body may prove attachment; custom Raven appearance is separate."
+      },
+      {
+        "id": "QST-1003",
+        "summary": "Which speech providers are already available in the actual core environment?",
+        "status": "open",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "RESUME.md",
+        "owner": "Implementer",
+        "blocking": false,
+        "decision_needed_by": "WRK-1002",
+        "resolution": "Inspect available configured providers, choose a minimal route and expose actual identity/limits."
+      }
+    ],
+    "risks": [
+      {
+        "id": "RSK-1001",
+        "summary": "A stale core handoff causes a duplicate runtime.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "likelihood": "plausible",
+        "impact": "Lost work and divergent identity/memory ownership.",
+        "mitigation": "Reconcile real checkout in WRK-1000.",
+        "trigger": "An implementer proposes a new host because no code appears on main."
+      },
+      {
+        "id": "RSK-1002",
+        "summary": "A presentation adapter becomes a hidden behavioral author.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "likelihood": "plausible",
+        "impact": "Affective research contamination.",
+        "mitigation": "Trace mapping origin and inspect actual context; disclose experimental mechanisms.",
+        "trigger": "Sentiment changes gesture/tone without an authored choice."
+      },
+      {
+        "id": "RSK-1003",
+        "summary": "Reconnect repeats a stale action or utterance.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "likelihood": "plausible",
+        "impact": "Incorrect presentation and causal history.",
+        "mitigation": "Epochs, Observe and UNKNOWN reconciliation; no stale replay.",
+        "trigger": "Renderer disconnects mid-action."
+      },
+      {
+        "id": "RSK-1004",
+        "summary": "The body package lacks compatible motion mappings.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "likelihood": "plausible",
+        "impact": "First viewer loads but cannot perform.",
+        "mitigation": "Check one model/clip and use explicit unsupported results.",
+        "trigger": "Wave or expression mapping fails."
+      }
+    ],
+    "components": [
+      {
+        "id": "CMP-1000",
+        "summary": "Existing Blackbird integration boundary; not a new service",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Delegate to parent Core/Store/Context/ModelPort/MemoryPort/Glass Box owners",
+          "Keep source evidence, authored state and meaningful receipts"
+        ],
+        "owned_state": [
+          "DAT-1001",
+          "DAT-1002",
+          "DAT-1003",
+          "DAT-1004"
+        ],
+        "requirements": [
+          "REQ-1001",
+          "REQ-1007",
+          "REQ-1008"
+        ]
+      },
+      {
+        "id": "CMP-1001",
+        "summary": "Embodiment coordinator",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Translate CapabilityPort body requests",
+          "Arbitrate published resources and reconcile receipts"
+        ],
+        "owned_state": [],
+        "requirements": [
+          "REQ-1002",
+          "REQ-1003"
+        ]
+      },
+      {
+        "id": "CMP-1002",
+        "summary": "Replaceable body and local motion adapter",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Load package mappings",
+          "Render local motion",
+          "Observe presentation and report events"
+        ],
+        "owned_state": [],
+        "requirements": [
+          "REQ-1004"
+        ]
+      },
+      {
+        "id": "CMP-1003",
+        "summary": "Voice coordinator and endpoint playback loop",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Use existing conversation for STT/TTS routing",
+          "Track actual playback and cancellation"
+        ],
+        "owned_state": [],
+        "requirements": [
+          "REQ-1005"
+        ]
+      },
+      {
+        "id": "CMP-1004",
+        "summary": "Ambient perception and opportunity bridge",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Normalize one source",
+          "Use configured wake opportunities with attribution"
+        ],
+        "owned_state": [],
+        "requirements": [
+          "REQ-1006"
+        ]
+      }
+    ],
+    "interfaces": [
+      {
+        "id": "INT-1001",
+        "summary": "Core action dispatch",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "from": "CMP-1000",
+        "to": "CMP-1001",
+        "invocation": "Existing in-process Core ports and localhost surface transport",
+        "contract": "Parent AttemptAction v1 plus BodyIntent in CONTRACTS.md",
+        "failure_semantics": "Reject unsupported/schema/author errors; persist attempt before dispatch."
+      },
+      {
+        "id": "INT-1002",
+        "summary": "BodyPort v1",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "from": "CMP-1001",
+        "to": "CMP-1002",
+        "invocation": "Existing in-process Core ports and localhost surface transport",
+        "contract": "DescribeBody, Observe, ApplyIntent, SpeechCue, Cancel in CONTRACTS.md",
         "failure_semantics": "Two-second uncertain acknowledgement triggers observation; UNKNOWN is not retried as a fresh action."
       },
       {
