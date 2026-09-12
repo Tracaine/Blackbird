@@ -1,6 +1,6 @@
 # Local CLI baseline — Bill's report, 2026-09-12
 
-Evidence status: supplied by Bill in conversation; source files, test output and live endpoint were not independently accessed in this session. This identifies the implemented scope, but does not resolve the checkout-location dependency.
+Evidence status: source archive supplied by Bill and inspected on 2026-09-12. The source is now stored at this branch root. Typecheck and fake-server test were independently rerun in the available Linux environment; Bill supplied the Windows live-LM-Studio evidence.
 
 ## Environment
 
@@ -29,12 +29,20 @@ This loopback address is on Bill's PC, not on a remote implementation environmen
 
 ## Meaning for the extension
 
-This corresponds in scope to the parent local-model CLI proof. Preserve the ModelPort, adapter, configuration and CLI. A persistent Core host, durable ledger/projections, browser conversation, CapabilityPort implementation, snapshot subscriptions and body viewer are not reported as implemented. They remain planned until code inspection shows otherwise.
+This corresponds in scope to the parent local-model CLI proof. Exact source paths are `src/cli/blackbird.ts`, `src/model/lm-studio-model-port.ts`, and `tests/model/lm-studio-model-port.test.ts`; configuration and scripts are in the branch root. Exact source paths are `src/cli/blackbird.ts`, `src/model/lm-studio-model-port.ts`, and `tests/model/lm-studio-model-port.test.ts`; configuration and scripts are in the branch root. Exact source paths are `src/cli/blackbird.ts`, `src/model/lm-studio-model-port.ts`, and `tests/model/lm-studio-model-port.test.ts`; configuration and scripts are in the branch root. Preserve the ModelPort, adapter, configuration and CLI. A persistent Core host, durable ledger/projections, browser conversation, CapabilityPort implementation, snapshot subscriptions and body viewer are not reported as implemented. They remain planned until code inspection shows otherwise.
 
 The next missing prerequisite is therefore explicit: add a minimal persistent host inside this same TypeScript application before attaching the avatar. WRK-1004 covers that bridge. It does not include the complete memory system, authored-state UI, unattended scheduler or all six parent work packages.
 
 The 32-second figure is total response time for one example; it is not time to first token, first playable speech, or a general latency benchmark. Streaming availability, first-token delay, cancellation, and model support for structured actions are unverified. Inspect existing adapter capabilities before designing around them. Slow inference must not freeze rendering or local interruption. Do not silently switch model/provider to meet a voice target.
 
-## Remaining input
+## Independent inspection and verification
 
-Obtain the source checkout, a pushed code branch, or a project ZIP with package manifest, TypeScript sources, example configuration and test. Private credentials are unnecessary. Preserve any existing version history where available. Actual source paths and commands are then recorded in WRK-1000; user-reported checks do not need repetitive reruns merely to restate this report.
+- Archive paths were normalized safely; no `node_modules` or credentials were included.
+- No credential-like values were found in the source/configuration scan. `blackbird.config.json` contains the loopback endpoint and model/runtime settings.
+- `npm ci` succeeded under Node 24.19.0 and npm 11.9.0 in the available Linux environment.
+- `npm run typecheck` passed.
+- `npm test` passed: one test, zero failures.
+- The Windows LM Studio endpoint is not reachable from this execution environment; the supplied screenshots and checkpoint remain the live-call evidence.
+- Source was copied without implementation edits. Existing UTF-8 BOM/CRLF encodings were preserved because the project currently passes with them.
+
+The source dependency is resolved. The active implementation package is WRK-1004: extend this project into the minimum persistent Core host while preserving its CLI and ModelPort.

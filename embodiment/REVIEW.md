@@ -28,3 +28,8 @@ Bill supplied a detailed CLI report. Record it as user-reported evidence, includ
 - Parent/extension ID collision check: none.
 - Local Markdown link check: all resolve.
 - No runtime commands or application tests run.
+
+## Revision 3 source reconciliation
+
+The supplied CLI archive was inspected and added at the branch root without implementation edits. It confirms the ModelPort/adapter/CLI scope and absence of Core persistence, browser, capability and avatar code. Typecheck and the single fake-server adapter test pass in the available Node 24 environment. QST-1001 and WRK-1000 are resolved by source evidence; WRK-1004 is now the first implementation package. The live Windows LM Studio call was not repeated from this environment.
+
