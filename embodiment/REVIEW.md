@@ -17,6 +17,10 @@ QST-1001 is intentionally open and blocks implementation: Bill's built first sli
 
 Structural validation and local reference checks are run before publication. Strict execution-readiness validation is expected to report QST-1001; this must not be hidden by declaring the question resolved or marking it deferred. No claim of full implementation readiness is made.
 
+## Revision 2 baseline reconciliation
+
+Bill supplied a detailed CLI report. Record it as user-reported evidence, including exact environment and total response time. The implemented inventory includes ModelPort/adapter/CLI, not proof of the larger Core stack. WRK-1004 now explicitly bridges that CLI to the minimal persistent host before body attachment. No performance conclusion is drawn about first token or first speech from the total-time sample. Source location remains QST-1001.
+
 ## Recorded document checks
 
 - Standard blueprint validation: 0 errors, 0 warnings.

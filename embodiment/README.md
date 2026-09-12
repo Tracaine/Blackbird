@@ -1,4 +1,4 @@
-# Blackbird Avatar Module — blueprint revision 1
+# Blackbird Avatar Module — blueprint revision 2
 
 Date: 2026-09-12. Status: review; architecture amendment requested by Bill, implementation not started.
 
@@ -16,6 +16,10 @@ Read in order:
 4. [DELIVERY.md](DELIVERY.md): three observable increments and targeted verification.
 5. [RESUME.md](RESUME.md): what is verified, unknown, and next.
 6. [avatar-blueprint.json](avatar-blueprint.json): canonical extension index, ownership, dependencies, and verification links.
+
+## Current implementation baseline
+
+Bill reports a working local CLI with ModelPort and LM Studio adapter; see [LOCAL-CLI-BASELINE.md](LOCAL-CLI-BASELINE.md) for environment, checks and evidence status. The larger Core services below are the target architecture, not verified existing code. WRK-1004 extends that same project into a minimal persistent host before WRK-1001 attaches the body.
 
 ## Minimum architecture
 

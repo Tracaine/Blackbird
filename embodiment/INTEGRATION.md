@@ -2,11 +2,13 @@
 
 ## Verified baseline
 
-Parent: Tracaine/Blackbird main commit `188fc592318a8223c94afb439d5e22dbfab770f5`, root registry revision 1. Inspected on 2026-09-12. Main contains architecture and research documents; no runtime implementation was visible. The available `raven/blueprint-review-fixes` branch was also inspected earlier in this session and contained documents. Bill reports that his first implementation slice exists; its location and real interfaces must be reconciled before coding. Do not treat stale root resume text as proof that his slice is unbuilt.
+Parent: Tracaine/Blackbird main commit `188fc592318a8223c94afb439d5e22dbfab770f5`, root registry revision 1. Inspected on 2026-09-12. Main contains architecture and research documents; no runtime implementation was visible. The available `raven/blueprint-review-fixes` branch was also inspected earlier in this session and contained documents. Bill has now supplied the first-slice inventory: a local CLI with ModelPort, LM Studio adapter, configuration and one adapter test. See LOCAL-CLI-BASELINE.md. The persistent Core/action/snapshot implementations are not in that reported inventory. Its source location and actual interfaces still require reconciliation before coding. Do not treat stale root resume text as proof that his slice is unbuilt.
 
 This extension activates the avatar/voice portion of parent REQ-201. Numeric IDs 1000–1999 are reserved for this module, avoiding the existing core IDs and allowing the standard blueprint validator. An earlier conversational suggestion used EMB-prefixed IDs; this package uses the validator-compatible numeric range instead. Parent references below are qualified as parent claims and are not duplicated as extension owners.
 
 ## Reuse map
+
+This table maps architectural owners. Only ModelPort/LM Studio adapter and CLI functionality are currently reported implemented. WRK-1004 adds the minimal host, persistence and surface seams within that existing project; it does not assume every row already has executable code.
 
 | Parent owner | Integration use | Extension responsibility |
 | --- | --- | --- |

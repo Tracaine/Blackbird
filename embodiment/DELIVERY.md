@@ -5,11 +5,12 @@
 | Work item | Prerequisite | Observable result |
 | --- | --- | --- |
 | WRK-1000 | Locate Bill's first-slice checkout | Exact existing launcher, core interfaces, missing prerequisites and next work recorded |
-| WRK-1001 | WRK-1000 and the minimal live Core seams | One attached model waves via Blackbird; receipt and reconnect are visible |
+| WRK-1004 | WRK-1000 | Same CLI project gains a minimal persistent host and browser conversation |
+| WRK-1001 | WRK-1004 and the minimal live Core seams | One attached model waves via Blackbird; receipt and reconnect are visible |
 | WRK-1002 | WRK-1001 and existing conversation path | Speech output, mouth motion, microphone input and interruption use the same companion |
 | WRK-1003 | WRK-1002 | One ambient observation/opportunity, one continuing activity, inspectable authorship and freedom to defer |
 
-Missing minimal Core seams are implemented in the existing core under a scoped prerequisite, never as a replacement host. Do not use the avatar plan as a reason to rebuild completed work or finish every core roadmap item first. A standalone viewer can help asset diagnosis but is not completion of WRK-1001.
+The reported CLI lacks the broader host in its implementation inventory. WRK-1004 explicitly adds the minimum Core/action/snapshot seams to that existing project, preserving ModelPort and the CLI. Reuse any additional code discovered in WRK-1000. Do not use the avatar plan as a reason to rebuild completed work or finish every core roadmap item first. A standalone viewer can help asset diagnosis but is not completion of WRK-1001.
 
 Later expansions: custom avatar production, Unity or game body adapter, richer clips/props, learned motion, explicit affect experiments, desktop packaging. Each starts from a chosen visible outcome. Preserving an experiment interface does not require building a research dashboard now.
 

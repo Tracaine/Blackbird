@@ -11,7 +11,7 @@
       "affective-computing"
     ]
   },
-  "revision": 1,
+  "revision": 2,
   "status": "review",
   "created_at": "2026-09-12",
   "last_updated": "2026-09-12",
@@ -27,8 +27,8 @@
     "code_revision": null,
     "last_verified_at": "2026-09-12",
     "next_actions": [
-      "Locate and reconcile Bill's implemented first slice before coding.",
-      "On implementation authorization, run WRK-1001 against the existing core."
+      "Obtain and reconcile the reported local CLI source in WRK-1000.",
+      "On build authorization, extend that project into the minimum host in WRK-1004, then attach the body in WRK-1001."
     ],
     "resume_notes": "Blueprint publication only; QST-1001 blocks code execution, not architecture publication."
   },
@@ -115,6 +115,20 @@
       "summary": "work-items/WRK-1003.md",
       "status": "active",
       "path": "work-items/WRK-1003.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1013",
+      "summary": "LOCAL-CLI-BASELINE.md",
+      "status": "active",
+      "path": "LOCAL-CLI-BASELINE.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1014",
+      "summary": "work-items/WRK-1004.md",
+      "status": "active",
+      "path": "work-items/WRK-1004.md",
       "depends_on": []
     }
   ],
@@ -370,14 +384,14 @@
     "questions": [
       {
         "id": "QST-1001",
-        "summary": "Where is the reported first-slice implementation and what seams exist?",
+        "summary": "Where can the reported local CLI source be accessed and its exact seams reconciled?",
         "status": "open",
         "source": "Bill clarification and avatar integration review, 2026-09-12",
         "artifact": "RESUME.md",
         "owner": "Implementer with Bill if inaccessible",
         "blocking": true,
-        "decision_needed_by": "Before executing WRK-1001",
-        "resolution": "Locate actual checkout; reconcile in WRK-1000; do not recreate existing code."
+        "decision_needed_by": "Before executing WRK-1004",
+        "resolution": "CLI scope is now reported in LOCAL-CLI-BASELINE.md; source location remains open. Obtain checkout/ZIP/code branch; do not recreate the adapter."
       },
       {
         "id": "QST-1002",
@@ -830,7 +844,7 @@
           "REQ-1008"
         ],
         "prerequisites": [
-          "Existing first-slice location is currently unverified."
+          "LOCAL-CLI-BASELINE.md supplies user-reported implementation and checks; source is not yet accessible."
         ],
         "affected_paths": [
           "embodiment/RESUME.md",
@@ -852,7 +866,7 @@
         "source": "Bill clarification and avatar integration review, 2026-09-12",
         "artifact": "work-items/WRK-1001.md",
         "depends_on": [
-          "WRK-1000"
+          "WRK-1004"
         ],
         "requirements": [
           "REQ-1001",
@@ -862,8 +876,8 @@
           "REQ-1008"
         ],
         "prerequisites": [
-          "Actual Core integration seams recorded by WRK-1000.",
-          "Implement only a missing minimal seam in existing Core if required."
+          "Actual CLI source reconciled in WRK-1000.",
+          "Minimal host/capability/snapshot seams supplied by WRK-1004."
         ],
         "affected_paths": [
           "embodiment/RESUME.md",
@@ -874,9 +888,7 @@
           "Core remains usable when viewer closes; no fresh companion is created."
         ],
         "evidence_paths": [],
-        "blocked_by": [
-          "QST-1001"
-        ],
+        "blocked_by": [],
         "implementation_scope": "Actual Core CapabilityPort/InspectState paths found in WRK-1000; new body adapter/viewer and model manifest",
         "code_paths_status": "Resolve actual source paths in WRK-1000 before execution."
       },
@@ -937,7 +949,59 @@
         "blocked_by": [],
         "implementation_scope": "Actual Core wake/context/inspection paths; one perception source and body activity mapping",
         "code_paths_status": "Resolve actual source paths in WRK-1000 before execution."
+      },
+      {
+        "id": "WRK-1004",
+        "summary": "Extend the existing CLI into the minimal persistent Core host.",
+        "status": "proposed",
+        "source": "Bill local CLI inventory, 2026-09-12",
+        "artifact": "work-items/WRK-1004.md",
+        "depends_on": [
+          "WRK-1000"
+        ],
+        "requirements": [
+          "REQ-1002",
+          "REQ-1003",
+          "REQ-1008"
+        ],
+        "prerequisites": [
+          "Actual CLI source and adapter reconciled by WRK-1000."
+        ],
+        "affected_paths": [
+          "embodiment/RESUME.md",
+          "embodiment/work-items/WRK-1004.md"
+        ],
+        "implementation_scope": "Existing TypeScript project: shared Core entry, ModelPort reuse, minimal SQLite records, localhost conversation/snapshot/capability seams; exact source paths from WRK-1000.",
+        "acceptance_checks": [
+          "One browser exchange uses the existing configured model route.",
+          "Reload/restart retains committed conversation and companion ID.",
+          "CLI remains usable and the body capability/snapshot seam is ready."
+        ],
+        "evidence_paths": [],
+        "blocked_by": [
+          "QST-1001"
+        ]
       }
     ]
+  },
+  "implementation_baseline": {
+    "evidence_kind": "user_report",
+    "artifact": "LOCAL-CLI-BASELINE.md",
+    "source_code_inspected": false,
+    "environment": {
+      "os": "Windows",
+      "node": "24.13.1",
+      "npm": "11.5.2",
+      "git": "2.53.0.windows.2",
+      "lm_studio_endpoint": "http://127.0.0.1:1234/v1",
+      "expected_model": "gryphe_pantheon-rp-1.8-24b-small-3.1"
+    },
+    "reported_commands": [
+      "npm start",
+      "npm run typecheck",
+      "npm test"
+    ],
+    "reported_total_response_seconds": 32,
+    "first_token_latency_seconds": null
   }
 }
