@@ -1,0 +1,943 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "name": "Blackbird Avatar Module",
+    "slug": "blackbird-avatar-module",
+    "summary": "Embodiment extension of existing Blackbird: replaceable body, speech, perception and observable agency.",
+    "profiles": [
+      "single-user",
+      "local-first",
+      "existing-project-extension",
+      "affective-computing"
+    ]
+  },
+  "revision": 1,
+  "status": "review",
+  "created_at": "2026-09-12",
+  "last_updated": "2026-09-12",
+  "source_of_truth": {
+    "registry": "embodiment/avatar-blueprint.json",
+    "parent_registry": "blueprint.json",
+    "governing_amendment": "embodiment/AUTONOMY-AMENDMENT.md",
+    "parent_commit": "188fc592318a8223c94afb439d5e22dbfab770f5"
+  },
+  "current_focus": {
+    "phase": "review",
+    "active_work_item": "WRK-1000",
+    "code_revision": null,
+    "last_verified_at": "2026-09-12",
+    "next_actions": [
+      "Locate and reconcile Bill's implemented first slice before coding.",
+      "On implementation authorization, run WRK-1001 against the existing core."
+    ],
+    "resume_notes": "Blueprint publication only; QST-1001 blocks code execution, not architecture publication."
+  },
+  "artifacts": [
+    {
+      "id": "ART-1001",
+      "summary": "README.md",
+      "status": "active",
+      "path": "README.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1002",
+      "summary": "AUTONOMY-AMENDMENT.md",
+      "status": "active",
+      "path": "AUTONOMY-AMENDMENT.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1003",
+      "summary": "INTEGRATION.md",
+      "status": "active",
+      "path": "INTEGRATION.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1004",
+      "summary": "CONTRACTS.md",
+      "status": "active",
+      "path": "CONTRACTS.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1005",
+      "summary": "DELIVERY.md",
+      "status": "active",
+      "path": "DELIVERY.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1006",
+      "summary": "RESUME.md",
+      "status": "active",
+      "path": "RESUME.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1007",
+      "summary": "REVIEW.md",
+      "status": "active",
+      "path": "REVIEW.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1008",
+      "summary": "avatar-blueprint.json",
+      "status": "active",
+      "path": "avatar-blueprint.json",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1009",
+      "summary": "work-items/WRK-1000.md",
+      "status": "active",
+      "path": "work-items/WRK-1000.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1010",
+      "summary": "work-items/WRK-1001.md",
+      "status": "active",
+      "path": "work-items/WRK-1001.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1011",
+      "summary": "work-items/WRK-1002.md",
+      "status": "active",
+      "path": "work-items/WRK-1002.md",
+      "depends_on": []
+    },
+    {
+      "id": "ART-1012",
+      "summary": "work-items/WRK-1003.md",
+      "status": "active",
+      "path": "work-items/WRK-1003.md",
+      "depends_on": []
+    }
+  ],
+  "registries": {
+    "requirements": [
+      {
+        "id": "REQ-1001",
+        "summary": "Preserve revisable authorship and disclose behavioral interventions.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "AUTONOMY-AMENDMENT.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1000"
+        ],
+        "verified_by": [
+          "VER-1001"
+        ],
+        "acceptance": "A context receipt distinguishes previous statements and observations from instructions; no automatic identity or response shaping is introduced."
+      },
+      {
+        "id": "REQ-1002",
+        "summary": "Attach a replaceable body to existing Blackbird.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1001"
+        ],
+        "verified_by": [
+          "VER-1001"
+        ],
+        "acceptance": "A wave requested through existing Core appears in the body and has a correlated receipt; companion identity survives a body swap."
+      },
+      {
+        "id": "REQ-1003",
+        "summary": "Track intended, presented and observed state with honest recovery.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1001"
+        ],
+        "verified_by": [
+          "VER-1002"
+        ],
+        "acceptance": "Reconnection observes fresh state without replaying stale actions; unsupported requests and unknown outcomes remain explicit."
+      },
+      {
+        "id": "REQ-1004",
+        "summary": "Keep motion local and avatar assets replaceable.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1002"
+        ],
+        "verified_by": [
+          "VER-1001"
+        ],
+        "acceptance": "Idle and a wave run without frame-level inference; the model loads through a versioned package mapping."
+      },
+      {
+        "id": "REQ-1005",
+        "summary": "Connect interruptible speech to the existing conversation.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1003"
+        ],
+        "verified_by": [
+          "VER-1003"
+        ],
+        "acceptance": "One voice exchange uses the same primary path; interruption stops audio/mouth motion and stale callbacks do not restart it."
+      },
+      {
+        "id": "REQ-1006",
+        "summary": "Support initiative with attributed observations and configured opportunities.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "AUTONOMY-AMENDMENT.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1004"
+        ],
+        "verified_by": [
+          "VER-1004"
+        ],
+        "acceptance": "An enabled opportunity presents context without a required response; the primary can act, defer or remain silent."
+      },
+      {
+        "id": "REQ-1007",
+        "summary": "Keep optional affect experiments explicit and distinguishable from self-report.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1000"
+        ],
+        "verified_by": [
+          "VER-1004"
+        ],
+        "acceptance": "Baseline has no hidden affect intervention; any future enabled mechanism records version, sources, outputs and destinations."
+      },
+      {
+        "id": "REQ-1008",
+        "summary": "Reuse actual core implementation and proportionate verification.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "DELIVERY.md",
+        "priority": "must",
+        "owned_by": [
+          "CMP-1000"
+        ],
+        "verified_by": [
+          "VER-1001"
+        ],
+        "acceptance": "The handoff names real core paths and launcher before integration; demonstration checks only the new behavior and consequential failure paths."
+      }
+    ],
+    "invariants": [
+      {
+        "id": "INV-1001",
+        "summary": "Infrastructure does not covertly author emotional or social choices.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "scope": "Embodiment integration",
+        "enforcement": "Trace meaningful expressions to selected outputs or authored policies; label experiments; preserve revisability.",
+        "verified_by": [
+          "VER-1001"
+        ]
+      },
+      {
+        "id": "INV-1002",
+        "summary": "Core owns continuity and durable writes; surfaces are replaceable.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "scope": "Embodiment integration",
+        "enforcement": "Adapters have no store handle or independent personality/memory loop.",
+        "verified_by": [
+          "VER-1002"
+        ]
+      },
+      {
+        "id": "INV-1003",
+        "summary": "Execution evidence does not derive from narration.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "scope": "Embodiment integration",
+        "enforcement": "Separate requested, presented and observed records; keep UNKNOWN until evidence resolves it.",
+        "verified_by": [
+          "VER-1002"
+        ]
+      },
+      {
+        "id": "INV-1004",
+        "summary": "Motion and audio remain responsive without primary inference.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "scope": "Embodiment integration",
+        "enforcement": "Local clocks and priority cancellation; per-frame state remains transient.",
+        "verified_by": [
+          "VER-1003"
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "id": "DEC-1001",
+        "summary": "Apply Bill's autonomy clarification as a governing amendment.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "AUTONOMY-AMENDMENT.md",
+        "alternatives": [
+          "Literal static-only interpretation of older rules",
+          "Opaque automated behavioral shaping"
+        ],
+        "consequences": [
+          "Explicit evolving authorship and initiative are allowed",
+          "Affect interventions must be attributable and reversible"
+        ]
+      },
+      {
+        "id": "DEC-1002",
+        "summary": "Implement an extension of Blackbird with independent avatar registry.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "INTEGRATION.md",
+        "alternatives": [
+          "Replace Core with standalone companion runtime",
+          "Merge unrelated registries with colliding IDs"
+        ],
+        "consequences": [
+          "Existing Core and contracts retained",
+          "1000\u20131999 IDs reserved for avatar module",
+          "Actual first-slice code must be located before coding"
+        ]
+      },
+      {
+        "id": "DEC-1003",
+        "summary": "Begin with a local browser VRM body and clip-based motion.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "README.md",
+        "alternatives": [
+          "Unity body adapter first"
+        ],
+        "consequences": [
+          "Fits existing browser surface",
+          "Actual asset compatibility checked in first slice",
+          "BodyPort permits later renderer replacement"
+        ]
+      },
+      {
+        "id": "DEC-1004",
+        "summary": "Deliver attachment, voice, then ambient presence as separate increments.",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "DELIVERY.md",
+        "alternatives": [
+          "Finish all core features before any avatar",
+          "Build all embodiment subsystems together"
+        ],
+        "consequences": [
+          "Early visible progress",
+          "Voice and perception do not block first wave"
+        ]
+      }
+    ],
+    "assumptions": [
+      {
+        "id": "ASM-1001",
+        "summary": "The candidate browser renderer can load the eventual chosen model.",
+        "status": "unvalidated",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "README.md",
+        "owner": "Implementer in WRK-1001",
+        "impact": "May choose a different model or BodyPort adapter.",
+        "validation": "Load one representative model and demonstrate wave/expression support.",
+        "architecture_shaping": false
+      }
+    ],
+    "questions": [
+      {
+        "id": "QST-1001",
+        "summary": "Where is the reported first-slice implementation and what seams exist?",
+        "status": "open",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "RESUME.md",
+        "owner": "Implementer with Bill if inaccessible",
+        "blocking": true,
+        "decision_needed_by": "Before executing WRK-1001",
+        "resolution": "Locate actual checkout; reconcile in WRK-1000; do not recreate existing code."
+      },
+      {
+        "id": "QST-1002",
+        "summary": "Which initial model asset should be loaded?",
+        "status": "open",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "RESUME.md",
+        "owner": "Implementer/Bill",
+        "blocking": false,
+        "decision_needed_by": "WRK-1001",
+        "resolution": "A clearly identified sample body may prove attachment; custom Raven appearance is separate."
+      },
+      {
+        "id": "QST-1003",
+        "summary": "Which speech providers are already available in the actual core environment?",
+        "status": "open",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "RESUME.md",
+        "owner": "Implementer",
+        "blocking": false,
+        "decision_needed_by": "WRK-1002",
+        "resolution": "Inspect available configured providers, choose a minimal route and expose actual identity/limits."
+      }
+    ],
+    "risks": [
+      {
+        "id": "RSK-1001",
+        "summary": "A stale core handoff causes a duplicate runtime.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "likelihood": "plausible",
+        "impact": "Lost work and divergent identity/memory ownership.",
+        "mitigation": "Reconcile real checkout in WRK-1000.",
+        "trigger": "An implementer proposes a new host because no code appears on main."
+      },
+      {
+        "id": "RSK-1002",
+        "summary": "A presentation adapter becomes a hidden behavioral author.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "likelihood": "plausible",
+        "impact": "Affective research contamination.",
+        "mitigation": "Trace mapping origin and inspect actual context; disclose experimental mechanisms.",
+        "trigger": "Sentiment changes gesture/tone without an authored choice."
+      },
+      {
+        "id": "RSK-1003",
+        "summary": "Reconnect repeats a stale action or utterance.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "likelihood": "plausible",
+        "impact": "Incorrect presentation and causal history.",
+        "mitigation": "Epochs, Observe and UNKNOWN reconciliation; no stale replay.",
+        "trigger": "Renderer disconnects mid-action."
+      },
+      {
+        "id": "RSK-1004",
+        "summary": "The body package lacks compatible motion mappings.",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "likelihood": "plausible",
+        "impact": "First viewer loads but cannot perform.",
+        "mitigation": "Check one model/clip and use explicit unsupported results.",
+        "trigger": "Wave or expression mapping fails."
+      }
+    ],
+    "components": [
+      {
+        "id": "CMP-1000",
+        "summary": "Existing Blackbird integration boundary; not a new service",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Delegate to parent Core/Store/Context/ModelPort/MemoryPort/Glass Box owners",
+          "Keep source evidence, authored state and meaningful receipts"
+        ],
+        "owned_state": [
+          "DAT-1001",
+          "DAT-1002",
+          "DAT-1003",
+          "DAT-1004"
+        ],
+        "requirements": [
+          "REQ-1001",
+          "REQ-1007",
+          "REQ-1008"
+        ]
+      },
+      {
+        "id": "CMP-1001",
+        "summary": "Embodiment coordinator",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Translate CapabilityPort body requests",
+          "Arbitrate published resources and reconcile receipts"
+        ],
+        "owned_state": [],
+        "requirements": [
+          "REQ-1002",
+          "REQ-1003"
+        ]
+      },
+      {
+        "id": "CMP-1002",
+        "summary": "Replaceable body and local motion adapter",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Load package mappings",
+          "Render local motion",
+          "Observe presentation and report events"
+        ],
+        "owned_state": [],
+        "requirements": [
+          "REQ-1004"
+        ]
+      },
+      {
+        "id": "CMP-1003",
+        "summary": "Voice coordinator and endpoint playback loop",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Use existing conversation for STT/TTS routing",
+          "Track actual playback and cancellation"
+        ],
+        "owned_state": [],
+        "requirements": [
+          "REQ-1005"
+        ]
+      },
+      {
+        "id": "CMP-1004",
+        "summary": "Ambient perception and opportunity bridge",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "responsibilities": [
+          "Normalize one source",
+          "Use configured wake opportunities with attribution"
+        ],
+        "owned_state": [],
+        "requirements": [
+          "REQ-1006"
+        ]
+      }
+    ],
+    "interfaces": [
+      {
+        "id": "INT-1001",
+        "summary": "Core action dispatch",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "from": "CMP-1000",
+        "to": "CMP-1001",
+        "invocation": "Existing in-process Core ports and localhost surface transport",
+        "contract": "Parent AttemptAction v1 plus BodyIntent in CONTRACTS.md",
+        "failure_semantics": "Reject unsupported/schema/author errors; persist attempt before dispatch."
+      },
+      {
+        "id": "INT-1002",
+        "summary": "BodyPort v1",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "from": "CMP-1001",
+        "to": "CMP-1002",
+        "invocation": "Existing in-process Core ports and localhost surface transport",
+        "contract": "DescribeBody, Observe, ApplyIntent, SpeechCue, Cancel in CONTRACTS.md",
+        "failure_semantics": "Two-second uncertain acknowledgement triggers observation; UNKNOWN is not retried as a fresh action."
+      },
+      {
+        "id": "INT-1003",
+        "summary": "Snapshot and ordered events",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "from": "CMP-1002",
+        "to": "CMP-1000",
+        "invocation": "Existing in-process Core ports and localhost surface transport",
+        "contract": "InspectState extension with runtimeEpoch, sequence and connectionEpoch in CONTRACTS.md",
+        "failure_semantics": "Gap or changed epoch requires snapshot and actual Observe; never replay stale finite actions."
+      },
+      {
+        "id": "INT-1004",
+        "summary": "Voice delivery and interruption",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "from": "CMP-1003",
+        "to": "CMP-1000",
+        "invocation": "Existing in-process Core ports and localhost surface transport",
+        "contract": "Existing Converse input/output plus playback generation and delivery receipts in CONTRACTS.md",
+        "failure_semantics": "Stop locally, invalidate stale buffers, leave text usable on speech failure."
+      },
+      {
+        "id": "INT-1005",
+        "summary": "Observation and configured opportunity intake",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "from": "CMP-1004",
+        "to": "CMP-1000",
+        "invocation": "Existing in-process Core ports and localhost surface transport",
+        "contract": "Source/timestamps/freshness/payload and authored configuration in CONTRACTS.md",
+        "failure_semantics": "Defer by configured budgets; do not fabricate missed observations or demand a response."
+      }
+    ],
+    "data_entities": [
+      {
+        "id": "DAT-1001",
+        "summary": "Attachment preferences and asset binding",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "owner": "CMP-1000",
+        "lifecycle": "Registered \u2192 attached \u2192 stale/disconnected \u2192 observed/reconnected or removed",
+        "persistence": "Core existing store via additive migrations; DAT-1004 remains deferred until experiments are requested.",
+        "sensitivity": "Personal companion data; existing retention/export controls apply.",
+        "migration": "Additive Core schema; existing backup before upgrade; asset references versioned."
+      },
+      {
+        "id": "DAT-1002",
+        "summary": "Intent, attempt, presentation and observation evidence",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "owner": "CMP-1000",
+        "lifecycle": "Requested \u2192 acknowledged \u2192 started \u2192 completed/cancelled/failed, or UNKNOWN until observed",
+        "persistence": "Core existing store via additive migrations; DAT-1004 remains deferred until experiments are requested.",
+        "sensitivity": "Personal companion data; existing retention/export controls apply.",
+        "migration": "Additive Core schema; existing backup before upgrade; asset references versioned."
+      },
+      {
+        "id": "DAT-1003",
+        "summary": "Speech delivery receipt",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "owner": "CMP-1000",
+        "lifecycle": "Queued \u2192 playing \u2192 completed/interrupted/failed; generated text remains distinct",
+        "persistence": "Core existing store via additive migrations; DAT-1004 remains deferred until experiments are requested.",
+        "sensitivity": "Personal companion data; existing retention/export controls apply.",
+        "migration": "Additive Core schema; existing backup before upgrade; asset references versioned."
+      },
+      {
+        "id": "DAT-1004",
+        "summary": "Optional experiment configuration and signal receipt",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "owner": "CMP-1000",
+        "lifecycle": "Absent/disabled \u2192 explicitly enabled/versioned \u2192 disabled or superseded",
+        "persistence": "Core existing store via additive migrations; DAT-1004 remains deferred until experiments are requested.",
+        "sensitivity": "Personal companion data; existing retention/export controls apply.",
+        "migration": "Additive Core schema; existing backup before upgrade; asset references versioned."
+      }
+    ],
+    "flows": [
+      {
+        "id": "FLW-1001",
+        "summary": "Attach and perform a wave",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "actors": [
+          "CMP-1000",
+          "CMP-1001",
+          "CMP-1002"
+        ],
+        "preconditions": [
+          "Existing core seams reconciled",
+          "Compatible model loaded"
+        ],
+        "steps": [
+          "Attach and describe body",
+          "Accept authored action and record attempt",
+          "Play wave locally",
+          "Report completion and persist receipt"
+        ],
+        "failure_branches": [
+          "Unsupported action fails explicitly",
+          "Disconnected dispatch remains unknown until observed"
+        ]
+      },
+      {
+        "id": "FLW-1002",
+        "summary": "Reconnect without replay",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "actors": [
+          "CMP-1000",
+          "CMP-1001",
+          "CMP-1002"
+        ],
+        "preconditions": [
+          "A prior body connection existed"
+        ],
+        "steps": [
+          "Mark disconnected and stop local turn-bound output",
+          "Create new epoch",
+          "Acquire ordered snapshot and Observe actual body",
+          "Reconcile; accept new work"
+        ],
+        "failure_branches": [
+          "Missing observation stays stale",
+          "Old finite commands are not replayed"
+        ]
+      },
+      {
+        "id": "FLW-1003",
+        "summary": "Speak and interrupt",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "actors": [
+          "CMP-1000",
+          "CMP-1002",
+          "CMP-1003"
+        ],
+        "preconditions": [
+          "Body connected",
+          "Existing conversation and selected speech route available"
+        ],
+        "steps": [
+          "STT final enters existing conversation",
+          "Primary output feeds TTS",
+          "Playback clock drives mouth",
+          "Interrupt invalidates generation and stops audio",
+          "Core records actual delivery"
+        ],
+        "failure_branches": [
+          "TTS failure preserves text",
+          "Late callbacks discarded"
+        ]
+      },
+      {
+        "id": "FLW-1004",
+        "summary": "Observe and allow autonomous choice",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "CONTRACTS.md",
+        "actors": [
+          "CMP-1000",
+          "CMP-1004"
+        ],
+        "preconditions": [
+          "Opportunity configuration enabled",
+          "Core supports authored state/wakes"
+        ],
+        "steps": [
+          "Observe one cheap source",
+          "Wake with time, changes and open intentions",
+          "Primary chooses act, defer or silence",
+          "Execute selected action and preserve origin"
+        ],
+        "failure_branches": [
+          "Budget deferral visible",
+          "Stale observation labeled",
+          "Experimental signal never masquerades as independent self-report"
+        ]
+      }
+    ],
+    "verifications": [
+      {
+        "id": "VER-1001",
+        "summary": "Targeted running-app demonstration 1001",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "DELIVERY.md",
+        "target": [
+          "REQ-1001",
+          "REQ-1002",
+          "REQ-1004",
+          "REQ-1008",
+          "INV-1001",
+          "FLW-1001"
+        ],
+        "method": "Manual feature demonstration and one attributed receipt/context inspection; see DELIVERY.md.",
+        "evidence": "Short outcome report and relevant receipt or screenshot produced during implementation.",
+        "command": null
+      },
+      {
+        "id": "VER-1002",
+        "summary": "Targeted running-app demonstration 1002",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "DELIVERY.md",
+        "target": [
+          "REQ-1003",
+          "INV-1002",
+          "INV-1003",
+          "FLW-1002"
+        ],
+        "method": "Manual feature demonstration and one attributed receipt/context inspection; see DELIVERY.md.",
+        "evidence": "Short outcome report and relevant receipt or screenshot produced during implementation.",
+        "command": null
+      },
+      {
+        "id": "VER-1003",
+        "summary": "Targeted running-app demonstration 1003",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "DELIVERY.md",
+        "target": [
+          "REQ-1005",
+          "INV-1004",
+          "FLW-1003"
+        ],
+        "method": "Manual feature demonstration and one attributed receipt/context inspection; see DELIVERY.md.",
+        "evidence": "Short outcome report and relevant receipt or screenshot produced during implementation.",
+        "command": null
+      },
+      {
+        "id": "VER-1004",
+        "summary": "Targeted running-app demonstration 1004",
+        "status": "accepted",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "DELIVERY.md",
+        "target": [
+          "REQ-1006",
+          "REQ-1007",
+          "FLW-1004"
+        ],
+        "method": "Manual feature demonstration and one attributed receipt/context inspection; see DELIVERY.md.",
+        "evidence": "Short outcome report and relevant receipt or screenshot produced during implementation.",
+        "command": null
+      }
+    ],
+    "work_items": [
+      {
+        "id": "WRK-1000",
+        "summary": "Reconcile the existing first slice",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "work-items/WRK-1000.md",
+        "depends_on": [],
+        "requirements": [
+          "REQ-1008"
+        ],
+        "prerequisites": [
+          "Existing first-slice location is currently unverified."
+        ],
+        "affected_paths": [
+          "embodiment/RESUME.md",
+          "embodiment/work-items/WRK-1000.md"
+        ],
+        "acceptance_checks": [
+          "Actual code revision, launcher and integration paths recorded.",
+          "Existing work classified from evidence; no replacement core scaffolded."
+        ],
+        "evidence_paths": [],
+        "blocked_by": [],
+        "implementation_scope": "RESUME.md and work-items/WRK-1001.md; implementation files inspected read-only",
+        "code_paths_status": "Resolve actual source paths in WRK-1000 before execution."
+      },
+      {
+        "id": "WRK-1001",
+        "summary": "Attach one visible body",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "work-items/WRK-1001.md",
+        "depends_on": [
+          "WRK-1000"
+        ],
+        "requirements": [
+          "REQ-1001",
+          "REQ-1002",
+          "REQ-1003",
+          "REQ-1004",
+          "REQ-1008"
+        ],
+        "prerequisites": [
+          "Actual Core integration seams recorded by WRK-1000.",
+          "Implement only a missing minimal seam in existing Core if required."
+        ],
+        "affected_paths": [
+          "embodiment/RESUME.md",
+          "embodiment/work-items/WRK-1001.md"
+        ],
+        "acceptance_checks": [
+          "VER-1001 and VER-1002 demonstrations succeed.",
+          "Core remains usable when viewer closes; no fresh companion is created."
+        ],
+        "evidence_paths": [],
+        "blocked_by": [
+          "QST-1001"
+        ],
+        "implementation_scope": "Actual Core CapabilityPort/InspectState paths found in WRK-1000; new body adapter/viewer and model manifest",
+        "code_paths_status": "Resolve actual source paths in WRK-1000 before execution."
+      },
+      {
+        "id": "WRK-1002",
+        "summary": "Speak through the attached body",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "work-items/WRK-1002.md",
+        "depends_on": [
+          "WRK-1001"
+        ],
+        "requirements": [
+          "REQ-1005"
+        ],
+        "prerequisites": [
+          "Existing conversation path identified; one STT/TTS provider route chosen from available environment."
+        ],
+        "affected_paths": [
+          "embodiment/RESUME.md",
+          "embodiment/work-items/WRK-1002.md"
+        ],
+        "acceptance_checks": [
+          "VER-1003 demonstration succeeds.",
+          "No parallel voice cognition/personality loop; text still works on TTS failure."
+        ],
+        "evidence_paths": [],
+        "blocked_by": [],
+        "implementation_scope": "Actual conversation/control paths; voice adapter, endpoint audio and body speech cues",
+        "code_paths_status": "Resolve actual source paths in WRK-1000 before execution."
+      },
+      {
+        "id": "WRK-1003",
+        "summary": "Add ambient presence and continuing activity",
+        "status": "proposed",
+        "source": "Bill clarification and avatar integration review, 2026-09-12",
+        "artifact": "work-items/WRK-1003.md",
+        "depends_on": [
+          "WRK-1002"
+        ],
+        "requirements": [
+          "REQ-1001",
+          "REQ-1006",
+          "REQ-1007"
+        ],
+        "prerequisites": [
+          "Existing Core authored state/wake support is available; otherwise extend that owner as a scoped prerequisite."
+        ],
+        "affected_paths": [
+          "embodiment/RESUME.md",
+          "embodiment/work-items/WRK-1003.md"
+        ],
+        "acceptance_checks": [
+          "VER-1004 demonstration succeeds.",
+          "Standing behavior traces to its authored policy; no automatic emotion classifier controls output."
+        ],
+        "evidence_paths": [],
+        "blocked_by": [],
+        "implementation_scope": "Actual Core wake/context/inspection paths; one perception source and body activity mapping",
+        "code_paths_status": "Resolve actual source paths in WRK-1000 before execution."
+      }
+    ]
+  }
+}

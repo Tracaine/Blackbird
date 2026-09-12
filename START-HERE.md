@@ -1,5 +1,7 @@
 # BLACKBIRD v0.1 — Start Here
 
+> **Avatar branch entry point (2026-09-12):** Read [BLACKBIRD-AVATAR-MODULE.md](BLACKBIRD-AVATAR-MODULE.md) for the embodiment extension and its governing autonomy amendment. The root blueprint remains the core baseline; qualified changes and the new avatar work sequence are documented in that extension.
+
 Status: **provisional architecture for Bill's review**. Nothing in this package authorizes implementation.
 
 ## The decision in one sentence
@@ -46,4 +48,5 @@ At each stop the implementing agent must provide a checkpoint card, a short demo
 No Kafka, containers, cloud control plane, user accounts, adversarial multi-tenant security, vector database, automatic affect system, self-summary loop, voice stack, avatar renderer, game adapter, or donor-runtime integration is needed to determine whether BLACKBIRD's central idea works.
 
 That is restraint, not abandonment. The full BLACKBIRD concept remains the destination; First Presence is the cheapest honest experiment that can falsify or justify it.
+
 
